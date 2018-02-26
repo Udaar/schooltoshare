@@ -10,7 +10,7 @@ use App\Models\File;
 use App\Mail\SendMail;
 class SendEmailController extends AppBaseController
 {
-    //
+    ////
     public function create()
     {
         // if(\Auth::user()->getParent(\Auth::user()->perent_id) != null)
