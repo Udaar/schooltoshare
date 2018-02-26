@@ -1,0 +1,11 @@
+.issue-body {
+  width: 200px;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .issue-body {
+    width: 150px; } }
+
+/*# sourceMappingURL=zone-has-equpment-reset.css.map */

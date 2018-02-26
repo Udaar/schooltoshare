@@ -1,0 +1,68 @@
+.dropdown-menu {
+  box-shadow: none;
+  border-color: #C9C9C9; }
+  .dropdown-menu:before {
+    border-bottom-color: #C9C9C9 !important; }
+
+.slimScrollBar {
+  background-color: #566366 !important; }
+
+.dashboard-section .related-system .mt-element-ribbon {
+  padding: 10px 0 10px 8px;
+  font-size: 11px; }
+  .dashboard-section .related-system .mt-element-ribbon .ribbon {
+    top: 7px; }
+.dashboard-section .charts .left .portlet.light {
+  padding: 10px;
+  border-color: #C9C9C9; }
+  .dashboard-section .charts .left .portlet.light .portlet-title .caption .caption-subject {
+    font-size: 12px;
+    font-weight: 500; }
+  .dashboard-section .charts .left .portlet.light .portlet-body .feeds li {
+    background-color: #e9edf0;
+    font-size: 12px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-top: 5px; }
+    .dashboard-section .charts .left .portlet.light .portlet-body .feeds li .col1 .desc .label.label-sm {
+      display: inline-block;
+      font-size: 12px;
+      margin-top: 5px;
+      padding-bottom: 5px;
+      padding-top: 5px; }
+  .dashboard-section .charts .left .portlet.light .portlet-body .task-list li {
+    background-color: #e9edf0;
+    font-size: 12px;
+    margin-bottom: 7px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-top: 5px; }
+    .dashboard-section .charts .left .portlet.light .portlet-body .task-list li .task-title .label.label-sm {
+      display: inline-block;
+      font-size: 12px;
+      margin-top: 5px;
+      padding-bottom: 5px;
+      padding-top: 5px; }
+.dashboard-section .charts .right .budget-expenses .portlet-body {
+  padding: 10px 10px 0; }
+.dashboard-section .requstes .legend table {
+  bottom: 5px;
+  left: 50%;
+  right: auto !important;
+  top: auto !important;
+  transform: translateX(-50%); }
+.dashboard-section .requstes .legend tr {
+  display: inline;
+  margin-right: 10px; }
+  .dashboard-section .requstes .legend tr td.legendColorBox > div {
+    border: 0 !important; }
+    .dashboard-section .requstes .legend tr td.legendColorBox > div > div {
+      border-radius: 50% !important; }
+.dashboard-section .inventory-list div.dataTables_wrapper .dt-buttons {
+  display: block; }
+
+@media screen and (min-width: 1024px) {
+  .no-padding-left-lg {
+    padding-left: 0; } }
+
+/*# sourceMappingURL=dashboard.css.map */

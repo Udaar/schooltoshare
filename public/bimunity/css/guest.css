@@ -1,0 +1,245 @@
+/* === GRID SYSTEM === */
+
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+.fix-margin{
+    margin: 100px auto 0 auto!important;
+}
+.no-padding-right{
+    padding-right: 0!important;
+}
+#content p{
+    line-height: 16px;
+}
+
+a,
+a:hover,
+a:focus,
+.content-wrap {
+    color: #000;
+}
+
+.button {
+    background-color: #393939!important;
+}
+.avatar{
+    color: #fff!important;
+    font-weight: 500!important;
+}
+.avatar img{
+    border-radius: 50%!important;
+    height: 30px;
+    width: 30px;
+}
+.map-wrap{
+    position: relative;
+}
+.map-wrap .filters{
+    background-color: #A7A8AA;
+    left: 50%;
+    padding: 30px;
+    position: absolute;
+    top: 450px;
+    transform: translateX(-50%);
+    width: 900px;
+}
+#map{
+    height: 500px;
+}
+
+.company-wrap {
+    margin-bottom: 25px;
+}
+.select2-container{
+    width: 100%;
+}
+.select2-container .select2-selection--single {
+    height: 34px;
+}
+.select2-container--default .select2-selection--single{
+    border: 1px solid #fff;
+}
+
+.top-p {
+    color: #393939!important;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.row.is-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.row.is-flex>[class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.item {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.item .details{
+    background-color: #393939;
+    bottom:0;
+    color: #fff;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+}
+.item .details p{
+    margin: 0;
+    text-transform: capitalize;
+}
+.item .details p.title{
+    font-size: 18px;
+    font-weight: bold;
+}
+.item .details p.address{
+    display: inline-block;
+    font-size: 12px;
+}
+.item img {
+    height: 224px;
+    object-fit: cover;
+    width: 100%;
+}
+.item .rate-group{
+    display: inline-block;
+    float: right;
+}
+.item .rate-group .rate-yellow {
+    color: #FFFF00;
+}
+
+/* Event Box */
+.event-box{
+    
+}
+.event-box .event-top-box{
+    color: #fff;
+    padding: 10px;
+    position: relative;
+}
+.event-box.keynote .event-top-box{
+    background-color: #F3A828;
+}
+.event-box.workshop .event-top-box{
+    background-color: #4FBC92;
+}
+.event-box.workshop .event-top-box img.icon{
+    display: inline-block;
+    vertical-align: baseline;
+}
+.event-box .event-type span{
+    font-size: 12px;
+}
+.event-box .event-title p{
+    padding: 10px 0 0 0;
+}
+.event-box .event-avatar{
+    left: 50%;
+    position: absolute;
+    top: 73px;
+    transform: translateX(-50%);
+}
+.event-box .event-avatar img{
+    border-radius: 50%!important;
+    height: 55px;
+    width: 55px;
+}
+.event-box .event-details{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 0;
+    padding: 0 20px 25px;
+}
+.event-box .event-details .speaker{
+    border-bottom: 1px solid #E8E8E8;
+    margin-bottom: 15px;
+    padding: 30px 0 10px;
+}
+.event-box .event-details .attend-details{
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.event-box .event-details .speaker p,
+.event-box .event-details .attend-details span{
+    color: #393939;
+    margin-bottom: 0;
+}
+.event-box .event-details .attend-details label{
+    margin-bottom: 0;
+    margin-right: 5px;
+    text-align: right;
+    width: 60px;
+}
+.event-box .event-details .attend-details span{
+    display: inline-block;
+    text-align: left;
+    width: 70px;
+}
+.event-box .event-details .speaker span,
+.event-box .event-details .attend-details label{
+    color: #A7A8AA;
+}
+.event-box .event-details .attend-details,
+.event-box .event-details .attend-details label{
+    font-size: 10px!important;
+}
+
+@media screen and (max-width: 480px) {
+    .select2-container {
+        margin-bottom: 10px!important;
+        width: 100%!important;
+    }
+}

@@ -1,0 +1,39 @@
+.portlet.calendar.light .fc-toolbar {
+  margin-bottom: 30px; }
+.portlet.calendar.light .fc-button.fc-today-button,
+.portlet.calendar.light .fc-button.fc-today-button.fc-state-hover {
+  background-color: #1BBC9B;
+  border: 1px solid #1BBC9B;
+  color: #FFFFFF !important;
+  padding: 5px;
+  text-transform: capitalize; }
+.portlet.calendar.light .fc-button.fc-state-disabled,
+.portlet.calendar.light .fc-button.fc-state-disabled:hover {
+  background-color: #C9C9C9;
+  border: 1px solid #C9C9C9;
+  color: #566366 !important;
+  opacity: 0.2; }
+.portlet.calendar.light .fc-button {
+  top: 0; }
+.portlet.calendar.light .legend {
+  padding: 10px 15px; }
+  .portlet.calendar.light .legend .col-lg-2 {
+    margin-top: 10px; }
+  .portlet.calendar.light .legend .color-box {
+    display: inline-block;
+    height: 15px;
+    width: 15px; }
+    .portlet.calendar.light .legend .color-box.event {
+      background-color: #69A4E0; }
+    .portlet.calendar.light .legend .color-box.task {
+      background-color: #B73D8A; }
+    .portlet.calendar.light .legend .color-box.interview {
+      background-color: #345CD5; }
+    .portlet.calendar.light .legend .color-box.invoice {
+      background-color: #FF9800; }
+    .portlet.calendar.light .legend .color-box.payment {
+      background-color: #673AB7; }
+    .portlet.calendar.light .legend .color-box.expenses {
+      background-color: #E91E63; }
+
+/*# sourceMappingURL=calendar.css.map */

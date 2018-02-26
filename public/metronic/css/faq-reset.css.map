@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAa;EACT,OAAO,EAAE,YAAW",
+"sources": ["../sass/faq-reset.scss"],
+"names": [],
+"file": "faq-reset.css"
+}

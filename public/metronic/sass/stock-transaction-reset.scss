@@ -1,0 +1,18 @@
+@import "partials/_Variables.scss";
+.no-more-tables{
+	>.extandable{
+		>tbody{
+			td{
+				>p{
+					width: 90px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $screen-xxs) and (max-width: $screen-sm){
+	h3{
+		font-size: 20px;
+	}
+}

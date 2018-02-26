@@ -1,0 +1,178 @@
+@import "partials/_Variables";
+
+%form-control{
+    width: 100px;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: $ifm-grey;
+    background-color: #FFFFFF;
+    border: 1px solid $ifm-light-grey;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    margin: 0;
+    &:focus{
+        border-color: $ifm-main;
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+    }
+}
+
+div.dataTables_wrapper {
+    div.dataTables_length{
+        float: left!important;
+        select{
+            @extend %form-control;
+        }
+        label{
+            margin-bottom: 0!important;
+        }
+    }
+    div.dataTables_filter{
+        float: right!important;
+        margin-bottom: 5px;
+        input{
+            @extend %form-control;
+            width: 200px;
+            margin-left: 3px;
+        }
+        label{
+            margin-bottom: 0!important;
+        }
+    }
+    .dt-buttons{
+        display: none;
+    }
+    div.dataTables_paginate{
+        padding-top: 0;
+    }
+}
+
+.table-scrollable{
+    >.table-bordered{
+        >tbody{
+            >tr{
+                >td:last-child{
+                    border-right: 1px solid $ifm-light-grey!important;
+                }
+            }
+        }
+    }
+}
+
+.table-bordered{
+    thead{
+        >tr{
+            >th:last-child{
+                border-right-color: $ifm-main!important;
+            }
+        }
+    }
+    >tbody{
+        >tr{
+            &:first-child{
+                >td{
+                    border-top-color: $ifm-main;
+                }
+            }
+            &:last-child{
+                >td{
+                    border-bottom: 1px solid $ifm-light-grey!important;
+                    vertical-align: middle;
+                }
+            }
+            >td{
+                border-color: $ifm-light-grey;
+                &:first-child{
+                    border-left: 1px solid $ifm-light-grey!important;
+                }
+            }
+        }
+    }
+}
+
+table.dataTable{
+    thead{
+        .sorting_desc{
+            background-image: url('../assets/global/plugins/datatables/images/sort_desc1.png')!important;
+        }
+    }    
+}        
+
+table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child::before
+{
+    top: 15px!important;
+}
+
+.dtr-data{
+    display: block;
+    .label-sm{
+        padding-left: 0!important;
+    }
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child,
+table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child,
+.table-bordered > tbody > tr:first-child > td{
+    vertical-align: middle;
+}
+
+table.table-bordered.dataTable tbody td{
+    vertical-align: middle;
+}
+
+table.table-bordered.dataTable td:last-child, table.table-bordered.dataTable td:last-child{
+    border-right-width: 1px!important;
+}
+
+@media only screen and (max-width: 768px){
+    table.dataTable>tbody>tr.child span.dtr-title{
+        margin-bottom: 10px;
+    }
+    table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,
+    table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child::before
+    {
+        top: 10px!important;
+    }
+    table.table-bordered.dataTable tbody td{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 640px){
+    div.dataTables_wrapper {
+        div.dataTables_paginate{
+            margin-top: 5px;
+            .paginate_button{
+                padding: 0;
+            }
+        }
+        div.dataTables_filter{
+            float: right!important;
+            margin-top: 0!important;
+            input{
+                width: 100px;
+            }
+        }
+        div.dataTables_length{
+            float: left!important;
+        }
+    }
+}
+
+@media only screen and (max-width: 320px){
+    div.dataTables_wrapper{
+        div.dataTables_filter{
+            label{
+                font-size: 12px;
+            }
+        }
+        div.dataTables_length{
+            label{
+                font-size: 12px;
+            }
+        }
+    }
+}

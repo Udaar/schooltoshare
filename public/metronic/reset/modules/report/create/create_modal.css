@@ -1,0 +1,51 @@
+.remodal-wrapper {
+  z-index: 100003; }
+
+.remodal {
+  padding: 30px 20px;
+  text-align: left;
+  max-width: 600px; }
+  .remodal .remodal-close {
+    left: auto;
+    right: 0; }
+
+.remodal.confirmation {
+  max-width: 360px;
+  padding: 0; }
+  .remodal.confirmation .remodal-body {
+    padding: 15px; }
+    .remodal.confirmation .remodal-body .confirmation-message {
+      margin-bottom: 20px; }
+      .remodal.confirmation .remodal-body .confirmation-message i {
+        color: #EE4266;
+        font-size: 25px;
+        margin-top: 10px; }
+      .remodal.confirmation .remodal-body .confirmation-message span {
+        color: #222222;
+        padding-left: 22px; }
+  .remodal.confirmation .remodal-close {
+    color: #FFFFFF; }
+  .remodal.confirmation .remodal-head {
+    background-color: #EE4266;
+    color: #FFFFFF;
+    padding: 12px 15px; }
+    .remodal.confirmation .remodal-head h4 {
+      margin-bottom: 0 !important; }
+
+.report-create-section .graph {
+  padding: 10px; }
+  .report-create-section .graph .table-colmuns .checkbox-list label {
+    cursor: pointer;
+    margin-bottom: 0;
+    padding: 10px; }
+.report-create-section .chart-item {
+  border: 1px solid #C9C9C9;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 5px; }
+  .report-create-section .chart-item:first-child {
+    margin-left: 0; }
+.report-create-section .filter-add {
+  cursor: pointer; }
+
+/*# sourceMappingURL=create_modal.css.map */

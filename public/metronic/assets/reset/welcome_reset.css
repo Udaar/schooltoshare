@@ -1,0 +1,132 @@
+a, a:hover, a:focus{
+	text-decoration: none;
+}
+/* BEGIN POST ADD */
+.portlet.box.red{
+	border: none;
+}
+
+.portlet.box .portlet-title{
+	padding: 0;
+}
+
+.portlet.box.red .portlet-title, .portlet.red, .portlet .portlet-body.red{
+	background-color: #fff;
+	border-bottom: 1px solid #efefef;
+}
+
+.portlet .portlet-title .nav-tabs li{
+	border-right: 1px solid #efefef;
+}
+
+.portlet .portlet-title .nav-tabs li a{
+    color: #cbcbcb;
+}
+
+.portlet .portlet-title .nav-tabs li.active a,
+.portlet .portlet-title .nav-tabs li:hover a{
+	background-color: transparent;
+	color: #333;
+}
+
+.portlet .portlet-body textarea.form-control{
+	border:none;
+	border-bottom: 1px solid #efefef;
+}
+
+.portlet .portlet-body button.submit,
+.portlet .portlet-body a.submit{
+    margin: 10px 5px 5px;
+    background: #eb6a5a;
+    border: 1px solid #eb6a5a;
+    border-radius: 3px !important;
+    color: #fff;
+    font-weight: bold;
+}
+
+.portlet .portlet-body a.submit:hover{
+	text-decoration: none;
+}
+/* END POST ADD */
+
+/* BEGIN POSTS */
+.timeline .timeline-item .list-icon{
+    background-color: #eb6a5a;
+    color: #fff;
+    height: 36px;
+    width: 36px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 50%;
+    line-height: 2 !important;
+    text-align: center;
+    font-size: 20px;
+}
+
+.timeline .timeline-body{
+    margin-left: 70px;
+    background-color: transparent !important;
+    border: 1px solid #efefef;
+        
+}
+
+.timeline .timeline-body-head-caption{
+    margin-bottom: 20px;
+}
+
+.timeline .timeline-body-head-caption.no-margin{
+    margin-bottom: 0;
+    margin-left: 20px;
+}
+
+.timeline .timeline-body-head .media-heading .delete_post{
+    border: 1px solid #eb6a5a;
+    color: #eb6a5a;
+    width:20px;
+    height:20px; 
+    text-align: center;
+    line-height: 1;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.timeline .timeline-body-head .media-heading .replay{
+    color: #fff;
+    background-color: #4193d0;
+    width:20px;
+    height:20px; 
+    text-align: center;
+    cursor: pointer;
+    line-height: 1.5;
+    border-radius: 5px;
+}
+
+.media-heading{
+	font-size: 15px;
+	margin-top: 10px;
+}
+
+.timeline .timeline-body-arrow{
+	position: absolute;
+    width: 8px;
+    height: 0;
+    top: 30px;
+    left: -7px;
+	border-right: 8px solid #dfdfdf;
+    border-top: 8px solid transparent;
+    border-left: 0 dotted;
+    border-bottom: 8px solid transparent;
+}
+
+.timeline .timeline-body-content{
+	margin-top: 10px;
+}
+
+.post-text{
+    margin-bottom: 20px;
+}
+
+.comment-body{
+}
+/* END POSTS */

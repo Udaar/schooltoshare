@@ -1,0 +1,45 @@
+/* Page BG */
+.login{
+	background: url('../../metronic/assets/pages/media/bg/3.jpg');
+	background-size: cover;
+}
+
+/* Logo */
+.login .logo{
+	margin: 50px auto 0;
+	padding: 0;
+}
+
+/* Text Boxes */
+.login .content .form-control{
+	background-color: #fff;
+}
+
+.login .content .form-control.input-sm{
+	width: 150px;
+}
+
+.login .content .form-control::-moz-placeholder {
+    color: #707B88;
+    opacity: 1; 
+}
+
+.login .content .form-control:-ms-input-placeholder {
+color: #707B88; 
+}
+
+.login .content .form-control::-webkit-input-placeholder {
+color: #707B88; 
+}
+
+/* Login Button */
+.btn.green:not(.btn-outline){
+	background-color: #31c7b2;
+}
+
+/* Register Button */
+.btn-register{
+	background-color: black;
+	color: #fff;
+	border: 1px solid #000;
+}

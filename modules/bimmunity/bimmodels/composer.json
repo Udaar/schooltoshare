@@ -1,0 +1,11 @@
+{
+    "name": "bimmunity/bimmodels",
+    "description": "package to bimmodels",
+    "type": "project",
+    "license": "any",
+    "authors": [{
+        "name": "mohamed elserag",
+        "email": "mohamedelserag4488@gmail.com"
+    }],
+    "require": {}
+}

@@ -1,0 +1,188 @@
+.media {
+    overflow: visible;
+}
+.task-card{
+    box-shadow: none!important;
+}
+#task-documents{
+    padding: 15px;
+}
+.task-img{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 5px;
+}
+.task-img img{
+    width: 100%;
+    height: 100%;
+}
+.task-img-col{
+    margin-bottom: 15px;
+    padding-right: 0;
+}
+.doc-images-container{
+    padding-right: 15px;
+}
+.page-content-wrapper .page-content{
+    padding: 0!important;
+}
+.page-toolbar{
+    display: none!important;
+}
+.ifm-border-light-grey-left{
+    border-color: #DDDDDD!important;
+}
+.task-section{
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.task-section .task-card .task-details .task-title h6,
+.task-section .task-card .task-details label{
+    color: #777;
+}
+.task-section .task-card .task-details label{
+    font-size: 13px;
+}
+.edit-task-section h3{
+    padding: 15px;
+    margin-bottom:10px!important;
+    border-bottom: 1px solid #DDDDDD;
+}
+.edit-task-wrap{
+    position:fixed;
+}
+:root:root:root .tabbable-custom > .nav-tabs > li{
+    width: 20%;
+}
+.table-bordered > tbody > tr > td:first-child{
+    border-left:0!important;
+}
+.table-bordered, .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th{
+    border-right: 0!important;
+}
+.table .btn{
+    margin-right: 0;
+}
+.popover{
+    box-shadow: none;
+}
+.editable-cancel{
+    background-color: #DDD!important;
+}
+.editable-input .form-control{
+    border-color: #DDD;
+}
+.editable-clear{
+    display: none;
+}
+.start_date .editable-buttons,
+.end_date .editable-buttons{
+    display: block;
+    margin-left: 0;
+    margin-top: 10px;
+}
+.table-bordered > tbody > tr > td,
+.table-bordered > tbody > tr:last-child > td{
+    border-color:#DDD!important;
+}
+span.actions{
+    display: none;
+}
+.note-editor.note-frame,
+.note-editor .note-toolbar,
+.note-editor .note-statusbar .note-resizebar{
+    border-color: #DDDDDD;
+}
+.select2-container{
+    z-index: 9994;
+}
+.btn-file{
+    color:#337ab7;
+}
+.btn-file:hover{
+    text-decoration:underline;
+}
+.fileinput-new{
+    cursor: pointer;
+}
+.img-data{
+    margin-bottom: 2px;
+}
+.doc-files-container{
+    padding: 10px;
+    border: 1px dashed #C7C7C7;
+}
+#comments-container{
+    padding-left: 3px!important;
+}
+.commenting-field{
+    margin-bottom: 0!important;
+}
+.jquery-comments .textarea-wrapper{
+    padding-left: 7px!important;
+}
+.jquery-comments .textarea-wrapper:after,
+.jquery-comments .textarea-wrapper:before{
+    display: none;
+}
+#no-desc-span{
+    color: #74777b;
+}
+// Media Query
+@media screen and (min-width:320px) and (max-width:468px){
+    :root:root:root .tabbable-custom > .nav-tabs > li{
+        width: 50%;
+    }
+}
+@media screen and (min-width:320px) and (max-width:768px){
+    .task-card .chart-wrap{
+        border-right:0;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (min-width:991px) and (max-width:1170){
+    .edit-task-wrap{
+        position:fixed;
+    }
+}
+@media screen and (min-width:320px) and (max-width:991px){
+    .edit-task-wrap{
+        position: static!important;
+    }
+    .task-section .task-card .task-actions .btn-group{
+        float: left!important;
+    }
+    .editableform{
+        .form-group{
+            margin-bottom: 0;
+        }
+    }
+    .popover-content{
+        padding: 9px 12px;
+    }
+    .edit-task-wrap h3{
+        font-size: 14px;
+        margin-bottom: 10px!important;
+    }
+    .edit-task-wrap .popover h3{
+        font-size: 11px;
+    }
+    #user.table td{
+        font-size: 12px!important;
+    }
+    #user.table td.editable-cell{
+        border-right: 1px solid #DDDDDD!important;
+    }
+    .editable-input input[type="text"]{
+        padding: 0 5px;
+        height: 28px;
+        padding-right: 0!important;
+    }
+    .editable-submit,
+    .editable-cancel{
+        padding: 3px 5px!important;
+    }
+}

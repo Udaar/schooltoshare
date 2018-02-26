@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,kBAAkB;EACd,KAAK,EAAE,eAAc;;AAGzB,yGAAyG;EACrG,KAAK,EAAE,eAAc",
+"sources": ["../sass/users-show-reset.scss"],
+"names": [],
+"file": "users-show-reset.css"
+}

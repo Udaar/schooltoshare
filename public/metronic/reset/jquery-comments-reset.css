@@ -1,0 +1,24 @@
+:root:root:root .jquery-comments .textarea-wrapper .textarea {
+  border-color: #DDDDDD; }
+
+:root:root:root .jquery-comments .textarea-wrapper .close span {
+  background: transparent !important; }
+
+:root:root:root .jquery-comments .textarea-wrapper .control-row > span {
+  padding: 6px 12px !important; }
+
+:root:root:root .jquery-comments .no-data {
+  margin-bottom: 0 !important; }
+
+:root:root:root .jquery-comments ul.main li.comment .comment-wrapper {
+  overflow: visible;
+  padding-top: 24px; }
+
+:root:root:root .jquery-comments i.profile-picture {
+  font-size: 2.8em; }
+
+:root:root:root .jquery-comments ul.main li.comment .wrapper .content {
+  color: #74777b;
+  line-height: 1.5; }
+
+/*# sourceMappingURL=jquery-comments-reset.css.map */

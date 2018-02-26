@@ -1,0 +1,103 @@
+@import "partials/_Variables";
+
+/* === Info-section === */
+.info-section{
+	height: 100%;
+	padding: $ifm-padding-sm;
+	margin-bottom: $ifm-margin-md;
+	.info-wrapper{
+		border-bottom: 1px solid #ccc;
+	}
+	.info-box{
+		.media{
+			overflow: visible;
+			.fa-stack{
+				margin-top: 8px !important;
+			}
+		}
+		.info-img{
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+			> img{
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+			> a{
+				position: absolute;
+				top:0;
+				right:0;
+				> &:focus{
+					color: $ifm-white;
+				}
+			}
+		}
+		.info-details{
+			margin-left: $ifm-margin-md;
+			cursor: pointer;
+			text-decoration: none;
+			&:hover{
+				color: #707B88;
+			}
+		}
+		.info-more-details{
+			.fa-stack{
+				margin-top: $ifm-margin-md;
+			}
+		}
+	}
+	.info-action{
+		margin-top: $ifm-margin-md;
+	}
+}
+
+/* === Info-map === */
+.info-map {
+	height: 300px;
+	width: 100%;
+}
+
+/* === Info Item === */
+.info-item{
+	padding: 15px 15px 0;
+}
+
+/* === Mobile Media Queries === */
+@media (max-width : 768px){
+	// === Placeholders === // 
+	%info-details-address{
+		font-size: 14px;
+		line-height: 20px;
+	}
+	.page-content-wrapper{
+		.page-content{
+			padding: 0!important;
+		}
+	}
+	.info-item:last-child{
+		padding-bottom: 15px;
+	}
+	.info-section{
+		.info-box{
+			.info-item{
+				h4.font-lg{
+					display: inline-block;
+					font-size: 15px;
+					margin: 5px 0;
+				}
+			}
+			.info-details{
+				span{
+					@extend %info-details-address;
+				}
+			}
+			.info-address{
+				@extend %info-details-address;
+			}
+			.col-xs-12.no-padding-xs{
+				padding: 0 !important;
+			}
+		}
+	}
+}

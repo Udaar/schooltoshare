@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,MAAO;EACH,QAAQ,EAAE,OAAO",
+"sources": ["../sass/payment-show-reset.scss"],
+"names": [],
+"file": "payment-show-reset.css"
+}

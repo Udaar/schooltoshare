@@ -1,0 +1,86 @@
+.remodal-wrapper {
+  z-index: 100003; }
+
+.remodal {
+  padding: 30px 20px;
+  text-align: left;
+  max-width: 600px; }
+  .remodal .remodal-close {
+    left: auto;
+    right: 0; }
+
+.remodal.confirmation {
+  max-width: 360px;
+  padding: 0; }
+  .remodal.confirmation .remodal-body {
+    padding: 15px; }
+    .remodal.confirmation .remodal-body .confirmation-message {
+      margin-bottom: 20px; }
+      .remodal.confirmation .remodal-body .confirmation-message i {
+        color: #EE4266;
+        font-size: 25px;
+        margin-top: 10px; }
+      .remodal.confirmation .remodal-body .confirmation-message span {
+        color: #222222;
+        padding-left: 22px; }
+  .remodal.confirmation .remodal-close {
+    color: #FFFFFF; }
+  .remodal.confirmation .remodal-head {
+    background-color: #EE4266;
+    color: #FFFFFF;
+    padding: 12px 15px; }
+    .remodal.confirmation .remodal-head h4 {
+      margin-bottom: 0 !important; }
+
+.service-section a {
+  color: #333333; }
+.service-section > h3 {
+  margin-bottom: 20px !important; }
+.service-section .col-md-3 {
+  margin-bottom: 10px; }
+.service-section .service-item .service-title {
+  background-color: #BFBFBF;
+  padding: 10px 0; }
+  .service-section .service-item .service-title span {
+    display: inline-block;
+    vertical-align: -webkit-baseline-middle;
+    vertical-align: -moz-baseline-middle;
+    vertical-align: -ms-baseline-middle;
+    vertical-align: -o-baseline-middle;
+    vertical-align: baseline-middle;
+    word-break: break-all; }
+.service-section .service-item .service-body {
+  background-color: #E9EDEF;
+  color: #6D6766;
+  font-size: 12px;
+  padding: 10px 5px;
+  position: relative; }
+.service-section .service-item .add {
+  background-color: #E9EDEF;
+  color: #6D6766;
+  font-size: 12px;
+  padding: 10px 5px;
+  position: relative;
+  height: 150px; }
+
+.row.is-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.row.is-flex > [class*='col-'] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+/*# sourceMappingURL=service.css.map */

@@ -1,0 +1,16 @@
+/* From 992px To 1199px */
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .timesheet-show{
+        h3,
+        .select-date,
+        .timesheets-body{
+            font-size: 13px;
+        }
+        .total-interval{
+            .col-md-offset-10{
+                margin-left: 82.33333%!important;
+            }
+        }
+    }
+}

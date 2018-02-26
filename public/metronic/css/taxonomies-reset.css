@@ -1,0 +1,6 @@
+.no-more-tables > .table-bordered > tbody tr.child td > div.child-item p.tax-description {
+  line-height: 1.8;
+  text-align: justify;
+  padding-left: 30px; }
+
+/*# sourceMappingURL=taxonomies-reset.css.map */

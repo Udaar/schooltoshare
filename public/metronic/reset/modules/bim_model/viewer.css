@@ -1,0 +1,11 @@
+div#viewer {
+  border: 0; }
+
+div#list {
+  border: 1px solid #C9C9C9;
+  padding: 8px 9px 8px 8px;
+  width: 100%; }
+  div#list div button {
+    width: 100%; }
+
+/*# sourceMappingURL=viewer.css.map */

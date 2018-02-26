@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAKI,4CAAE;EACD,KAAK,EAAE,IAAI;;AAOhB,2DAAsE;EACrE,EAAE;IACD,SAAS,EAAE,IAAI",
+"sources": ["../sass/stock-transaction-reset.scss"],
+"names": [],
+"file": "stock-transaction-reset.css"
+}

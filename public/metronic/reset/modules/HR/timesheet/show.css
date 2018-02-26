@@ -1,0 +1,109 @@
+/* === From 320px - 768px === */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .page-content-wrapper .page-content {
+    padding: 10px !important; }
+    .page-content-wrapper .page-content .timesheet-zone {
+      padding: 10px !important; }
+      .page-content-wrapper .page-content .timesheet-zone .title-bar {
+        padding-bottom: 10px !important; }
+        .page-content-wrapper .page-content .timesheet-zone .title-bar .title {
+          font-weight: 500; }
+        .page-content-wrapper .page-content .timesheet-zone .title-bar .add-btn {
+          top: 8px !important;
+          right: 27px !important;
+          padding: 4px 9px; }
+          .page-content-wrapper .page-content .timesheet-zone .title-bar .add-btn span {
+            display: none; }
+    .page-content-wrapper .page-content .timesheet-wrap .timesheet-item .col-sm-2 {
+      padding-right: 15px !important;
+      text-align: left; }
+    .page-content-wrapper .page-content .timesheet-wrap .timesheet-item .timesheet-day {
+      padding: 0 !important;
+      border: 0 !important;
+      border-bottom: 1px solid #C9C9C9 !important; }
+      .page-content-wrapper .page-content .timesheet-wrap .timesheet-item .timesheet-day p {
+        display: inline-block;
+        color: #8a7e7e !important;
+        font-weight: 200 !important;
+        font-size: 13px !important; } }
+/* === From 320px - 991px === */
+@media screen and (min-width: 320px) and (max-width: 991px) {
+  .timesheet-show-m .daterange-wrap {
+    margin-top: 5px;
+    margin-bottom: 10px; }
+    .timesheet-show-m .daterange-wrap .input-large {
+      width: 100% !important; }
+    .timesheet-show-m .daterange-wrap .form-control {
+      height: 25px; }
+    .timesheet-show-m .daterange-wrap .input-group-addon {
+      padding: 0 5px; }
+  .timesheet-show-m .owl-carousel.owl-theme .owl-nav [class*=owl-] {
+    background-color: #999;
+    transition: all 0.4s ease-in-out; }
+    .timesheet-show-m .owl-carousel.owl-theme .owl-nav [class*=owl-]:hover {
+      background-color: #1BBC9B; }
+  .timesheet-show-m .owl-carousel.owl-theme .owl-dots .owl-dot span {
+    background-color: #999; }
+  .timesheet-show-m .owl-carousel.owl-theme .owl-dots .owl-dot.active span {
+    background-color: #1BBC9B; }
+  .timesheet-show-m .owl-carousel.owl-theme .owl-dots .owl-dot.active span,
+  .timesheet-show-m .owl-carousel.owl-theme .owl-dots .owl-dot:hover span {
+    transition: all 0.4s ease-in-out; }
+  .timesheet-show-m .timesheet-day .task-row {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #C9C9C9;
+    font-size: 12px; }
+    .timesheet-show-m .timesheet-day .task-row:last-child {
+      margin-bottom: 0; }
+    .timesheet-show-m .timesheet-day .task-row div {
+      margin-bottom: 5px; } }
+/* === Custome, iPhone Retina === */
+@media screen and (max-width: 320px) {
+  .timesheet-zone .title-bar .title {
+    font-size: 12px;
+    font-weight: 600; }
+  .timesheet-zone .title-bar .add-btn {
+    top: 8px !important;
+    right: 27px !important;
+    padding: 2px 7px; } }
+/* === Mobile Phones === */
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  .timesheet-zone .title-bar .title {
+    font-size: 14px; }
+  .timesheet-zone .title-bar .add-btn {
+    padding: 4px 9px; } }
+/* From 992px To 1199px */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .timesheet-show h3,
+  .timesheet-show .select-date,
+  .timesheet-show .timesheets-body {
+    font-size: 13px; }
+  .timesheet-show .total-interval .col-md-offset-10 {
+    margin-left: 82.33333% !important; } }
+.timesheet-show .daterange-wrap {
+  display: inline-block;
+  vertical-align: middle; }
+  .timesheet-show .daterange-wrap .form-control {
+    height: 25px; }
+  .timesheet-show .daterange-wrap .input-group-addon {
+    padding: 0 5px; }
+.timesheet-show .timesheets-wrap .timesheet-day {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #C9C9C9; }
+  .timesheet-show .timesheets-wrap .timesheet-day .day {
+    padding: 10px 5px;
+    color: #566366;
+    border: 1px solid #C9C9C9;
+    font-weight: 600;
+    text-align: center; }
+  .timesheet-show .timesheets-wrap .timesheet-day .task-row {
+    margin-bottom: 6px; }
+  .timesheet-show .timesheets-wrap .timesheet-day .total-day {
+    margin-bottom: 6px; }
+    .timesheet-show .timesheets-wrap .timesheet-day .total-day .col-lg-offset-8 {
+      margin-left: 68.66667%; }
+.timesheet-show .total-interval .col-lg-offset-10 {
+  margin-left: 86.33333%; }
+
+/*# sourceMappingURL=show.css.map */

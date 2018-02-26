@@ -1,0 +1,143 @@
+@import "partials/_Variables.scss";
+
+.tasks-section{
+    .no-tasks{
+        p{
+            border: 1px solid #C9C9C9;
+            padding: 133px;
+            text-align: center;
+            display: block;
+            font-size: 30px;
+            margin: auto;
+            font-weight: 100;
+        }
+    }
+    .task-col:nth-child(even){
+        padding-right: 0;
+    }
+}
+
+.task-card{
+    background-color: #FFFFFF;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #DDD;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+	   -moz-box-shadow: 0 10px 6px -6px #777;
+        -ms-box-shadow: 0 10px 6px -6px #777;
+	        box-shadow: 0 10px 6px -6px #777;
+    .chart-wrap{
+        height: 100%;
+        border-right: 1px solid #DDD;
+        padding-right: 10px;
+    }
+    .task-details{
+        .task-title{
+            padding-bottom: 5px;
+            border-bottom: 1px solid #DDDDDD;
+            a{
+                color: #777;
+                text-decoration: none;
+                transition: color 0.6s ease-in-out;
+            }
+        }
+        label{
+          font-size: 13px;
+          color: #777;
+        }
+    }
+    .task-actions-col{
+        position: absolute;
+        bottom: 15px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+    .task-card{
+        height: auto;
+        -webkit-box-shadow: none!important;
+	       -moz-box-shadow: none!important;
+            -ms-box-shadow: none!important;
+	            box-shadow: none!important;
+    }
+    .task-actions{
+        position: static!important;
+    }
+    .task-col{
+        padding-right: 0!important;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+    .tasks-section{
+        .no-tasks{
+            p{
+                padding: 50px;
+            }
+        }
+    }
+    .task-card .chart-wrap{
+        width: 65%;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    .tasks-section{
+        .no-tasks{
+            p{
+                padding: 100px;
+            }
+        }
+    }
+    .task-card .chart-wrap{
+        width: 45%!important;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 992px){
+    .task-col{
+        padding-right: 0!important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .tasks-section{
+        .no-tasks{
+            p{
+                padding: 180px;
+            }
+        }
+    }
+    .task-card{
+        -webkit-box-shadow: none!important;
+	       -moz-box-shadow: none!important;
+            -ms-box-shadow: none!important;
+	            box-shadow: none!important;
+    }
+    .task-card .chart-wrap{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:991px){
+    .tasks-section .task-card .task-actions .btn-group{
+        float: left!important;
+    }
+    .task-card .chart-wrap{
+        border-right:0;
+        position: relative;
+        margin: 0 auto 20px;
+    }
+    .task-details ~ .col-sm-4,
+    .task-details ~ .col-md-3{
+        border-bottom: 1px solid #DDD;
+        margin-bottom: 20px;
+    }
+    .task-actions-col{
+        position: static!important;
+        .btn-group{
+            width: 100%;
+        }
+    }
+}

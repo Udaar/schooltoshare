@@ -1,0 +1,118 @@
+$ifm-main: #29cec6;
+
+.ifm-main{color: $ifm-main!important;}
+.ifm-main-bg{background-color: $ifm-main!important}
+.ifm-border-main-all{border: 1px solid $ifm-main!important}
+
+div#list div button,
+.irs-bar,
+.irs-bar-edge,
+.page-header.navbar .top-menu .navbar-nav>li.dropdown .dropdown-toggle .badge.badge-default,
+.page-sidebar .page-sidebar-menu>li.active.open>a,
+.page-sidebar .page-sidebar-menu>li.active>a,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li.active.open>a,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li.active>a{
+    background: $ifm-main!important;
+}
+
+.ifm-btn-main:hover,
+.ifm-btn-default:hover,
+.list-group-item.node-selected,
+.editable-submit,
+.irs-from, .irs-to, .irs-single,
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li a:hover,
+table.dataTable.dtr-column>tbody>tr.parent td.control:before,
+table.dataTable.dtr-column>tbody>tr.parent th.control:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td:first-child:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th:first-child:before{
+    background-color: $ifm-main!important;
+}
+
+.irs-bar,
+.table-bordered > tbody > tr:first-child > td,
+.tabbable-custom > .nav-tabs > li.active{
+    border-top-color: $ifm-main!important;
+}
+
+.faq-content-1 .faq-section>.faq-content .panel-heading i,
+.faq-content-1 .faq-section>.faq-content .panel-heading .accordion-toggle:hover,
+.portlet.calendar.light .fc-button.fc-state-active,
+.portlet.calendar.light .fc-button.fc-state-hover,
+.tabbable-custom > .nav-tabs > li.active a,
+.tabbable-custom > .nav-tabs > li > a:hover,
+.edit-tree-node,
+.edit-tree-node:hover{
+    color: $ifm-main!important;
+}
+
+.node-selected .edit-tree-node{
+    color: #FFFFFF!important;
+}
+
+.irs-bar-edge,
+div#list div button,
+.portlet.calendar.light .fc-button.fc-state-active,
+.editable-submit,
+.portlet.calendar.light .fc-button.fc-state-hover,
+div.dataTables_wrapper div.dataTables_length select:focus,
+div.dataTables_wrapper div.dataTables_filter input:focus{
+    border-color: $ifm-main!important;
+}
+
+.irs-bar,
+.tabbable-line>.nav-tabs>li.active,
+.tabbable-line>.nav-tabs>li.open,
+.tabbable-line>.nav-tabs>li:hover,
+.page-header.navbar .top-menu .navbar-nav >li.dropdown .dropdown-menu:after{
+    border-bottom-color: $ifm-main!important;
+}
+
+table.dataTable.dtr-column>tbody>tr>td.control:before,
+table.dataTable.dtr-column>tbody>tr>th.control:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before{
+    background-color: rgba(147, 211, 39, 0.7);
+}
+
+// Select 2
+.input-medium{
+	width: 100%!important;
+}
+
+.select2-container{
+	width: 100%!important;
+	text-align: left!important;
+}
+
+.select2-container--bootstrap .select2-results__option--highlighted[aria-selected]{
+    background-color: $ifm-main;
+	text-align: left!important;
+}
+
+// Calendar
+.responsive-calendar .day.active a,
+.responsive-calendar .day.active a:hover,
+.responsive-calendar .btn-primary{
+    background-color: $ifm-main;
+    border-color: $ifm-main;
+}
+.responsive-calendar .badge{
+    background-color: #FFFFFF;
+    color: #000000;
+    font-weight: normal!important;
+}
+.responsive-calendar .day.not-current a{
+    color: #CCC!important;
+}
+.task-card{
+    .task-details{
+        .task-title{
+            a{
+                &:hover{
+                    color: $ifm-main;
+                }
+            }
+        }
+    }
+}

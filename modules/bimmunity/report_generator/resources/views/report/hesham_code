@@ -1,0 +1,233 @@
+function getModalData(){
+            var checkboxes = $('.checker');
+            var checkboxes1 = $('#modal_check_list')[0].children;
+            var checkboxesChecked = {};
+//            console.log(checkboxes);
+            // loop over them all
+            var checkboxesCheckedCount = 0;
+            for (var i=0; i<checkboxes.length; i++) {
+//                console.log($('#'+checkboxes[i].id).children().children().attr('name'));
+//                console.log($('#modal_table_name').val());
+//                console.log($('#'+checkboxes[i].id).next()[0].children[0].value);
+                console.log($('#'+checkboxes[i].id).next()[0].innerText);
+//                console.log($('#'+checkboxes[i].id).next()[0].html());
+//                console.log($('#'+checkboxes[i].id).next()[0].val());
+                // And stick the checked ones onto an array...
+                if ($('#'+checkboxes[i].id).children().hasClass('checked')) {
+//                    checkboxesChecked.push($('#'+checkboxes[i].id).children().children().attr('name'));
+                    checkboxesChecked[checkboxesCheckedCount] = {};
+                    checkboxesChecked[checkboxesCheckedCount]['table_columns'] = {};
+                    checkboxesChecked[checkboxesCheckedCount]['table_name'] =$('#modal_table_name').val().trim();
+                    checkboxesChecked[checkboxesCheckedCount]['table_columns'][0] =$('#'+checkboxes[i].id).children().children().attr('name').trim();
+                    checkboxesChecked[checkboxesCheckedCount]['table_columns'][1] =$('#'+checkboxes[i].id).next()[0].innerText.trim();
+                    if($('#' + checkboxes[i].id).next()[0].children[0].type == 'number' ) {
+                        console.log($('#' + checkboxes[i].id).next()[0].children[0].type);
+                        checkboxesChecked[checkboxesCheckedCount]['table_columns'][2] = parseInt($('#' + checkboxes[i].id).next()[0].children[0].value.trim());
+                    }else {
+                        checkboxesChecked[checkboxesCheckedCount]['table_columns'][2] = $('#' + checkboxes[i].id).next()[0].children[0].value.trim();
+                    }
+                    if(typeof $('#' + checkboxes[i].id).next()[0].children[2] != "undefined" ) {
+                        checkboxesChecked[checkboxesCheckedCount]['table_columns'][3] = $('#' + checkboxes[i].id).next()[0].children[2].value.trim();
+                    }
+                    checkboxesCheckedCount++;
+                }
+            }
+            console.log(checkboxesChecked);
+            var jsonString = JSON.stringify(checkboxesChecked);
+            console.log(jsonString);
+            $.ajax({
+                headers: {'X-CSRF-Token': $('input[name="_token"]').val()},
+                type:'post',
+//                contentType: 'application/json',
+                dataType: "json",
+                url:'ajax_get_table_values',
+                data:{'data':checkboxesChecked},
+                success:function(result){
+//                    $("#modal_check_list").empty();
+//                    columns_data = JSON.parse(result)
+                    console.log(result);
+                    var bar_style = $('#modal_bar_chart').attr('style');
+                    var pie_style = $('#modal_pie_chart').attr('style');
+                    var line_style = $('#modal_line_chart').attr('style');
+                    var table_style = $('#modal_table_chart').attr('style');
+//                    console.log('qqw');
+//                    console.log($('#modal_bar_chart').css());
+//                    console.log('qqe');
+//                    console.log($('#modal_bar_chart').css('border'));
+//                    console.log('qqr');
+                    var options = {
+                        cellHeight: 'auto',
+                        verticalMargin: '1em',
+                        alwaysShowResizeHandle: false,
+                        resizable: {
+                            handles: 'e, se, s, sw, w'
+                        },
+                        animate: true
+                    };
+                    $('.grid-stack').gridstack(options);
+
+                    if( bar_style.indexOf('green') > -1 ) {
+
+                        // Bar Chart
+                        var ctx1 = document.getElementById("myBarChart").getContext('2d');
+                        var myChart = new Chart(ctx1, {
+                            type: 'bar',
+                            data: {
+                                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                                datasets: [{
+                                    //label: '# of Votes',
+                                    data: [12, 19, 3, 5, 2, 3],
+                                    backgroundColor: [
+                                        'rgba(255, 99, 132, 1)',
+                                        'rgba(54, 162, 235, 1)',
+                                        'rgba(255, 206, 86, 1)',
+                                        'rgba(75, 192, 192, 1)',
+                                        'rgba(153, 102, 255, 1)',
+                                        'rgba(255, 159, 64, 1)'
+                                    ],
+                                    borderColor: [
+                                        'rgba(255,99,132,1)',
+                                        'rgba(54, 162, 235, 1)',
+                                        'rgba(255, 206, 86, 1)',
+                                        'rgba(75, 192, 192, 1)',
+                                        'rgba(153, 102, 255, 1)',
+                                        'rgba(255, 159, 64, 1)'
+                                    ],
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                title: {
+                                    display: true,
+                                    text: 'Custom Chart Title',
+                                    fontSize: 18
+                                },
+                                scales: {
+                                    yAxes: [{
+                                        ticks: {
+                                            min: 0,
+                                        }
+                                    }]
+                                }
+                            }
+                        });
+                    }
+                    if( pie_style.indexOf('green') > -1 ) {
+                        // Doughnut Chart
+                        var ctx3 = document.getElementById("myDoughnutChart").getContext('2d');
+                        var myDoughnutChart = new Chart(ctx3, {
+                            type: 'doughnut',
+                            data: {
+                                datasets: [{
+                                    data: [10, 20, 30],
+                                    backgroundColor: [
+                                        '#ff3d67',
+                                        '#22cece',
+                                        '#011f33'
+                                    ]
+                                }],
+
+                                // These labels appear in the legend and in the tooltips when hovering different arcs
+                                labels: [
+                                    'Red',
+                                    'Yellow',
+                                    'Blue'
+                                ]
+                            },
+                            options: {
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                title: {
+                                    display: true,
+                                    text: 'Custom Chart Title',
+                                    fontSize: 18
+                                }
+                            }
+                        });
+                    }
+                    if( line_style.indexOf('green') > -1 ) {
+                        // Line Chart
+                        var ctx2 = document.getElementById("myLineChart").getContext('2d');
+                        var myLineChart = new Chart(ctx2, {
+                            type: 'line',
+                            data: {"labels":["January","February","March","April","May","June","July"],"datasets":[{"label":"My First Dataset","data":[65,59,80,81,56,55,40],"fill":false,"borderColor":"rgb(75, 192, 192)","lineTension":0.1}]},
+                            options: {
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                title: {
+                                    display: true,
+                                    text: 'Custom Chart Title',
+                                    fontSize: 18
+                                },
+                                scales: {
+                                    yAxes: [{
+                                        ticks: {
+                                            min: 0,
+                                        }
+                                    }]
+                                }
+                            }
+                        });
+
+                    }
+                    if( table_style.indexOf('green') > -1 ) {
+                        // Area Chart
+                        var ctx4 = document.getElementById("myAreaChart").getContext('2d');
+                        var myAreaChart = new Chart(ctx4, {
+                            type: 'radar',
+                            data: {"labels":["Eating","Drinking","Sleeping","Designing","Coding","Cycling","Running"],"datasets":[{"label":"My First Dataset","data":[65,59,90,81,56,55,40],"fill":true,"backgroundColor":"rgba(255, 99, 132, 0.2)","borderColor":"rgb(255, 99, 132)","pointBackgroundColor":"rgb(255, 99, 132)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgb(255, 99, 132)"},{"label":"My Second Dataset","data":[28,48,40,19,96,27,100],"fill":true,"backgroundColor":"rgba(54, 162, 235, 0.2)","borderColor":"rgb(54, 162, 235)","pointBackgroundColor":"rgb(54, 162, 235)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgb(54, 162, 235)"}]},
+                            options: {
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                title: {
+                                    display: true,
+                                    text: 'Custom Chart Title',
+                                    fontSize: 18
+                                }
+                            }
+                        });
+                    }
+
+//                    for(index in columns_data){
+////                        console.log(columns_data[index]);
+////                        console.log(columns_data[index]['Type']);
+//                        if(columns_data[index]['Type'].indexOf('int(') !== -1){
+//                            $("#modal_check_list").loadTemplate($("#number_item"),{},{ append: true } );
+//                            $('#number_item_label').after(columns_data[index]['Field']);
+//                            $('#number_item_label').attr('name',columns_data[index]['Field']);
+//                            $('#number_item_label').attr('id',columns_data[index]['Field']);
+//                        }
+//                        if(columns_data[index]['Type'].indexOf('varchar(') !== -1){
+//                            $("#modal_check_list").loadTemplate($("#text_item"),{},{ append: true } );
+//                            $('#text_item_label').after(columns_data[index]['Field']);
+//                            $('#text_item_label').attr('name',columns_data[index]['Field']);
+//                            $('#text_item_label').attr('id',columns_data[index]['Field']);
+//                        }
+//                        if(columns_data[index]['Type'].indexOf('timestamp') !== -1 ){
+//                            $("#modal_check_list").loadTemplate($("#date_item"),{},{ append: true } );
+//                            $('#date_item_label').after(columns_data[index]['Field']);
+//                            $('#date_item_label').attr('name',columns_data[index]['Field']);
+//                            $('#date_item_label').attr('id',columns_data[index]['Field']);
+//                        }
+//                    }
+//
+//
+////                    $("#modal_check_list").loadTemplate($("#text_item"),{},{ append: true } );
+//                    $("select, input:checkbox, input:radio, input:file").uniform();
+//                    filterenable1();
+////                    $('#store_0').attr('name','store_'+script_counter);
+////                    $('#store_0').attr('id','store_'+script_counter);
+////                    $('#quantity_0').attr('name','quantity_'+script_counter);
+////                    $('#quantity_0').attr('id','quantity_'+script_counter);
+////                    $('#price_0').attr('name','price_'+script_counter);
+////                    $('#price_0').attr('id','price_'+script_counter);
+////                    $('#item_cost_id_0').attr('name','item_cost_id_'+script_counter);
+////                    $('#item_cost_id_0').attr('id','item_cost_id_'+script_counter);
+////                    $('#item_price_0').attr('name','item_price_'+script_counter);
+////                    $('#item_price_0').attr('id','item_price_'+script_counter);
+//                    console.log("updated");
+                }
+            })
+        }

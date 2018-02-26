@@ -1,0 +1,22 @@
+/* === 320px To 768px === */
+/* === Custome, iPhone Retina === */
+/* === Mobile Phones === */
+.interview-assesment-section .tabbable-custom > .nav-tabs > li {
+  width: 33.33333% !important; }
+.interview-assesment-section .select2-container {
+  z-index: 1000 !important; }
+
+.datetimepicker .active,
+.datetimepicker .active:hover {
+  background-color: #1BBC9B !important; }
+
+.interview-assesment-section .competncy-row {
+  border-bottom: 1px dashed #C9C9C9; }
+  .interview-assesment-section .competncy-row:last-child {
+    border-bottom: none; }
+  .interview-assesment-section .competncy-row h4 {
+    color: #8e8d8d; }
+  .interview-assesment-section .competncy-row .row {
+    margin-bottom: 17px; }
+
+/*# sourceMappingURL=create.css.map */

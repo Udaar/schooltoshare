@@ -1,0 +1,30 @@
+@import "../../../partials/_Variables";
+@import "../../../partials/_remodal";
+
+.report-create-section{
+    .graph{
+        padding: 10px;
+        .table-colmuns{
+            .checkbox-list{
+                label{
+                    cursor: pointer;
+                    margin-bottom: 0;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+    .chart-item{
+        border: 1px solid $ifm-light-grey;
+        cursor: pointer;
+        margin-left: 10px;
+        padding: 5px;
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+    .filter-add{
+        cursor: pointer;
+        
+    }
+}

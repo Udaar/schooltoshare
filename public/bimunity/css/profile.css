@@ -1,0 +1,255 @@
+/* === Global === */
+a{
+    color: #337ab7;
+}
+
+/* === GRID SYSTEM === */
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+    .col-sm-15 {
+            width: 20%;
+            float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+/* ========================================= Company Profile Style ========================================= */
+
+/* === Name & Location === */
+.name-location{
+    padding-top: 10px;
+}
+
+/* === Company Info === */
+.right .company-info{
+    margin-bottom: 25px;
+}
+.right .company-info img{
+    width: 100%;
+    height: auto;
+}
+.company-info .rate{
+    margin-top: 15px;
+}
+.company-info .see-rates a{
+    color: #68c0d8;
+}
+.company-info .rate-group .rate-yellow,
+.company-reviews .rate-group .rate-yellow{
+    color: #FFFF00;
+    font-size: 30px;
+}
+.company-info .rate-group .rate-yellow:before,
+.company-reviews .rate-group .rate-yellow:before{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: orange;
+    -moz-text-stroke-width: 1px;
+    -moz-text-stroke-color: orange;
+    -o-text-stroke-width: 1px;
+    -o-text-stroke-color: orange;
+    -ms-text-stroke-width: 1px;
+    -ms-text-stroke-color: orange;
+}
+.company-info .rate-value{
+    color: #777;
+    font-size: 20px;
+}
+
+/* === Services === */
+.services h4,
+.current_projects h4,
+.image-gallery h4,
+.facilities h4,
+.events h4{
+    color: #777!important;
+    padding: 15px 0;
+    margin-bottom: 0;
+}
+.services .mt-element-ribbon{
+    padding: 10px 0 10px 0px;
+    font-size: 11px;
+}
+.services .mt-element-ribbon .ribbon{
+    position: static;
+    word-break: break-all;
+}
+.services .mt-element-ribbon p{
+    padding: 0 8px;
+    word-break: break-all;
+}
+
+/* === Current Projects === */
+.current_projects{
+    margin-bottom: 20px;
+}
+.current_projects .project-item img{
+    width: 100%;
+    height: 130px;
+}
+.current_projects .project-item .project-name{
+    color: #3e566e;
+    font-size: 12px;
+}
+
+/* === Company Reviews === */
+.company-reviews .mt-comments .mt-comment{
+    padding: 0;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+.company-reviews .rate-group,
+.company-reviews .rate-value{
+    margin-left: 10px;
+}
+.company-reviews .rate-group .rate-yellow{
+    font-size: 15px;
+}
+.company-reviews .rate-value{
+    color: #777;
+}
+
+/* === Company Follow === */
+.company-follow{
+    margin-top: 30px;
+    text-align: center;
+}
+.company-follow .button{
+    background-color: #5B9BD5;
+}
+.company-follow .button:focus{
+    color: #FFFFFF;
+}
+
+/* ========================================= Property Profile Style ========================================= */
+
+/* === Property Info === */
+.right .property-info{
+    margin-bottom: 25px;
+}
+.right .property-info img{
+    width: 100%;
+    height: auto;
+}
+.property-info .rate{
+    margin-top: 15px;
+}
+.property-info .see-rates a{
+    color: #68c0d8;
+}
+.property-info .rate-group .rate-grey,
+.property-reviews .rate-group .rate-grey,
+.property-info .rate-group .rate-yellow,
+.property-reviews .rate-group .rate-yellow{
+    font-size: 30px;
+}
+
+.property-info .rate-group .rate-yellow,
+.property-reviews .rate-group .rate-yellow{
+    color: #FFFF00;
+}
+.property-info .rate-group .rate-grey,
+.property-reviews .rate-group .rate-grey{
+    color: #FFFFFF;
+}
+.property-info .rate-group .rate-yellow:before,
+.property-reviews .rate-group .rate-yellow:before,
+.property-info .rate-group .rate-grey:before,
+.property-reviews .rate-group .rate-grey:before{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: orange;
+    -moz-text-stroke-width: 1px;
+    -moz-text-stroke-color: orange;
+    -o-text-stroke-width: 1px;
+    -o-text-stroke-color: orange;
+    -ms-text-stroke-width: 1px;
+    -ms-text-stroke-color: orange;
+}
+.property-info .rate-value{
+    color: #777;
+    font-size: 20px;
+}
+
+/* === Property Reviews === */
+.property-reviews .mt-comments .mt-comment{
+    padding: 0;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+.property-reviews .rate-group,
+.property-reviews .rate-value{
+    margin-left: 10px;
+}
+.property-reviews .rate-group .rate-yellow,
+.property-reviews .rate-group .rate-grey{
+    font-size: 15px;
+}
+.property-reviews .rate-value{
+    color: #777;
+}
+
+/* === Property Follow === */
+.property-follow{
+    margin-top: 30px;
+    text-align: center;
+}
+.property-follow .button{
+    background-color: #5B9BD5;
+}
+.property-follow .button:focus{
+    color: #FFFFFF;
+}
+
+/* === Image Gallery === */
+.image-gallery{
+    margin-bottom: 20px;
+}
+.image-gallery .gallery-item img{
+    width: 100%;
+    height: 130px;
+}
+.image-gallery .gallery-item .project-name{
+    color: #3e566e;
+    font-size: 12px;
+}
+
+/* === Facilities === */
+.facilities .pricing-content-1 .price-table-head h2{
+    color: #FFFFFF!important;
+}
+
+/* === Events === */
+.events{
+    margin-bottom: 20px;
+}
+.events .mt-element-ribbon{
+    padding: 10px 0 10px 8px;
+    font-size: 11px;
+}
+.events .mt-element-ribbon .ribbon{
+    top: 10px;
+}

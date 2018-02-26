@@ -1,0 +1,14 @@
+@import "partials/_Variables";
+
+/* === Filter === */
+@media only screen and (max-width: 800px){
+	.ifm-filter{
+		.form-control{
+			margin-bottom: $ifm-margin-sm !important;
+		}
+		.col-xs-12{
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+}

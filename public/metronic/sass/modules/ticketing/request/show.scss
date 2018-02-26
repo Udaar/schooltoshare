@@ -1,0 +1,55 @@
+@import '../../../partials/_Variables';
+
+:root:root:root .table-bordered.report > tbody > tr:first-child > td,
+:root:root:root .table-bordered.report > tbody > tr > td,
+.table-bordered thead > tr > th:last-child{
+    border-color: $ifm-light-grey!important;
+    color: $ifm-grey;
+    padding: 5px;
+}
+:root:root:root .table-bordered.report > tbody > tr > td{
+    padding: 5px 10px;
+    &.title-2{
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+.tr.action td:nth-child(n+2){
+    border-right: 1px solid $ifm-light-grey;
+}
+
+@media print {
+
+    @page { margin: 0; }
+
+    body { margin: 1.6cm; }
+
+    .print-btn{
+        display: none;
+    }
+
+    .table-bordered td,
+    .table-bordered th{
+        border: 1px solid $ifm-light-grey!important;
+    }
+
+    :root:root:root .table-bordered.report > tbody > tr:first-child > td,
+    :root:root:root .table-bordered.report > tbody > tr > td{
+        border-color: $ifm-light-grey!important;
+        color: $ifm-grey;
+        padding: 5px;
+    }
+    :root:root:root .table-bordered.report > tbody > tr > td{
+        padding: 5px 10px;
+        &.title-2{
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+
+    .tr.action td:nth-child(n+2){
+        border-right: 1px solid $ifm-light-grey;
+    }
+
+}

@@ -1,0 +1,11 @@
+{
+    "name": "bimmunity/report_generator",
+    "description": "package to report_generator",
+    "type": "project",
+    "license": "any",
+    "authors": [{
+        "name": "Hisham Atef",
+        "email": "eng.hishamatef@gmail.com"
+    }],
+    "require": {}
+}

@@ -1,0 +1,99 @@
+/* === PAGINATION === */
+%pagination_1{
+	border-color: $ifm-light-grey;
+	color: $ifm-light-grey;
+	@include ifmTransition(all 0.6s ease-in-out);
+}
+%pagination_2{
+	background-color: $ifm-grey;
+	border-color: $ifm-grey;
+}
+%pagination_3{
+	border-color: $ifm-grey;
+	color: $ifm-grey;
+}
+.pagination{
+	>li{
+		>a{
+			@extend %pagination_1;
+		}
+	}
+}
+.pagination{
+	>li{
+		>span{
+			@extend %pagination_1;
+		}
+	}
+}
+.pagination{
+	>li{
+		>a:focus{
+			@extend %pagination_3;
+		}
+	}
+}
+.pagination{
+	>li{
+		>a:hover{
+			@extend %pagination_3;
+		}
+	}
+}
+.pagination{
+	>li{
+		>span:focus{
+			@extend %pagination_3;
+		}
+	}
+}
+.pagination{
+	>li{
+		>span:hover{
+			@extend %pagination_3;
+		}
+	}
+}
+.pagination{
+	>.active{
+		>a{
+			@extend %pagination_2;
+		}
+	}
+}
+.pagination{
+	>.active{
+		>a:focus{
+			@extend %pagination_2;
+		}
+	}
+}
+.pagination{
+	>.active{
+		>a:hover{
+			@extend %pagination_2;
+		}
+	}
+}
+.pagination{
+	>.active{
+		>span{
+			@extend %pagination_2;
+		}
+	}
+}
+.pagination{
+	>.active{
+		>span:hover{
+			@extend %pagination_2;
+		}
+	}
+}
+.pagination{
+	>.active{
+		>span:focus{
+			@extend %pagination_2;
+		}
+	}
+}
+

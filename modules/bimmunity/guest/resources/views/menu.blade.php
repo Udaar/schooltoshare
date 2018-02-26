@@ -1,0 +1,46 @@
+<ul>
+    <li class="mega-menu">
+        <a href="/users/{{\Auth::user()->id}}" class="nav-link avatar">
+            <img src="/bimunity/images/team3.jpg" alt="">
+            <span>Mohammed Galal</span>
+        </a>
+    </li>
+    <li class="mega-menu">
+        <a href="/logout" class="nav-link avatar">
+            <i class="icon-logout"></i>
+        </a>
+    </li>
+    <!-- <li class="current">
+        <a class="nav-link" data-scroll href="#header"><div>Home</div></a>
+    </li>
+    <li class="mega-menu">
+        <a class="nav-link" data-scroll href="#logic"><div>Our Logic</div></a>
+    </li>
+    <li class="mega-menu">
+        <a class="nav-link" data-scroll href="#platform"><div>Platforms</div></a>
+    </li>
+    <li class="mega-menu">
+        <a class="nav-link" data-scroll href="#prototyps"><div>Prototypes</div></a>
+    </li>
+    <li class="mega-menu">
+        <a class="nav-link" data-scroll href="#features"><div>Features</div></a>
+    </li>
+    <li class="mega-menu">
+        <a class="nav-link" data-scroll href="#users"><div>Users</div></a>
+    </li>
+    <li class="mega-menu">
+        <a class="nav-link" data-scroll href="#contact"><div>Contact US</div></a>
+    </li> -->
+    {{--@if(\Auth::user()) --}}
+        {{--<li><a href="/login" class="dashboard" style="color:#FFFFFF;padding-right:15px;margin-left:15px;background-color:#A7A8AA"><i class="icon-speedometer"></i> Dashboard</a></li>--}}
+    {{--@else
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle login" style="color:#FFFFFF;padding-right:15px;margin-left:15px;background-color:#68c0d8" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-power-off"></i> Login <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="/login" class="nomargin"><i class="fa fa-user"></i> Login</a></li>
+                <li><a href="/register" class="nomargin"><i class="fa fa-pencil"></i> Register</a></li>
+                <li><a href="/guest" class="nomargin"><i class="fa fa-pencil"></i> Guest</a></li>
+            </ul>
+        </li>
+    @endif--}}
+</ul>

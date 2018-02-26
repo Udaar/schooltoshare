@@ -1,0 +1,10 @@
+.profile-img.fileinput-exists{
+    span.fileinput-exists,
+    a.fileinput-exists{
+        display: none;
+    }
+    .btn-select-img{
+        display: block!important;
+        color: red;
+    }
+}

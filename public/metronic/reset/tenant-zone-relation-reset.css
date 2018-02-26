@@ -1,0 +1,10 @@
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .tenant-unit-relation-section .ifm-title-bar h3 {
+    font-size: 1em !important; }
+
+  .tenant-unit-relation-section .ifm-title-bar .btn {
+    padding: 5px;
+    font-size: 1em;
+    top: -5px; } }
+
+/*# sourceMappingURL=tenant-zone-relation-reset.css.map */

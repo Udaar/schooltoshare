@@ -1,0 +1,58 @@
+.taxonomy-tab a {
+  background-color: transparent; }
+
+.nav-tabs {
+  list-style: none;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative; }
+  .nav-tabs > li {
+    display: inline-block;
+    float: none;
+    width: 20%; }
+    .nav-tabs > li.active {
+      border-bottom: 3px solid #1BBC9B; }
+
+.tab-content .item-label {
+  color: #666;
+  font-weight: 100; }
+.tab-content .item-value.description {
+  line-height: 1.7; }
+
+/* === Start Mobile And Tablet === */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .nav-tabs > li {
+    width: 60%; }
+    .nav-tabs > li a {
+      font-size: 12px; }
+      .nav-tabs > li a img {
+        margin-bottom: 5px; }
+
+  .tab-content .item-label {
+    font-size: 12px; }
+  .tab-content .item-value {
+    font-size: 12px; }
+    .tab-content .item-value.description {
+      font-size: 12px; } }
+/* === End Mobile And Tablet === */
+/* === Start Small Screens === */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .nav-tabs > li {
+    width: 40%; }
+    .nav-tabs > li a {
+      font-size: 14px; }
+      .nav-tabs > li a img {
+        margin-bottom: 5px; } }
+/* === End Small Screens === */
+/* === Start Medium Screens === */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .nav-tabs > li {
+    width: 30%; }
+    .nav-tabs > li a img {
+      margin-bottom: 5px; } }
+/* === End Medium Screens === */
+/* === Start Large Screens === */
+/* === End Large Screens === */
+
+/*# sourceMappingURL=show.css.map */

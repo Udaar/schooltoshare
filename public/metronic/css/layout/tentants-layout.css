@@ -1,0 +1,151 @@
+/* Start Box-Model Reset */
+    .page-sidebar .page-sidebar-menu > li > a{
+        border-top: none;
+    }
+
+    .portlet .media{
+        padding: 10px;
+    }
+
+    .media, .media-body{
+      overflow: visible;
+    }
+
+    .portlet .offer{
+        margin-bottom: 30px;
+        padding: 10px;
+    }
+
+    .portlet .media .media-heading{
+        margin-bottom: 20px;
+    }
+
+    .events .feed li{
+        margin-bottom: 10px;
+    }
+
+    .offer .media .tag{
+        float: right;
+    }
+
+    .portlet.payments.portlet-fit > .portlet-title{
+        padding: 10px;
+        height: 20px;
+        margin-bottom: 0px;
+        border: none;
+    }
+
+    .portlet.payments.portlet-fit td a > i{
+        padding: 5px;
+    }
+
+    .payments.portlet.light.portlet-fit{
+        margin-top: 10px;
+    }
+
+    .payments .table.table-light > tbody > tr:last-child > td{
+        padding: 15px 5px;
+    }
+
+    .col-md-5{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .portlet.payments > .portlet-title > .caption{
+        padding: 0;
+        margin-left: 20px
+    }
+
+    .portlet.payments > .portlet-title > .caption i{
+        color: #9eacb4;
+    }
+
+    .portlet.images,.portlet.about{
+        height: 600px;
+    }
+
+    .ticketing.portlet.light > .portlet-title > .nav-tabs > li.issue > a,
+    .portlet .tag,
+    .portlet .media .tag,
+    .portlet .offer .tag{
+        display: inline-block;
+    }
+
+    .portlet .tag,
+    .portlet .media .tag,
+    .portlet .offer .tag{
+      padding: 10px;
+    }
+
+    .ticketing.portlet.light > .portlet-title > .nav-tabs > li.issue > a{
+      padding: 0;
+    }
+
+    .ticketing.portlet.light > .portlet-title > .nav-tabs > li.issue{
+        padding: 5px 10px;
+    }
+
+    .portlet > .portlet-body p{
+        margin: 5px;
+        font-weight: 100;
+    }
+
+    .ticketing .nav-tabs > li > a > .badge,
+    .work-orders .nav-tabs > li > a > .badge {
+        margin-top: -35px;
+        margin-left: -10px;
+    }
+
+    .ticketing.portlet.light{
+        padding: 12px 20px 25px 20px;
+    }
+
+    .ticketing .media{
+        padding: 20px;
+    }
+
+    .ticketing .media-heading span{
+        margin-right: 10px;
+    }
+
+    .work-orders.light > .portlet-title > .caption > .caption-subject{
+        padding: 15px 6px;
+    }
+
+    .work-orders.light > .portlet-title > .nav-tabs > li > a{
+        padding: 15px 7px;
+    }
+
+    .work-orders.portlet.light,
+    .work-orders.portlet .scroller,
+    .work-orders.portlet .slimScrollDiv
+    {
+        min-height: 650px !important;
+    }
+
+    .page-content-wrapper .page-content{
+        background-color: #f5f5f5;
+    }
+
+    .link-pills li{
+        text-align: center;
+        padding-top: 10px;
+        margin-right: 35px;
+    }
+
+    .link-pills li p{
+        margin: 0;
+    }
+
+    @media(max-width: 768px){
+        .portlet > .portlet-body p{
+            margin: 5px;
+        }
+
+        .portlet .media .tag{
+            padding: 5px 10px;
+            float: left;
+        }
+    }
+/* End Box-Model Reset */

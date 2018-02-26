@@ -1,0 +1,105 @@
+.tabbable-custom > .nav-tabs > li.active a, .tabbable-custom > .nav-tabs > li > a:hover {
+  color: #31C7B2; }
+
+.tabbable-custom > .nav-tabs > li, .taxonomy-tab a {
+  border: 1px solid rgba(40, 44, 42, 0.1); }
+
+.tabbable-custom > .tab-content, .list-group-item, .ifm-tab-add.form-control {
+  border: 1px solid rgba(40, 44, 42, 0.2); }
+
+.nav-tabs > li.active a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+  border: none;
+  border-right: 1px solid #ddd; }
+
+/* === Tabbable-custom === */
+.tabbable-custom {
+  width: 100%; }
+
+/* === Nav-tabs === */
+/* === Tab <li> === */
+.tabbable-custom > .nav-tabs > li {
+  margin-right: 0;
+  border-left-width: 0;
+  border-bottom-width: 0;
+  border-collapse: collapse;
+  width: 12.5%; }
+  .tabbable-custom > .nav-tabs > li.active {
+    border: 0;
+    border-top: 3px solid #31C7B2; }
+  .tabbable-custom > .nav-tabs > li:first-child {
+    border-left-width: 1px; }
+
+/* === Tab <a> === */
+.taxonomy-tab a {
+  background-color: rgba(40, 44, 42, 0.05);
+  color: #74777b;
+  padding: 15px 20px;
+  text-align: center;
+  -webkit-transition: color 0.1s !important;
+  -moz-transition: color 0.1s !important;
+  -o-transition: color 0.1s !important;
+  -ms-transition: color 0.1s !important;
+  transition: color 0.1s !important; }
+
+.tabbable-custom > .nav-tabs > li > a {
+  padding: 15px 19.5px;
+  line-height: 1;
+  font-size: 12.5px;
+  /* === Tab <i> === */ }
+  .tabbable-custom > .nav-tabs > li > a > .icon {
+    width: 100%;
+    margin: 0 auto 10px;
+    font-size: 20px; }
+
+/* === Tab Content === */
+.tabbable-custom > .tab-content {
+  padding: 0; }
+
+/* === Tab List Item === */
+.list-group-item {
+  color: #74777b; }
+
+.edit-tree-node {
+  color: #31C7B2; }
+
+.node-selected {
+  background-color: #31C7B2 !important; }
+
+.node-selected .edit-tree-node {
+  color: #fff; }
+
+/* === Add Category Button === */
+.ifm-tab-add {
+  height: 40.5px !important;
+  padding: 8px 15px !important;
+  overflow: hidden; }
+
+/* === Media Query === */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  /* === Small Tab Font Size === */
+  .tabbable-custom > .nav-tabs > li > a {
+    padding: 12px;
+    font-size: 11px; } }
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .input-group-lg > .form-control {
+    font-size: 14px !important; }
+
+  .tabbable-custom > .nav-tabs {
+    list-style: none;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative; }
+
+  .tabbable-custom > .nav-tabs > li {
+    display: inline-block;
+    width: 50%;
+    float: none;
+    margin: 0; }
+
+  .portlet.light {
+    padding: 10px; }
+    .portlet.light > .portlet-title > .caption > .caption-subject {
+      font-size: 15px; } }
+
+/*# sourceMappingURL=tabBased.css.map */

@@ -1,0 +1,8 @@
+// For Make Transition
+@mixin ifmTransition($transitions...) {
+	-webkit-transition: $transitions !important;
+	-moz-transition: $transitions !important;
+	-o-transition: $transitions !important;
+	-ms-transition: $transitions !important;
+	transition: $transitions !important;
+}

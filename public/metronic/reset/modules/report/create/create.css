@@ -1,0 +1,58 @@
+.remodal-wrapper {
+  z-index: 100003; }
+
+.remodal {
+  padding: 30px 20px;
+  text-align: left;
+  max-width: 600px; }
+  .remodal .remodal-close {
+    left: auto;
+    right: 0; }
+
+.remodal.confirmation {
+  max-width: 360px;
+  padding: 0; }
+  .remodal.confirmation .remodal-body {
+    padding: 15px; }
+    .remodal.confirmation .remodal-body .confirmation-message {
+      margin-bottom: 20px; }
+      .remodal.confirmation .remodal-body .confirmation-message i {
+        color: #EE4266;
+        font-size: 25px;
+        margin-top: 10px; }
+      .remodal.confirmation .remodal-body .confirmation-message span {
+        color: #222222;
+        padding-left: 22px; }
+  .remodal.confirmation .remodal-close {
+    color: #FFFFFF; }
+  .remodal.confirmation .remodal-head {
+    background-color: #EE4266;
+    color: #FFFFFF;
+    padding: 12px 15px; }
+    .remodal.confirmation .remodal-head h4 {
+      margin-bottom: 0 !important; }
+
+.remodal {
+  max-width: 800px !important; }
+
+.remodal-wrapper {
+  padding-top: 70px; }
+
+.popover {
+  top: 12.5px !important; }
+
+#title {
+  border-color: #566366; }
+
+.editable-buttons .btn {
+  padding: 2px 6px; }
+
+.editable-unsaved {
+  font-weight: 100 !important; }
+
+.report-top-bar {
+  padding: 15px; }
+  .report-top-bar .btn-group button {
+    margin-right: 10px; }
+
+/*# sourceMappingURL=create.css.map */

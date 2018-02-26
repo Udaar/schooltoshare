@@ -1,0 +1,28 @@
+@import '../../../partials/_Variables';
+@import '../../../partials/_Mixens';
+@import './partials/_all-media';
+
+.page-content-wrapper .page-content{
+    .timesheet-zone{
+        .timesheet-wrap{
+            .timesheet-item{
+                .timesheet-day{
+                    padding: 10px 0;
+                    border: 2px solid $ifm-light-grey;
+                    p{
+                        color: $ifm-grey;
+                        font-weight: 600;
+                        font-size: 20px;
+                    }
+                }
+                .timesheet-activity{
+                    padding: 10px 15px;
+                    border: 2px solid $ifm-light-grey;
+                    .row{
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

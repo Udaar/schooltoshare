@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,4DAA4D;EACxD,YAAY,EAAE,OAAO;;AAEzB,8DAA8D;EAC1D,UAAU,EAAE,sBAAqB;;AAErC,sEAAsE;EAClE,OAAO,EAAE,mBAAkB;;AAE/B,yCAAyC;EACrC,aAAa,EAAE,YAAW;;AAE9B,oEAAoE;EAChE,QAAQ,EAAE,OAAO;EACjB,WAAW,EAAE,IAAI;;AAErB,kDAAkD;EAC9C,SAAS,EAAE,KAAK;;AAEpB,qEAAqE;EACjE,KAAK,EAAE,OAAO;EACd,WAAW,EAAE,GAAG",
+"sources": ["../sass/jquery-comments-reset.scss"],
+"names": [],
+"file": "jquery-comments-reset.css"
+}

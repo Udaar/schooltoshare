@@ -1,0 +1,99 @@
+/* === Filter === */
+@media only screen and (max-width: 800px) {
+  .ifm-filter .form-control {
+    margin-bottom: 10px !important; }
+  .ifm-filter .col-xs-12 {
+    padding-left: 10px;
+    padding-right: 10px; } }
+/* === TABLE STYLE === */
+.no-more-tables .table-condensed > thead > tr > th {
+  padding: 10px; }
+.no-more-tables > .table-bordered > thead > tr > th {
+  border-bottom-width: 0;
+  border-left: 1px solid #c9c9c9;
+  border-top: 1px solid #c9c9c9;
+  text-align: center; }
+  .no-more-tables > .table-bordered > thead > tr > th:last-child {
+    border-right: 1px solid #c9c9c9; }
+.no-more-tables > .table-bordered > tbody > tr > td {
+  padding: 5px;
+  text-align: center;
+  border-color: #C9C9C9;
+  color: #566366; }
+.no-more-tables .btn-group .ifm-btn-default:hover {
+  background-color: #C9C9C9 !important; }
+
+/* === TABLE MEDIA QUERY */
+@media screen and (min-width: 320px) and (max-width: 1200px) {
+  .no-more-tables tr, .no-more-tables td {
+    display: block; }
+
+  .no-more-tables thead tr, .no-more-tables td:before {
+    position: absolute; }
+
+  .no-more-tables table.table-bordered {
+    border-left: 1px solid #C9C9C9 !important; }
+    .no-more-tables table.table-bordered > tbody tr td {
+      padding: 5px;
+      font-size: 12px;
+      text-align: right; }
+  .no-more-tables table.col-xs-12 {
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
+  .no-more-tables thead tr {
+    top: -9999px;
+    left: -9999px; }
+  .no-more-tables tr {
+    border: 1px solid #CCCCCC; }
+  .no-more-tables td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50% !important;
+    white-space: normal;
+    text-align: left; }
+    .no-more-tables td:before {
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      text-align: left;
+      font-weight: bold;
+      content: attr(data-title); }
+    .no-more-tables td > .table-paragraph {
+      width: 150px !important; } }
+/* === PAGINATION === */
+.pagination > li > a, .pagination > li > span {
+  border-color: #C9C9C9;
+  color: #C9C9C9;
+  -webkit-transition: all 0.6s ease-in-out !important;
+  -moz-transition: all 0.6s ease-in-out !important;
+  -o-transition: all 0.6s ease-in-out !important;
+  -ms-transition: all 0.6s ease-in-out !important;
+  transition: all 0.6s ease-in-out !important; }
+
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+  background-color: #566366;
+  border-color: #566366; }
+
+.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover {
+  border-color: #566366;
+  color: #566366; }
+
+/* === BUTTON === */
+.btn-group a, .btn-group button {
+  padding: 5px; }
+
+.btn-group a:first-child {
+  margin-right: 3px; }
+
+/* === BUTTON MEDIA QUERY === */
+@media only screen and (max-width: 800px) {
+  .btn-group a, .btn-group button {
+    padding: 3px 4px; } }
+@media only screen and (max-width: 767px) {
+  .zone-units {
+    padding: 10px !important; } }
+
+/*# sourceMappingURL=tabular.css.map */

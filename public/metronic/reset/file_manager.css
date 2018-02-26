@@ -1,0 +1,167 @@
+.page-sidebar {
+  z-index: 4; }
+
+.page-content-wrapper .page-content {
+  padding: 0 !important; }
+
+.page-header-fixed .page-container {
+  margin-top: 34px;
+  overflow-x: hidden; }
+
+.ifm-filemanager {
+  position: relative; }
+  .ifm-filemanager header {
+    background-image: url("/metronic/reset/images/dark_embroidery.png");
+    min-height: 200px;
+    position: relative; }
+  .ifm-filemanager .ifm-btn-group {
+    min-height: 30px;
+    min-width: 100px;
+    padding: 0 10px;
+    border-radius: 4px !important; }
+    .ifm-filemanager .ifm-btn-group .ifm-folder-name {
+      margin-top: 4px;
+      color: #566366;
+      background-color: transparent; }
+    .ifm-filemanager .ifm-btn-group .ifm-folder-dropdown {
+      margin-top: 12px;
+      color: #566366;
+      float: right;
+      background-color: transparent; }
+      .ifm-filemanager .ifm-btn-group .ifm-folder-dropdown:focus {
+        background: transparent; }
+    .ifm-filemanager .ifm-btn-group .dropdown-menu {
+      box-shadow: none; }
+  .ifm-filemanager .ifm-file-menu {
+    list-style: none;
+    margin: 0;
+    width: 25%;
+    min-height: 100%;
+    position: absolute;
+    left: -102%;
+    top: 0;
+    z-index: 6;
+    background-color: #FFFFFF;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    transition: left 0.2s ease-in-out;
+    overflow-x: hidden;
+    overflow-y: auto; }
+  .ifm-filemanager .ifm-file-actions {
+    padding: 10px 7px 10px 0; }
+    .ifm-filemanager .ifm-file-actions .right-buttons button {
+      margin-right: 5px; }
+  .ifm-filemanager .ifm-file-middle {
+    position: absolute;
+    top: 85px;
+    left: 115px; }
+    .ifm-filemanager .ifm-file-middle h1 {
+      color: #FFFFFF; }
+  .ifm-filemanager .ifm-file-bottom {
+    position: absolute;
+    z-index: 5;
+    left: 50px;
+    bottom: -30px; }
+    .ifm-filemanager .ifm-file-bottom button {
+      width: 55px;
+      height: 55px; }
+      .ifm-filemanager .ifm-file-bottom button i {
+        line-height: 10px;
+        text-indent: -1px;
+        font-size: 22px; }
+  .ifm-filemanager .ifm-menu-cloas {
+    cursor: pointer; }
+
+.nav-trigger {
+  position: absolute;
+  clip: rect(0, 0, 0, 0); }
+
+label[for="nav-trigger"] {
+  z-index: 2;
+  padding: 6px 12px;
+  background-color: #DDDDDD; }
+  label[for="nav-trigger"] i {
+    color: #333;
+    font-size: 20px;
+    text-indent: -6px;
+    line-height: 19px !important; }
+
+label[for="nav-trigger"] {
+  /* ... previous styles here... */
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  color: #ffffff; }
+
+.nav-trigger:checked + label {
+  left: 215px; }
+
+div.checker {
+  position: absolute;
+  left: -500px; }
+
+.ifm-menu-close {
+  color: #566366; }
+
+#tree1 li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #C9C9C9; }
+  #tree1 li:first-child {
+    padding-top: 0; }
+  #tree1 li:last-child {
+    border-bottom: 0; }
+  #tree1 li a {
+    color: #566366; }
+  #tree1 li i {
+    color: #1BBC9B; }
+#tree1 hr {
+  margin: 10px 0; }
+
+#content {
+  overflow-x: hidden;
+  margin-top: 60px;
+  padding: 0 20px; }
+  #content .thumbnail {
+    padding: 0;
+    border: none;
+    background-color: transparent; }
+
+@media screen and (max-width: 768px) {
+  .ifm-filemanager .ifm-file-menu {
+    width: 100%; }
+
+  .left-button button {
+    margin-left: 0 !important; }
+
+  .ifm-filemanager .nav > li {
+    display: inline; }
+  .ifm-filemanager .navbar-nav {
+    margin: 0; }
+  .ifm-filemanager .ifm-file-middle {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0; }
+    .ifm-filemanager .ifm-file-middle h1 {
+      font-size: 30px;
+      width: 100%; }
+  .ifm-filemanager .ifm-file-bottom {
+    left: 20;
+    bottom: -20px; }
+    .ifm-filemanager .ifm-file-bottom button {
+      width: 40px;
+      height: 40px; }
+  .ifm-filemanager .ifm-file-actions {
+    padding-right: 0; }
+    .ifm-filemanager .ifm-file-actions .right-buttons button {
+      margin-right: 0; } }
+.ifm-files-content .folder-row, .ifm-files-content .img-row {
+  margin-bottom: 20px; }
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .ifm-filemanager .ifm-file-actions {
+    margin-top: 10px; } }
+
+/*# sourceMappingURL=file_manager.css.map */

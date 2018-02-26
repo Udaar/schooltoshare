@@ -1,0 +1,72 @@
+@import "partials/_Variables.scss";
+body{
+	overflow-x: hidden;
+}
+/* === Tab <li> === */
+.tabbable-custom{
+	>.nav-tabs{
+		>li{
+			width: 17%;
+		}
+	}
+	.show-unit-tab-pane{
+		>.portlet.light{
+			padding: 0 10px 0;
+			>.portlet-title{
+				padding: 10px 0;
+			}
+		}
+		>.portlet{
+			>.portlet-title{
+				margin-bottom: 0;
+			}
+			>.portlet-body{
+				padding-top: 0;
+				p{
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+/* === Info-section === */
+.info-section{
+	.info-wrapper{
+		border-bottom: none;
+	}
+}
+
+/* === Select 2 === */
+.select2-container{
+	width: 100%!important;
+}
+.input-group-btn{
+	.btn.default:not(.btn-outline){
+		border-color: #c2cad8;
+	}
+}
+
+/* === Media Query === */
+@media screen and (min-width: $screen-xxs) and (max-width: $screen-sm){
+	.tabbable-custom{
+		>.nav-tabs{
+			>li{
+				display: inline-block;
+				width: 50%;
+				float: none;
+				margin: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $screen-lg){
+	/* === Add Equipment === */
+	.show-unit-equipments-add [class*=' col-']{
+		margin-bottom: 10px;
+	}
+	.add-equipment{
+		float: left!important;
+	}
+}

@@ -1,0 +1,65 @@
+/* === Info-section === */
+.info-section {
+  height: 100%;
+  padding: 10px;
+  margin-bottom: 20px; }
+  .info-section .info-wrapper {
+    border-bottom: 1px solid #ccc; }
+  .info-section .info-box .media {
+    overflow: visible; }
+    .info-section .info-box .media .fa-stack {
+      margin-top: 8px !important; }
+  .info-section .info-box .info-img {
+    position: relative;
+    width: 100%;
+    overflow: hidden; }
+    .info-section .info-box .info-img > img {
+      display: block;
+      width: 100%;
+      height: auto; }
+    .info-section .info-box .info-img > a {
+      position: absolute;
+      top: 0;
+      right: 0; }
+      > .info-section .info-box .info-img > a:focus {
+        color: #FFFFFF; }
+  .info-section .info-box .info-details {
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none; }
+    .info-section .info-box .info-details:hover {
+      color: #707B88; }
+  .info-section .info-box .info-more-details .fa-stack {
+    margin-top: 20px; }
+  .info-section .info-action {
+    margin-top: 20px; }
+
+/* === Info-map === */
+.info-map {
+  height: 300px;
+  width: 100%; }
+
+/* === Info Item === */
+.info-item {
+  padding: 15px 15px 0; }
+
+/* === Mobile Media Queries === */
+@media (max-width: 768px) {
+  .info-section .info-box .info-details span, .info-section .info-box .info-address {
+    font-size: 14px;
+    line-height: 20px; }
+
+  .page-content-wrapper .page-content {
+    padding: 0 !important; }
+
+  .info-item:last-child {
+    padding-bottom: 15px; }
+
+  .info-section .info-box .info-item h4.font-lg {
+    display: inline-block;
+    font-size: 15px;
+    margin: 5px 0; }
+  .info-section .info-box .col-xs-12.no-padding-xs {
+    padding: 0 !important; } }
+
+/*# sourceMappingURL=view_info.css.map */

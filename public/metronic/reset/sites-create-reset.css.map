@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,gBAAgB;EACZ,MAAM,EAAE,4BAAoC;;AAGhD,SAAS;EACL,KAAK,ECJE,OAAO",
+"sources": ["../sass/sites-create-reset.scss","../sass/partials/_Variables.scss"],
+"names": [],
+"file": "sites-create-reset.css"
+}

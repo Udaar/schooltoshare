@@ -1,0 +1,86 @@
+/* === Global === */
+body{
+    color: #FFFFFF;
+}
+@media (min-width: 1200px) {
+    .container{
+        width:926px;
+    }
+}
+
+/* === Content Wrap === */
+.content-wrap{
+    background-image: url('../images/poster.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+}
+
+/* === Property Registeration Logo === */
+.content-wrap .property-registeration .logo{
+    margin-bottom: 60px;
+    padding-left: 25px;
+    padding-top: 0px;
+    width: 250px;
+}
+
+/* === Form Title === */
+.content-wrap .property-registeration .form-title{
+    background-color: #3B3838;
+    color: #92D050;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+}
+
+/* === Form === */
+.content-wrap .property-registeration .form-wrap{
+    margin-bottom: 30px;
+}
+.content-wrap .property-registeration .form-wrap label,
+.content-wrap .property-registeration .form-wrap input{
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    font-weight: 500;
+}
+.content-wrap .property-registeration .form-wrap label{
+    color: rgba(0, 0, 0, 0.8);
+    cursor: context-menu;
+    margin-bottom: 0;
+    padding: 5px 10px;
+    width: 100%;
+}
+.content-wrap .property-registeration .form-wrap input{
+    padding: 18px 10px;
+}
+.content-wrap .property-registeration .submit-btn{
+    margin-bottom: 70px;
+}
+.content-wrap .property-registeration .submit-btn .submit{
+    background-color: #92D050;
+    float: right;
+}
+
+/* === Logo Upload === */
+.content-wrap .property-registeration .logo-upload .fileinput .thumbnail{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #FFFFFF;
+}
+.content-wrap .property-registeration .logo-upload .fileinput .btn{
+    border-color: #FFFFFF;
+}
+.content-wrap .property-registeration .logo-upload .fileinput .remove{
+    background-color: #92D050;
+    border-color: #92D050;
+    color: #FFFFFF;
+}
+.content-wrap .property-registeration .logo-upload .fileinput .btn:hover{
+    color: #FFFFFF;
+}
+
+/* === Map === */
+.content-wrap .property-registeration .map-wrap{
+    margin-bottom: 10px;
+}

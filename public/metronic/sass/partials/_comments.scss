@@ -1,0 +1,35 @@
+#comments-container{
+    .navigation{
+        display: none;
+    }
+    ul.main{
+        li.comment{
+            .comment-wrapper{
+                overflow: visible;
+                padding: 1.5em 0.5em;
+            }
+        }
+    }
+    .textarea-wrapper{
+        &::after{
+            display: none;
+        }
+        &::before{
+            display: none;
+        }
+        .close{
+            .left,.right{
+                display: none;
+            }
+        }
+    }
+    .commenting-field.main{
+        margin-bottom: 20px;
+        .profile-picture{
+            display: none;
+        }
+    }
+    .highlight-background{
+        background-color: $ifm-main!important;
+    }
+}

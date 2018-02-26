@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAMM,wFAAiB;EAChB,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,OAAO;EACnB,YAAY,EAAE,IAAI",
+"sources": ["../sass/taxonomies-reset.scss"],
+"names": [],
+"file": "taxonomies-reset.css"
+}

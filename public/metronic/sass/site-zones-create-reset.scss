@@ -1,0 +1,10 @@
+@import "partials/_Variables.scss";
+.select2-container--bootstrap .select2-selection,
+.list-group-item{
+    border: 1px solid $ifm-light-grey !important;
+}
+
+.treeview,
+.select2-container--bootstrap .select2-selection--single .select2-selection__rendered{
+    color: $ifm-grey;
+}

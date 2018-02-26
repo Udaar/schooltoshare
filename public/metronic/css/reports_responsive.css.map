@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,oCAAoC;EAChC;eACa;IACT,OAAO,EAAE,YAAW;;EAExB;8BAC4B;IACxB,OAAO,EAAE,cAAa",
+"sources": ["../sass/reports_responsive.scss"],
+"names": [],
+"file": "reports_responsive.css"
+}

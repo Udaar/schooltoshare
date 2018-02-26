@@ -1,0 +1,8 @@
+.no-more-tables > .extandable > tbody td > p {
+  width: 90px; }
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  h3 {
+    font-size: 20px; } }
+
+/*# sourceMappingURL=stock-transaction-reset.css.map */

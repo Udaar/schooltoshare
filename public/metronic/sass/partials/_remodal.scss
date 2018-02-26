@@ -1,0 +1,44 @@
+.remodal-wrapper{
+    z-index: 100003
+}
+
+.remodal{
+    padding: 30px 20px;
+    text-align: left;
+    max-width: 600px;
+    .remodal-close{
+        left: auto;
+        right: 0;
+    }
+}
+
+.remodal.confirmation{
+    max-width: 360px;
+    padding: 0;
+    .remodal-body{
+        padding: 15px;
+        .confirmation-message{
+            margin-bottom: 20px;
+            i{
+                color: #EE4266;
+                font-size: 25px;
+                margin-top: 10px;
+            }
+            span{
+                color: #222222;
+                padding-left: 22px;
+            }
+        }
+    }
+    .remodal-close{
+        color: #FFFFFF;
+    }
+    .remodal-head{
+        background-color: #EE4266;
+        color: #FFFFFF;
+        padding: 12px 15px;
+        h4{
+            margin-bottom: 0!important;
+        }
+    }
+}

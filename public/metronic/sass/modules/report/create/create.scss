@@ -1,0 +1,30 @@
+@import "../../../partials/_Variables";
+@import "../../../partials/_remodal";
+
+.remodal{
+    max-width:800px!important;
+}
+.remodal-wrapper{
+    padding-top: 70px;
+}
+.popover{
+    top: 12.5px!important;
+}
+#title{
+    border-color: $ifm-grey;
+}
+.editable-buttons .btn{
+    padding: 2px 6px;
+}
+.editable-unsaved{
+    font-weight: 100!important;
+}
+
+.report-top-bar{
+    padding: 15px;
+    .btn-group{
+        button{
+            margin-right: 10px;
+        }
+    }
+}

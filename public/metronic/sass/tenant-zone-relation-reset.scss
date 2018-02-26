@@ -1,0 +1,12 @@
+@import "partials/_Variables";
+
+@media screen and (min-width: $screen-xxs) and (max-width: $screen-sm){
+    .tenant-unit-relation-section .ifm-title-bar h3 {
+        font-size: 1em !important;
+    }
+    .tenant-unit-relation-section .ifm-title-bar .btn{
+        padding: 5px;
+        font-size: 1em;
+        top: -5px;
+    }
+}

@@ -1,0 +1,17 @@
+/* === Custome, iPhone Retina === */
+
+@media screen and (max-width: 320px){
+    .timesheet-zone{
+        .title-bar{
+            .title{
+                font-size: 12px;
+                font-weight: 600;
+            }
+            .add-btn{
+                top: 8px!important;
+                right: 27px!important;
+                padding: 2px 7px;
+            }
+        }
+    }
+}

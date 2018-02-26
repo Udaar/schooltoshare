@@ -1,0 +1,122 @@
+/* Start Global Reset */
+a:hover{
+    text-decoration: none;
+}
+/* End Global Reset */
+
+
+/* Start Color Reset */
+body,
+.page-sidebar-closed .page-sidebar .page-sidebar-menu.page-sidebar-menu-closed > li > .sub-menu,
+.page-sidebar .page-sidebar-menu > li.open > a,
+.page-sidebar,
+.page-quick-sidebar-wrapper .page-quick-sidebar,
+.page-sidebar .sidebar-search .input-group .form-control{
+    background-color: #333333;
+}
+
+.page-sidebar .page-sidebar-menu > li:hover > a,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.open > a,
+.page-header.navbar{
+    background-color: #222222;
+}
+
+/*.page-header.navbar .menu-toggler{
+    background-image: url('../../images/sidebar_toggler_icon_yellow.png');
+}*/
+
+.page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-toggle .badge.badge-default,
+.ticket .nav-tabs > li > a > .badge,
+.page-sidebar .page-sidebar-menu > li.active.open > a,
+.page-sidebar .page-sidebar-menu > li.active > a,
+.page-sidebar .page-sidebar-menu li > a > .badge,
+.page-sidebar .page-sidebar-menu > li.active.open > a:hover,
+.page-sidebar .page-sidebar-menu > li.active > a:hover{    
+    background-color: #f4c901; /* Badge  Background Color*/
+}
+
+.page-sidebar .sidebar-search .input-group .form-control::-moz-placeholder
+{
+    color: #cccccc;
+}
+
+.page-sidebar .sidebar-search .input-group .form-control::-webkit-input-placeholder{
+   color: #cccccc;
+}
+
+.page-sidebar .sidebar-search .input-group .form-control:-ms-input-placeholder{
+   color: #cccccc;
+}
+
+.page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle > .username
+.page-sidebar .page-sidebar-menu > li > a > i,
+.page-sidebar .page-sidebar-menu > li:hover > a > i,
+.page-sidebar .page-sidebar-menu .sub-menu > li > a > i,
+.page-sidebar .sidebar-search .input-group .input-group-btn .btn > i,
+.page-sidebar .page-sidebar-menu .sub-menu > li > a,
+.page-sidebar .page-sidebar-menu > li > a > i[class*="icon-"],
+.page-sidebar .page-sidebar-menu > li > a > i[class^="icon-"],
+.page-sidebar .page-sidebar-menu > li.heading > h3,
+.page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-toggle > i,
+.page-sidebar .page-sidebar-menu > li > a,
+.page-sidebar .page-sidebar-menu > li:hover > a,
+.page-header .top-menu .dropdown-quick-sidebar-toggler > .dropdown-toggle i::before,
+.page-quick-sidebar-open .page-quick-sidebar-toggler > i::before,
+.page-sidebar .page-sidebar-menu li > a > .arrow::before,
+.page-header .top-menu .dropdown-quick-sidebar-toggler > .dropdown-toggle i::before{
+    color: #cccccc;
+}
+
+.page-sidebar .sidebar-search .input-group{
+    border-bottom: 1px solid #cccccc;
+}
+
+.page-quick-sidebar-wrapper{
+    background-color: #333333;
+}
+
+.portlet .media .tag{
+    background-color: #f3c200;
+}
+
+.ticket .media{
+    border-bottom-color: #f5c55f;
+}
+
+.ticket.portlet.light,
+.ticket .feeds li{
+    background-color: #cc9933;
+}
+
+.ticket.portlet.light.bordered > .portlet-title{
+    border-bottom: 1px solid #f3c200;
+}
+.tabbable-line > .nav-tabs > li.active, .tabbable-line > .nav-tabs > li:hover{
+    border-bottom: 4px solid #f3c200;
+}
+
+.ticket .slimScrollBar{
+    background: rgb(245,197,95) !important;
+}
+
+.activities .bg-green{
+    background-color: #93d327 !important;
+}
+
+.activities .font-green{
+    color: #93d327 !important;
+}
+
+.page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-toggle{
+    background-color: transparent;
+}
+.page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-toggle:hover
+{
+    background-color: #444444;
+}
+/* End Color Reset */
+
+
+.ticket .media{
+    padding: 20px;
+}

@@ -1,0 +1,27 @@
+@import "partials/_step-progress-bar";
+@import "partials/_Variables.scss";
+
+.issue-status{
+	.portlet.box.red{
+		border-color: $ifm-light-grey;
+		> .portlet-title{
+			background-color: $ifm-light-grey;
+		}
+	}
+	.portlet.red{
+		background-color: $ifm-light-grey;
+	}
+	.portlet{
+		> .portlet-body.red{
+			background-color: $ifm-light-grey;
+		}
+	}
+}
+
+.portlet.box>.portlet-title>.tools>a.collapse{
+	background-image: url("../assets/global/img/portlet-collapse-icon.png");
+}
+
+.portlet.box>.portlet-title>.tools>a.expand{
+	background-image: url("../assets/global/img/portlet-expand-icon.png");
+}

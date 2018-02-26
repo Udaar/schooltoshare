@@ -1,0 +1,4 @@
+.highcharts-data-labels tspan,
+.highcharts-data-labels path{
+	display: none;
+}

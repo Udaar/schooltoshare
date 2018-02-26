@@ -1,0 +1,14 @@
+/* === Mobile Phones === */
+
+@media screen and (min-width: 321px) and (max-width:480px){
+    .timesheet-zone{
+        .title-bar{
+            .title{
+                font-size: 14px;
+            }
+            .add-btn{
+                padding: 4px 9px;
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@import "../../partials/_Variables";
+
+.portlet.calendar.light{
+    .fc-toolbar{
+       margin-bottom: 30px; 
+    }
+    .fc-button.fc-today-button,
+    .fc-button.fc-today-button.fc-state-hover{
+        background-color: $ifm-main;
+        border: 1px solid $ifm-main;
+        color: #FFFFFF!important;
+        padding: 5px;
+        text-transform: capitalize;
+    }
+    .fc-button.fc-state-disabled,
+    .fc-button.fc-state-disabled:hover{
+        background-color: #C9C9C9;
+        border: 1px solid #C9C9C9;
+        color: $ifm-grey!important;
+        opacity: 0.2;
+    }
+    .fc-button{
+        top: 0;
+    }
+    .legend{
+        padding: 10px 15px;
+        .col-lg-2{
+            margin-top: 10px;
+        }
+        .color-box{
+            display: inline-block;
+            height: 15px;
+            width: 15px;
+            &.event{
+                background-color: #69A4E0;
+            }
+            &.task{
+                background-color: #B73D8A;
+            }
+            &.interview{
+                background-color: #345CD5;
+            }
+            &.invoice{
+                background-color: #FF9800;
+            }
+            &.payment{
+                background-color: #673AB7;
+            }
+            &.expenses{
+                background-color: #E91E63;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@import '../../../partials/_Variables';
+@import '../../../partials/_Mixens';
+@import './partials/_all-media';
+
+.interview-assesment-section{
+    .tabbable-custom > .nav-tabs > li{
+        width: 33.33333%!important;
+    }
+    .select2-container{
+        z-index: 1000!important;
+    }
+}
+
+.datetimepicker .active,
+.datetimepicker .active:hover{
+    background-color: $ifm-main!important;
+}
+
+.interview-assesment-section{
+    .competncy-row{
+        border-bottom: 1px dashed $ifm-light-grey;
+        &:last-child{
+            border-bottom: none;
+        }
+        h4{
+            color: #8e8d8d;
+        }
+        .row{
+            margin-bottom: 17px;
+        }
+    }
+}

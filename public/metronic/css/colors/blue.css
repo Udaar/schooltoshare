@@ -1,0 +1,151 @@
+/* Start Global Reset */
+a:hover{
+    text-decoration: none;
+}
+/* End Global Reset */
+
+
+/* Start Color Reset */
+body,
+.page-sidebar-closed .page-sidebar .page-sidebar-menu.page-sidebar-menu-closed > li > .sub-menu,
+.page-sidebar .page-sidebar-menu > li.open > a,
+.page-sidebar,
+.page-quick-sidebar-wrapper .page-quick-sidebar,
+.page-sidebar .sidebar-search .input-group .form-control{
+    background-color: #333333;
+}
+
+.page-sidebar .page-sidebar-menu > li:hover > a,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.open > a,
+.page-header.navbar{
+    background-color: #222222;
+}
+
+/*.page-header.navbar .menu-toggler{
+    background-image: url('../../images/sidebar_toggler_icon_blue.png');
+}*/
+
+.events.light, .events.light .media{
+    background-color: #276b68;
+}
+
+.portlet .nav-tabs > li > a > .badge,
+.page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-toggle .badge.badge-default,
+.page-sidebar .page-sidebar-menu > li.active.open > a,
+.page-sidebar .page-sidebar-menu > li.active > a,
+.page-sidebar .page-sidebar-menu li > a > .badge,
+.portlet .media .tag,
+.tag,
+.sidebar-menu > li.active.open > a:hover,
+.page-sidebar .page-sidebar-menu > li.active > a:hover{
+    background-color: #29cec6;
+}
+
+.theme-panel > .toggler, .theme-panel > .toggler:hover{
+    background: url(../../images/icon-color.png) center no-repeat #29cec6 !important;
+}
+
+.page-sidebar .sidebar-search .input-group .form-control::-moz-placeholder
+{
+    color: #cccccc;
+}
+
+.page-sidebar .sidebar-search .input-group .form-control::-webkit-input-placeholder{
+   color: #cccccc;
+}
+
+.page-sidebar .sidebar-search .input-group .form-control:-ms-input-placeholder{
+   color: #cccccc;
+}
+
+.page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle > .username,
+.page-sidebar .page-sidebar-menu > li > a > i,
+.page-sidebar .page-sidebar-menu > li:hover > a > i,
+.page-sidebar .page-sidebar-menu .sub-menu > li > a > i,
+.page-sidebar .sidebar-search .input-group .input-group-btn .btn > i,
+.page-sidebar .page-sidebar-menu .sub-menu > li > a,
+.page-sidebar .page-sidebar-menu > li > a > i[class*="icon-"],
+.page-sidebar .page-sidebar-menu > li > a > i[class^="icon-"],
+.page-sidebar .page-sidebar-menu > li.heading > h3,
+.page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-toggle > i,
+.page-sidebar .page-sidebar-menu > li > a,
+.page-sidebar .page-sidebar-menu > li:hover > a,
+.page-quick-sidebar-open .page-quick-sidebar-toggler > i::before,
+.page-sidebar .page-sidebar-menu li > a > .arrow::before{
+    color: #cccccc;
+}
+
+.portlet .offer,
+.page-sidebar .sidebar-search .input-group{
+    border-bottom: 1px solid #cccccc;
+}
+
+.events.portlet.light.bordered > .portlet-title{
+    border-bottom: 1px solid #589c99;
+}
+
+.page-sidebar .page-sidebar-menu > li > a{
+    border-top: 1px solid #3d4957;
+}
+
+.page-quick-sidebar-wrapper,
+.theme-panel > .theme-options{
+    background-color: #333333;
+}
+
+.page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-toggle{
+    background-color: transparent;
+}
+.page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-toggle:hover
+{
+    background-color: #444444;
+}
+
+.events .media{
+    border-bottom-color: #f5c55f;
+}
+
+.tabbable-line > .nav-tabs > li.active, .tabbable-line > .nav-tabs > li:hover{
+    border-bottom: 4px solid #7cb7b4;
+}
+
+.events .slimScrollBar{
+    background: #589c99 !important;
+}
+
+.page-header .top-menu .dropdown-quick-sidebar-toggler > .dropdown-toggle i::before,
+.page-quick-sidebar-open .page-quick-sidebar-toggler > i::before,
+.portlet.light > .portlet-title > .caption > i,
+.events .media .fa-arrow-circle-o-up,
+.portlet.light > .portlet-title > .caption,
+.activities .font-green
+{
+    color: #29cec6;
+}
+
+.events .media .fa-arrow-circle-o-down{
+    color: #cc5656;
+}
+
+.portlet > .portlet-body p,
+.portlet .media .media-heading{
+    color: #292929;
+}
+
+.events > .portlet-body p,
+.events .media .media-heading{
+    color: #ffffff;
+}
+/* End Color Reset */
+
+.portlet .media{
+    background-color: #fff;
+}
+
+.link-pills li{
+    background-color: #fafafa;
+}
+
+.link-pills li a{
+    color: #1f1f1f;
+}

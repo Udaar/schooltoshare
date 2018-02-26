@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,MAAO;EACH,QAAQ,EAAE,OAAO",
+"sources": ["../sass/invoice-show-reset.scss"],
+"names": [],
+"file": "invoice-show-reset.css"
+}

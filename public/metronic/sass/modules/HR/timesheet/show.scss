@@ -1,0 +1,44 @@
+@import '../../../partials/_Variables';
+@import '../../../partials/_Mixens';
+@import './partials/_all-media';
+
+.timesheet-show{
+    .daterange-wrap{
+        display: inline-block;
+        vertical-align: middle;
+        .form-control{
+            height: 25px;
+        }
+        .input-group-addon{
+            padding: 0 5px;
+        }
+    }
+    .timesheets-wrap{
+        .timesheet-day{
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid $ifm-light-grey;
+            .day{
+                padding: 10px 5px;
+                color: $ifm-grey;
+                border: 1px solid $ifm-light-grey;
+                font-weight: 600;
+                text-align: center;
+            }
+            .task-row{
+                margin-bottom: 6px;
+            }
+            .total-day{
+                margin-bottom: 6px;
+                .col-lg-offset-8{
+                    margin-left: 68.66667%;
+                }
+            }
+        }
+    }
+    .total-interval{
+        .col-lg-offset-10{
+            margin-left: 86.33333%;
+        }
+    }
+}

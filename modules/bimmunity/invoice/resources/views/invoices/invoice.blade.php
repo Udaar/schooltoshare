@@ -1,0 +1,1 @@
+<p>{{$invoice->title}}</p>

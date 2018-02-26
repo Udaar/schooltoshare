@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,4BAA4B;ACA5B,oCAAoC;ACApC,2BAA2B",
+"sources": ["../../../../sass/modules/HR/interview_assesment/partials/_shared.scss","../../../../sass/modules/HR/interview_assesment/partials/_iphone.scss","../../../../sass/modules/HR/interview_assesment/partials/_mobile.scss"],
+"names": [],
+"file": "edit.css"
+}

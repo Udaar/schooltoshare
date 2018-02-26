@@ -1,0 +1,9 @@
+.profile-img{
+    span.fileinput-exists,
+    a.fileinput-exists{
+        display: none;
+    }
+    .fileinput-exists .fileinput-new, .fileinput-new .fileinput-exists{
+            display: inline-block!important;
+        }
+}

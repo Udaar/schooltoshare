@@ -1,0 +1,47 @@
+.portlet.light>.portlet-title>.caption>i{
+	font-size: 20px;
+}
+
+.portlet.light>.portlet-title>.caption>i:before{
+	padding: 5px;
+}
+
+td{
+	font-size: 10px;
+}
+
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td, 
+.table > thead > tr > th{
+	vertical-align: middle;
+	text-align: center;
+	padding: 6px;
+}
+
+.form-control{
+	display: inline-block;
+}
+
+.input-small{
+	width: 200px !important;
+}
+
+.filter{
+	padding: 5px;
+	margin-bottom: 15px;
+}
+
+.bootstrap-select>.dropdown-toggle{
+	width: 50%;
+}
+
+.bootstrap-select.btn-group .dropdown-menu{
+	min-width: 50%;
+}
+
+.bg-red-sunglo{
+	background-color: #EB6A5A !important;
+}

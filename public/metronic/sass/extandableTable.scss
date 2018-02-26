@@ -1,0 +1,73 @@
+@import "partials/_Variables.scss";
+
+.no-more-tables{
+	>.extandable{
+		>tbody{
+			>tr:not(.child){
+				cursor: pointer;
+			}
+			tr.child{
+				display: none;
+				td{
+					padding: 0;
+					text-align: left;
+					>div.child-item{
+						>i{
+							vertical-align: middle;
+							margin-right: 5px;
+							font-size: 16px;
+						}
+						>p{
+							margin-top: 10px;
+						}
+					}
+				}
+			}
+			td{
+				>p{
+					margin: 0 auto;
+					width: 150px;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $screen-xxs) and (max-width: $screen-lg){
+	.no-more-tables{
+		table.table-bordered{
+			border: none !important;
+		}
+		>.extandable{
+			>tbody{
+				tr:not(.child){
+					td{
+						padding: 5px!important;
+						text-align: left;
+						font-weight: bold;
+						border: 0;
+						i{
+							float: right;
+							margin-top: 3px;
+							font-size: 16px;
+						}
+					}
+				}
+				tr.child{
+					border: 0;
+					td{
+						padding: 0!important;
+						border-top: 0;
+						.child-item.ifm-padding-md-all{
+							padding: 10px !important;
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

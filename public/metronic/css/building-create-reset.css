@@ -1,0 +1,9 @@
+.select2-container--bootstrap .select2-selection,
+.list-group-item {
+  border: 1px solid #C9C9C9 !important; }
+
+.treeview,
+.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
+  color: #566366; }
+
+/*# sourceMappingURL=building-create-reset.css.map */

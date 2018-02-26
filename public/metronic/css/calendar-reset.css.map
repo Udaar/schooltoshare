@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAa;EACT,OAAO,EAAE,cAAa",
+"sources": ["../sass/calendar-reset.scss"],
+"names": [],
+"file": "calendar-reset.css"
+}

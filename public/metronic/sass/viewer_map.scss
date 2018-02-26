@@ -1,0 +1,14 @@
+@media screen and (max-width: 992px){
+    .viewer-map-left{
+        margin-bottom: 10px;
+    }
+    .viewer-map-right{
+        padding: 0;
+    }
+}
+div#list{
+    width: 100%!important;
+}
+div#list div button, .portlet.calendar.light .fc-button.fc-state-active, .portlet.calendar.light .fc-button.fc-state-hover, div.dataTables_wrapper div.dataTables_length select:focus, div.dataTables_wrapper div.dataTables_filter input:focus{
+    width:100%!important;
+}

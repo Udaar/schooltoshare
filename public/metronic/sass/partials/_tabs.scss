@@ -1,0 +1,192 @@
+@import "partials/_Variables.scss";
+@import "partials/_Mixens.scss";
+
+// === Tabs Variable === //
+$tab-front-color: #74777b;
+$tab-back-color: rgba(40, 44, 42, 0.05);
+
+// === Placeholders === //
+%ifm-tab-main{ color: $ifm-main; }
+%ifm-tab-border{ border: 1px solid rgba(40, 44, 42, 0.1); }
+%ifm-tab-border-dark { border: 1px solid rgba(40, 44, 42, 0.2); }
+%ifm-active-tab{
+	border: none;
+	border-right: 1px solid #ddd;	
+}
+
+/* === Tabbable-custom === */
+.tabbable-custom{
+	width: 100%;
+}
+
+/* === Nav-tabs === */
+.tabbable-custom{
+	.nav-tabs{
+		// margin-bottom: 10px;
+	}
+}
+
+/* === Tab <li> === */
+.tabbable-custom{
+	>.nav-tabs{
+		>li{
+			margin-right: 0;
+			@extend %ifm-tab-border;
+			border-left-width: 0;
+			border-bottom-width: 0;
+			border-collapse: collapse;
+			width: 12.5%;
+			&.active{
+				border:0;
+				border-top: 3px solid $ifm-main;
+			}
+			&.active a{
+				@extend %ifm-tab-main;
+			}
+			&:first-child{
+				border-left-width: 1px;
+			}
+		}
+	}
+}
+
+/* === Tab <a> === */
+.nav-tabs{
+	>li.active{
+		a{
+			@extend %ifm-active-tab;
+		}
+		>a:focus{
+			@extend %ifm-active-tab;
+		}
+		>a:hover{
+			@extend %ifm-active-tab;
+		}
+	}
+}
+
+.taxonomy-tab{
+	a{
+		background-color: $tab-back-color;
+		color: $tab-front-color;
+		padding: 15px 20px;
+		border-right: none!important;
+		text-align: center;
+		@include ifmTransition(color 0.1s);
+	}
+}
+
+.tabbable-custom{
+	>.nav-tabs{
+		>li{
+			border-right: 1px solid $ifm-light-grey!important;
+			&:last-child{
+				border-right: none!important;
+			}
+			>a{
+				padding: 15px 19.5px;
+				line-height: 1;
+				font-size: 12.5px;
+				&:hover{
+					@extend %ifm-tab-main;
+				}
+				/* === Tab <i> === */
+				>.icon{
+					width: 100%;
+					margin: 0 auto 10px;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+
+/* === Tab Content === */
+.tabbable-custom{
+	>.tab-content{
+		@extend %ifm-tab-border-dark;
+		padding: 0;
+	}
+}
+
+/* === Tab List Item === */
+.list-group-item{
+	@extend %ifm-tab-border-dark;
+	color: $tab-front-color;
+}
+
+.edit-tree-node{ color: #31C7B2; }
+
+.node-selected{
+	background-color: $ifm-main !important;
+}
+
+.node-selected .edit-tree-node{
+	color: #fff;
+}
+
+/* === Add Category Button === */
+.ifm-tab-add{
+	height: 40.5px !important;
+	padding: 8px 15px !important;
+	overflow: hidden;
+}
+.ifm-tab-add.form-control{
+	@extend %ifm-tab-border-dark;
+}
+
+/* === Media Query === */
+@media screen and (min-width: $screen-sm) and (max-width: $screen-lg) {
+	/* === Small Tab Font Size === */
+	.tabbable-custom{
+		>.nav-tabs{
+			>li{
+				>a{
+					padding: 12px;
+					font-size: 11px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $screen-xxs) and (max-width: $screen-sm) {
+	// Placeholders
+	%placeholder-font-size{ font-size: 14px!important; }
+	.tabbable-custom{
+		>.nav-tabs{
+			list-style: none;
+			width: 100%;
+			overflow:hidden;
+			white-space: nowrap;
+			position: relative;
+		}
+	}
+	.tabbable-custom{
+		>.nav-tabs{
+			>li{
+				display: inline-block;
+				width: 50%;
+				float: none;
+				margin: 0;
+			}
+		}
+	}
+	.input-group-lg{
+		>.form-control{
+			@extend %placeholder-font-size;
+		}
+	}
+	.portlet.light
+	{
+		padding: 10px;
+		>.portlet-title
+		{
+			>.caption{
+				>.caption-subject{
+					font-size: 15px;
+				}
+			}
+		}
+	}
+}

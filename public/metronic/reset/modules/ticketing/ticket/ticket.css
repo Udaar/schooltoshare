@@ -1,0 +1,421 @@
+/* === Glopal === */
+.progressBar {
+  padding: 50px 0 40px;
+  /* === Issued === */
+  /* === approved === */
+  /* === assigned === */
+  /* === re-assigned === */ }
+  .progressBar li {
+    list-style-type: none;
+    float: left;
+    width: 20%;
+    position: relative;
+    text-align: center; }
+    .progressBar li:before {
+      content: '';
+      position: relative;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      border: 1px solid #DDD;
+      display: block;
+      text-align: center;
+      margin: 0 auto 10px auto;
+      border-radius: 50%;
+      background-color: #FFF;
+      z-index: 1; }
+    .progressBar li:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 8px;
+      background-color: #DDD;
+      top: 11px;
+      left: -50%;
+      z-index: 0; }
+    .progressBar li:first-child:after {
+      content: none; }
+  .progressBar li.issued {
+    color: #e7505a; }
+    .progressBar li.issued:before {
+      border-color: #e7505a;
+      background-color: #e7505a; }
+    .progressBar li.issued + :after {
+      background-color: #e7505a; }
+  .progressBar.issued li:nth-child(1) {
+    color: #e7505a; }
+    .progressBar.issued li:nth-child(1):before {
+      border-color: #e7505a;
+      background-color: #e7505a; }
+    .progressBar.issued li:nth-child(1) + :after {
+      background-color: #e7505a; }
+  .progressBar li.approved {
+    color: #F7CA18; }
+    .progressBar li.approved:before {
+      border-color: #F7CA18;
+      background-color: #F7CA18; }
+    .progressBar li.approved + :after {
+      background-color: #F7CA18; }
+  .progressBar.approved li:nth-child(1) {
+    color: #e7505a; }
+    .progressBar.approved li:nth-child(1):before {
+      border-color: #e7505a;
+      background-color: #e7505a; }
+    .progressBar.approved li:nth-child(1) + :after {
+      background-color: #e7505a; }
+  .progressBar.approved li:nth-child(2) {
+    color: #F7CA18; }
+    .progressBar.approved li:nth-child(2):before {
+      border-color: #F7CA18;
+      background-color: #F7CA18; }
+    .progressBar.approved li:nth-child(2) + :after {
+      background-color: #F7CA18; }
+  .progressBar.assigned li:nth-child(1) {
+    color: #e7505a; }
+    .progressBar.assigned li:nth-child(1):before {
+      border-color: #e7505a;
+      background-color: #e7505a; }
+    .progressBar.assigned li:nth-child(1) + :after {
+      background-color: #e7505a; }
+  .progressBar.assigned li:nth-child(2),
+  .progressBar.assigned li:nth-child(3) {
+    color: #F7CA18; }
+    .progressBar.assigned li:nth-child(2):before,
+    .progressBar.assigned li:nth-child(3):before {
+      border-color: #F7CA18;
+      background-color: #F7CA18; }
+    .progressBar.assigned li:nth-child(2) + :after,
+    .progressBar.assigned li:nth-child(3) + :after {
+      background-color: #F7CA18; }
+  .progressBar.re-assigned li:nth-child(1) {
+    color: #e7505a; }
+    .progressBar.re-assigned li:nth-child(1):before {
+      border-color: #e7505a;
+      background-color: #e7505a; }
+    .progressBar.re-assigned li:nth-child(1) + :after {
+      background-color: #e7505a; }
+  .progressBar.re-assigned li:nth-child(2),
+  .progressBar.re-assigned li:nth-child(3),
+  .progressBar.re-assigned li:nth-child(4) {
+    color: #F7CA18; }
+    .progressBar.re-assigned li:nth-child(2):before,
+    .progressBar.re-assigned li:nth-child(3):before,
+    .progressBar.re-assigned li:nth-child(4):before {
+      border-color: #F7CA18;
+      background-color: #F7CA18; }
+    .progressBar.re-assigned li:nth-child(2) + :after,
+    .progressBar.re-assigned li:nth-child(3) + :after,
+    .progressBar.re-assigned li:nth-child(4) + :after {
+      background-color: #F7CA18; }
+  .progressBar li.completed {
+    color: #4DB3A2; }
+    .progressBar li.completed:before {
+      border-color: #4DB3A2;
+      background-color: #4DB3A2; }
+    .progressBar li.completed + :after {
+      background-color: #4DB3A2; }
+  .progressBar.completed li:nth-child(1) {
+    color: #e7505a; }
+    .progressBar.completed li:nth-child(1):before {
+      border-color: #e7505a;
+      background-color: #e7505a; }
+    .progressBar.completed li:nth-child(1) + :after {
+      background-color: #e7505a; }
+  .progressBar.completed li:nth-child(2),
+  .progressBar.completed li:nth-child(3),
+  .progressBar.completed li:nth-child(4) {
+    color: #F7CA18; }
+    .progressBar.completed li:nth-child(2):before,
+    .progressBar.completed li:nth-child(3):before,
+    .progressBar.completed li:nth-child(4):before {
+      border-color: #F7CA18;
+      background-color: #F7CA18; }
+    .progressBar.completed li:nth-child(2) + :after,
+    .progressBar.completed li:nth-child(3) + :after,
+    .progressBar.completed li:nth-child(4) + :after {
+      background-color: #F7CA18; }
+  .progressBar.completed li:nth-child(5) {
+    color: #4DB3A2; }
+    .progressBar.completed li:nth-child(5):before {
+      border-color: #4DB3A2;
+      background-color: #4DB3A2; }
+    .progressBar.completed li:nth-child(5) + :after {
+      background-color: #4DB3A2; }
+
+@media screen and (min-width: 320px) and (max-width: 464px) {
+  .progressBar li:before {
+    width: 20px;
+    height: 20px; }
+  .progressBar li:after {
+    height: 3px;
+    top: 9px; }
+
+  table.dataTable > tbody > tr.child ul.progressBar li {
+    font-size: 7px !important; } }
+.remodal-wrapper {
+  z-index: 100003; }
+
+.remodal {
+  padding: 30px 20px;
+  text-align: left;
+  max-width: 600px; }
+  .remodal .remodal-close {
+    left: auto;
+    right: 0; }
+
+.remodal.confirmation {
+  max-width: 360px;
+  padding: 0; }
+  .remodal.confirmation .remodal-body {
+    padding: 15px; }
+    .remodal.confirmation .remodal-body .confirmation-message {
+      margin-bottom: 20px; }
+      .remodal.confirmation .remodal-body .confirmation-message i {
+        color: #EE4266;
+        font-size: 25px;
+        margin-top: 10px; }
+      .remodal.confirmation .remodal-body .confirmation-message span {
+        color: #222222;
+        padding-left: 22px; }
+  .remodal.confirmation .remodal-close {
+    color: #FFFFFF; }
+  .remodal.confirmation .remodal-head {
+    background-color: #EE4266;
+    color: #FFFFFF;
+    padding: 12px 15px; }
+    .remodal.confirmation .remodal-head h4 {
+      margin-bottom: 0 !important; }
+
+body {
+  background-color: #333; }
+
+img {
+  vertical-align: middle; }
+
+.ticket-section {
+  /* Report Btn */
+  /* Container */
+  /* Step Bar Carosal #1 */
+  /* Step Bar */
+  /* If one step in item */
+  /* If two step in item */
+  /* If three step in item */
+  /* If four step in item */ }
+  .ticket-section .report-btn {
+    font-size: 13px;
+    padding: 3px 4px; }
+  .ticket-section .container {
+    margin: 40px auto;
+    width: 80%; }
+  .ticket-section #firstCarousel .carousel-control {
+    background-image: none;
+    top: 6px;
+    width: 5%; }
+    .ticket-section #firstCarousel .carousel-control .fa-chevron-left::before,
+    .ticket-section #firstCarousel .carousel-control .fa-chevron-right::before {
+      position: absolute;
+      left: 48%;
+      top: 52%;
+      transform: translate(-50%, -50%); }
+    .ticket-section #firstCarousel .carousel-control .fa-chevron-right::before {
+      left: 55%; }
+  .ticket-section .line {
+    border-bottom: 1px solid #C9C9C9;
+    padding-bottom: 20px;
+    width: 100%;
+    left: 15px;
+    position: relative; }
+    .ticket-section .line .line-inner {
+      position: absolute;
+      height: 1px;
+      background-color: #1BBC9B;
+      top: 0;
+      left: 0;
+      margin-top: 20px;
+      padding: 0 20px; }
+  .ticket-section .stepText {
+    color: #C9C9C9;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center; }
+  .ticket-section .stepText.active {
+    color: #1BBC9B; }
+  .ticket-section .step {
+    background: white;
+    border: 1px solid #C9C9C9;
+    border-radius: 100px !important;
+    color: #fff;
+    cursor: pointer;
+    height: 30px;
+    margin: -16px auto 10px;
+    text-align: center;
+    text-transform: capitalize;
+    transition: 0.4s;
+    width: 30px; }
+    .ticket-section .step i {
+      font-size: 18px;
+      line-height: 30px; }
+  .ticket-section .step.active {
+    background: #1BBC9B;
+    border-color: #1BBC9B; }
+  .ticket-section .one .one {
+    width: 100%; }
+  .ticket-section .one .zero {
+    padding: 0; }
+  .ticket-section .two .one {
+    width: 25%; }
+  .ticket-section .two .two {
+    width: 100%; }
+  .ticket-section .two .zero {
+    padding: 0; }
+  .ticket-section .three .one {
+    width: 18%; }
+  .ticket-section .three .two {
+    width: 50%; }
+  .ticket-section .three .three {
+    width: 100%; }
+  .ticket-section .three .zero {
+    padding: 0; }
+  .ticket-section .four .one {
+    width: 12.5%; }
+  .ticket-section .four .two {
+    width: 37.5%; }
+  .ticket-section .four .three {
+    width: 62.5%; }
+  .ticket-section .four .four {
+    width: 100%; }
+  .ticket-section .four .zero {
+    padding: 0; }
+
+.step-section {
+  display: none; }
+
+.step-section.active {
+  display: block; }
+
+/* Action Slider */
+.cd-horizontal-timeline {
+  margin-bottom: 45px;
+  margin-top: 45px; }
+  .cd-horizontal-timeline .events-content {
+    margin: 0; }
+    .cd-horizontal-timeline .events-content .action-wrap {
+      border-bottom: 1px solid #ece8e8;
+      margin-top: 20px;
+      padding-bottom: 20px; }
+      .cd-horizontal-timeline .events-content .action-wrap:first-child {
+        margin-top: 0; }
+      .cd-horizontal-timeline .events-content .action-wrap:last-child {
+        border-bottom: 0;
+        padding-bottom: 0; }
+    .cd-horizontal-timeline .events-content .action-row {
+      margin-bottom: 15px; }
+      .cd-horizontal-timeline .events-content .action-row label {
+        color: #555;
+        font-size: 15px;
+        font-weight: 100; }
+      .cd-horizontal-timeline .events-content .action-row span {
+        color: #777;
+        font-size: 14px; }
+      .cd-horizontal-timeline .events-content .action-row:last-child {
+        margin-bottom: 0; }
+  .cd-horizontal-timeline .timeline {
+    max-width: none; }
+  .cd-horizontal-timeline .cd-timeline-navigation a {
+    height: 30px;
+    width: 30px; }
+  .cd-horizontal-timeline .cd-timeline-navigation a, .cd-horizontal-timeline .cd-timeline-navigation a:hover, .cd-horizontal-timeline .cd-timeline-navigation a.inactive:hover {
+    border-color: #1BBC9B;
+    border-radius: 50% !important;
+    border-width: 2px; }
+    .cd-horizontal-timeline .cd-timeline-navigation a::after, .cd-horizontal-timeline .cd-timeline-navigation a:hover::after, .cd-horizontal-timeline .cd-timeline-navigation a.inactive:hover::after {
+      background-image: url("/horezontal_timeline/img/cd-arrow.svg"); }
+  .cd-horizontal-timeline .cd-timeline-navigation a.inactive::after {
+    background-position: 0 0; }
+  .cd-horizontal-timeline .filling-line {
+    background-color: #1BBC9B; }
+  .cd-horizontal-timeline .events {
+    height: 1px;
+    background-color: #C9C9C9; }
+    .cd-horizontal-timeline .events a:hover::after {
+      background-color: #1BBC9B !important;
+      border-color: #1BBC9B !important; }
+    .cd-horizontal-timeline .events a.selected::after {
+      background-color: #1BBC9B;
+      border-color: #1BBC9B; }
+    .cd-horizontal-timeline .events a.older-event::after {
+      border-color: #1BBC9B; }
+
+@media screen and (min-width: 480px) {
+  /* Step Bar Carosal #1 */
+  #firstCarousel .carousel-inner {
+    margin-top: 20px; }
+  #firstCarousel .container {
+    padding: 0; }
+  #firstCarousel .carousel-control {
+    box-shadow: none;
+    opacity: 1;
+    left: 28px; }
+    #firstCarousel .carousel-control .fa-chevron-left,
+    #firstCarousel .carousel-control .fa-chevron-right {
+      border: 2px solid #1BBC9B;
+      border-radius: 50% !important;
+      color: #1BBC9B;
+      display: inline-block;
+      font-size: 12px;
+      height: 30px;
+      line-height: 30px;
+      position: absolute;
+      text-align: center;
+      text-shadow: none;
+      top: 30.5%;
+      width: 30px; }
+    #firstCarousel .carousel-control.right {
+      left: auto;
+      right: 55px; } }
+@media screen and (max-width: 480px) {
+  .ticket-section {
+    /* Container */
+    /* Step */ }
+    .ticket-section .container {
+      padding: 0;
+      width: 100%; }
+    .ticket-section .step {
+      height: 20px;
+      margin-top: -11px;
+      width: 20px; }
+      .ticket-section .step i {
+        font-size: 12px;
+        line-height: 20px; }
+    .ticket-section .stepText {
+      font-size: 12px; }
+
+  #firstCarousel .carousel-control {
+    box-shadow: none;
+    opacity: 1; }
+    #firstCarousel .carousel-control .fa-chevron-left,
+    #firstCarousel .carousel-control .fa-chevron-right {
+      color: #1BBC9B;
+      font-size: 12px;
+      position: absolute;
+      text-shadow: none;
+      top: 10%; }
+    #firstCarousel .carousel-control.right {
+      right: 0px; }
+
+  .cd-timeline-navigation li {
+    position: absolute;
+    top: 0; }
+    .cd-timeline-navigation li a {
+      border: 0;
+      width: 10px !important; }
+    .cd-timeline-navigation li:first-child {
+      left: 0; }
+    .cd-timeline-navigation li:last-child {
+      right: 0; }
+
+  .cd-horizontal-timeline .timeline {
+    margin: 0;
+    width: 100%; } }
+
+/*# sourceMappingURL=ticket.css.map */

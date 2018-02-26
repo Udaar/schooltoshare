@@ -1,0 +1,12 @@
+@import "partials/_Variables";
+.list-group-item{
+    border: 1px solid $ifm-light-grey !important;
+}
+
+.list-group-item.node-selected{
+    background-color: $ifm-main!important;
+}
+
+.treeview{
+    color: #999999;
+}

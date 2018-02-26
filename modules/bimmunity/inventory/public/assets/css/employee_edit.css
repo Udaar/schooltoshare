@@ -1,0 +1,14 @@
+/* === Filter === */
+@media only screen and (max-width: 800px) {
+  .ifm-filter .form-control {
+    margin-bottom: 10px !important; }
+  .ifm-filter .col-xs-12 {
+    padding-left: 10px;
+    padding-right: 10px; } }
+.profile-img span.fileinput-exists,
+.profile-img a.fileinput-exists {
+  display: none; }
+.profile-img .fileinput-exists .fileinput-new, .profile-img .fileinput-new .fileinput-exists {
+  display: inline-block !important; }
+
+/*# sourceMappingURL=employee_edit.css.map */

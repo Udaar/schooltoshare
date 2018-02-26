@@ -1,0 +1,42 @@
+/* Start Icon Reset */
+.page-header .top-menu .dropdown-quick-sidebar-toggler > .dropdown-toggle i::before,
+.page-quick-sidebar-open .page-quick-sidebar-toggler > i::before{
+    content: "\f011";
+}
+/* End Icon Reset */
+
+/* Start Fonts */
+body{
+    font-size: 14px;
+}
+
+.link-pills li i{
+    font-size: 20px;
+}
+
+.offer span{
+    font-size: 1.3em;
+    font-weight: 100;
+}
+
+.portlet .media .media-heading{
+    font-size: 1em;
+    font-weight: 500;
+}
+
+@media(max-width: 768px){
+    .portlet .media .media-heading{
+        font-size: 1.4em;
+    }
+    .portlet > .portlet-body p{
+        font-size: 1em;
+    }
+    .label.label-sm{
+        font-size: 1em;
+    }
+    .activities .font-green{
+        font-size: 1em;
+    }
+}
+
+/* End Fonts */

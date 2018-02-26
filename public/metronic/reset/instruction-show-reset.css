@@ -1,0 +1,27 @@
+.media {
+  overflow: visible; }
+
+.steps ol, .steps ul {
+  counter-reset: count;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px; }
+.steps li {
+  margin-bottom: 10px;
+  background-color: #DCDCDC;
+  color: #566366 !important;
+  font-weight: bold;
+  list-style: none; }
+.steps li:before {
+  counter-increment: count;
+  content: counter(count);
+  padding: 10px 15px;
+  background-color: #31C7B2;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  color: #FFF;
+  font-weight: 500; }
+
+/*# sourceMappingURL=instruction-show-reset.css.map */

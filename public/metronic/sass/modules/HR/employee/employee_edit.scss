@@ -1,0 +1,144 @@
+@import '../../../partials/_Variables';
+@import '../../../partials/_Mixens';
+@import '../../../partials/_filter';
+@import '../../../partials/_profile-image';
+@import '../../../partials/_remodal';
+@import './partials/_all-media';
+
+$blue-steel: #4B77BE;
+$yellow-saffron: #F4D03F;
+$purple-studio: #8E44AD;
+
+.portlet.light{
+    padding: 15px;
+}
+.item-table td,
+.item-table th{
+    text-align: center;
+    vertical-align: middle!important;
+}
+:root:root:root .table-bordered > tbody > tr > td:first-child{
+    cursor: pointer;
+}
+:root:root:root .table-bordered > tbody > tr:first-child > td{
+    border-top-color: #DDDDDD!important;
+}
+:root:root:root .table-bordered thead > tr > th:last-child{
+    border-right-color: #DDDDDD!important;
+}
+:root:root:root .table-bordered,
+:root:root:root .table-bordered thead > tr > th{
+    border-color: #DDDDDD!important;
+}
+@media screen and (min-width: 320px) and (max-width: 992px){
+    .portlet.light .portlet-body{
+        padding-top:0;
+    }
+    .order-info .col-xs-12{
+        padding-left:0;
+        padding-right:0;
+    }
+    .form-actions{
+        padding-left: 15px;
+    }
+    .editableform .form-group{
+        margin-bottom: 0;
+    }
+    .popover-content{
+        padding: 9px 12px;
+    }
+    .edit-task-wrap h3{
+        font-size: 14px;
+        margin-bottom: 10px!important;
+    }
+    .edit-task-wrap .popover h3{
+        font-size: 11px;
+    }
+    .popover{
+        left: 35.2969px!important;
+    }
+}
+@media screen and (min-width: 768px){
+    .tabbable-custom > .nav-tabs > li{
+        width: 20%;
+    }
+}
+
+.employee-zone{
+    /* === Left Part === */
+    .left-part{
+        .m-personal-info{
+            display: none;
+        }
+        .m-tabs{
+            display: none;
+        }
+    }
+
+    /* === Personal Item === */
+    .personal-item{
+        label{
+            color:#74777B;
+            margin-right: 5px;
+        }
+        span{
+            color: darken($ifm-light-grey, 30%);
+        }
+        span.label-danger{
+            color: $ifm-white;
+        }
+        i{
+          font-size: 18px;
+            margin-right: 3px;  
+        }
+    }
+    /* === Tabs Part === */
+    .tabbable-custom > .nav-tabs > li:last-child{
+        border-right: none;
+    }
+    .add-btn-tab{
+        font-size: 27px;
+    }
+    .edit-btn-tab{
+        font-size: 20px;
+    }
+    .work-exp-item,
+    .edu-item,
+    .skill-item,
+    .salary-item{
+        h4{
+            color: #74777B;
+            span{
+                margin: 7px 0;
+                display: inline-block;
+                color: #828282;
+            }
+        }
+        h6{
+            color: #828282;
+        }
+    }
+    .skill-item{
+        .progress-bar{
+            color: #FFF!important;
+        }
+        .progress-bar.grey{
+            background-color: $ifm-grey!important;
+        }
+        .progress-bar.yellow-saffron{
+            background-color: $yellow-saffron!important;
+        }
+        .progress-bar.blue-steel{
+            background-color: $blue-steel!important;
+        }
+        .progress-bar.purple-studio{
+            background-color: $purple-studio!important;
+        }
+        .prgress-bar.green-meadow{
+            background-color: $ifm-main!important;
+        }
+    }
+    #personal{
+        display: none;
+    }
+}

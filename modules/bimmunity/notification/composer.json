@@ -1,0 +1,12 @@
+{
+    "name": "bimmunity/notification",
+    "description": "package to notification",
+    "type": "project",
+    "license": "any",
+    "authors": [{
+        "name": "Abdelsadek Nady",
+        "email": "abdelsadek.nady@gmail.com"
+    }],
+    "minimum-stability": "dev",
+    "require": {}
+}

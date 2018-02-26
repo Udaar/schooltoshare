@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,2DAAsE;EAClE,+CAAgD;IAC5C,SAAS,EAAE,cAAc;;EAE7B,iDAAiD;IAC7C,OAAO,EAAE,GAAG;IACZ,SAAS,EAAE,GAAG;IACd,GAAG,EAAE,IAAI",
+"sources": ["../sass/tenant-unit-relation-reset.scss"],
+"names": [],
+"file": "tenant-unit-relation-reset.css"
+}

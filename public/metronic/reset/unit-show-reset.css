@@ -1,0 +1,44 @@
+body {
+  overflow-x: hidden; }
+
+/* === Tab <li> === */
+.tabbable-custom > .nav-tabs > li {
+  width: 17%; }
+.tabbable-custom .show-unit-tab-pane > .portlet.light {
+  padding: 0 10px 0; }
+  .tabbable-custom .show-unit-tab-pane > .portlet.light > .portlet-title {
+    padding: 10px 0; }
+.tabbable-custom .show-unit-tab-pane > .portlet > .portlet-title {
+  margin-bottom: 0; }
+.tabbable-custom .show-unit-tab-pane > .portlet > .portlet-body {
+  padding-top: 0; }
+  .tabbable-custom .show-unit-tab-pane > .portlet > .portlet-body p {
+    margin: 0; }
+
+/* === Info-section === */
+.info-section .info-wrapper {
+  border-bottom: none; }
+
+/* === Select 2 === */
+.select2-container {
+  width: 100% !important; }
+
+.input-group-btn .btn.default:not(.btn-outline) {
+  border-color: #c2cad8; }
+
+/* === Media Query === */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .tabbable-custom > .nav-tabs > li {
+    display: inline-block;
+    width: 50%;
+    float: none;
+    margin: 0; } }
+@media screen and (max-width: 1200px) {
+  /* === Add Equipment === */
+  .show-unit-equipments-add [class*=' col-'] {
+    margin-bottom: 10px; }
+
+  .add-equipment {
+    float: left !important; } }
+
+/*# sourceMappingURL=unit-show-reset.css.map */

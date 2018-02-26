@@ -1,0 +1,294 @@
+/* === Filter === */
+@media only screen and (max-width: 800px) {
+  .ifm-filter .form-control {
+    margin-bottom: 10px !important; }
+  .ifm-filter .col-xs-12 {
+    padding-left: 10px;
+    padding-right: 10px; } }
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50% !important;
+  overflow: hidden;
+  position: relative; }
+  .profile-img:hover .btn-wrap {
+    height: 100%;
+    opacity: 1;
+    bottom: 0; }
+    .profile-img:hover .btn-wrap .btn-file .btn-select-img {
+      line-height: 180px; }
+  .profile-img .fileinput-new.thumbnail,
+  .profile-img .fileinput-preview.thumbnail {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    padding: 0 !important;
+    border: none !important;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .profile-img .fileinput-new.thumbnail img,
+    .profile-img .fileinput-preview.thumbnail img {
+      width: 100%;
+      height: 100%;
+      max-width: none !important;
+      max-height: none !important; }
+  .profile-img .btn-wrap {
+    width: 100%;
+    height: 50px;
+    opacity: 0;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    transition: 0.5s all ease-in-out; }
+    .profile-img .btn-wrap .btn-file {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      border: none;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #FFF; }
+      .profile-img .btn-wrap .btn-file:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #FFF; }
+      .profile-img .btn-wrap .btn-file .btn-select-img {
+        font-size: 20px;
+        text-align: center;
+        line-height: 50px; }
+  .profile-img span.fileinput-exists,
+  .profile-img a.fileinput-exists {
+    display: none; }
+  .profile-img .fileinput-exists .fileinput-new, .profile-img .fileinput-new .fileinput-exists {
+    display: inline-block !important; }
+  .profile-img .fileinput-new.btn-select-img {
+    display: inline-block !important; }
+
+.remodal-wrapper {
+  z-index: 100003; }
+
+.remodal {
+  padding: 30px 20px;
+  text-align: left;
+  max-width: 600px; }
+  .remodal .remodal-close {
+    left: auto;
+    right: 0; }
+
+.remodal.confirmation {
+  max-width: 360px;
+  padding: 0; }
+  .remodal.confirmation .remodal-body {
+    padding: 15px; }
+    .remodal.confirmation .remodal-body .confirmation-message {
+      margin-bottom: 20px; }
+      .remodal.confirmation .remodal-body .confirmation-message i {
+        color: #EE4266;
+        font-size: 25px;
+        margin-top: 10px; }
+      .remodal.confirmation .remodal-body .confirmation-message span {
+        color: #222222;
+        padding-left: 22px; }
+  .remodal.confirmation .remodal-close {
+    color: #FFFFFF; }
+  .remodal.confirmation .remodal-head {
+    background-color: #EE4266;
+    color: #FFFFFF;
+    padding: 12px 15px; }
+    .remodal.confirmation .remodal-head h4 {
+      margin-bottom: 0 !important; }
+
+/* iPhone, Mobile */
+@media screen and (max-width: 991px) {
+  :root:root:root .page-content {
+    padding: 0 !important; }
+    :root:root:root .page-content .employee-zone {
+      padding: 0 !important;
+      /* === Tabs === */ }
+      :root:root:root .page-content .employee-zone .personal {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        border-bottom: 0 !important; }
+      :root:root:root .page-content .employee-zone .title-bar {
+        display: none; }
+      :root:root:root .page-content .employee-zone .left-part > .col-md-4 {
+        margin: 0;
+        padding: 30px 0;
+        background-color: #1BBC9B; }
+        :root:root:root .page-content .employee-zone .left-part > .col-md-4 .profile-img {
+          width: 150px;
+          height: 150px;
+          border: 3px solid #FFF;
+          margin-bottom: 10px;
+          left: 50%;
+          transform: translate(-50%); }
+        :root:root:root .page-content .employee-zone .left-part > .col-md-4 .m-personal-info {
+          display: block; }
+          :root:root:root .page-content .employee-zone .left-part > .col-md-4 .m-personal-info p.name {
+            font-weight: bold;
+            font-size: 17px; }
+          :root:root:root .page-content .employee-zone .left-part > .col-md-4 .m-personal-info p {
+            margin: 0;
+            margin-bottom: 5px;
+            font-size: 14px; }
+            :root:root:root .page-content .employee-zone .left-part > .col-md-4 .m-personal-info p i {
+              font-size: 16px; }
+        :root:root:root .page-content .employee-zone .left-part > .col-md-4 .m-edit-btn {
+          position: absolute;
+          top: 10px;
+          right: 10px; }
+          :root:root:root .page-content .employee-zone .left-part > .col-md-4 .m-edit-btn a {
+            font-size: 20px; }
+      :root:root:root .page-content .employee-zone .right-part {
+        display: none; }
+      :root:root:root .page-content .employee-zone .m-name, :root:root:root .page-content .employee-zone .m-job {
+        display: none; }
+      :root:root:root .page-content .employee-zone .tabbable-custom {
+        border: none !important; }
+        :root:root:root .page-content .employee-zone .tabbable-custom .nav-tabs {
+          list-style: none;
+          width: 100%;
+          overflow: hidden;
+          white-space: nowrap;
+          position: relative;
+          border: none;
+          border-bottom: 1px solid #C9C9C9; }
+          :root:root:root .page-content .employee-zone .tabbable-custom .nav-tabs li {
+            width: 28%;
+            border: none !important;
+            display: inline-block;
+            float: none;
+            border-right: 1px solid #C9C9C9 !important; }
+            :root:root:root .page-content .employee-zone .tabbable-custom .nav-tabs li.active a {
+              color: #1BBC9B !important; }
+            :root:root:root .page-content .employee-zone .tabbable-custom .nav-tabs li a {
+              padding: 7px;
+              font-size: 12px;
+              border: none !important;
+              background-color: #FFFFFF !important; }
+              :root:root:root .page-content .employee-zone .tabbable-custom .nav-tabs li a .icon {
+                font-size: 14px;
+                margin-bottom: 5px; }
+        :root:root:root .page-content .employee-zone .tabbable-custom #personal.active {
+          display: block; } }
+@media screen and (max-width: 991px) {
+  :root:root:root .page-content .employee-zone {
+    /* === Personal Item === */ }
+    :root:root:root .page-content .employee-zone .personal-item {
+      margin-bottom: 0 !important; }
+      :root:root:root .page-content .employee-zone .personal-item .col-lg-6 {
+        margin-bottom: 15px; } }
+/* === Custome, iPhone Retina === */
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  .employee-zone {
+    padding: 10px; } }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .personal-item .col-sm-6 {
+    font-size: 13px; } }
+.portlet.light {
+  padding: 15px; }
+
+.item-table td,
+.item-table th {
+  text-align: center;
+  vertical-align: middle !important; }
+
+:root:root:root .table-bordered > tbody > tr > td:first-child {
+  cursor: pointer; }
+
+:root:root:root .table-bordered > tbody > tr:first-child > td {
+  border-top-color: #DDDDDD !important; }
+
+:root:root:root .table-bordered thead > tr > th:last-child {
+  border-right-color: #DDDDDD !important; }
+
+:root:root:root .table-bordered,
+:root:root:root .table-bordered thead > tr > th {
+  border-color: #DDDDDD !important; }
+
+@media screen and (min-width: 320px) and (max-width: 992px) {
+  .portlet.light .portlet-body {
+    padding-top: 0; }
+
+  .order-info .col-xs-12 {
+    padding-left: 0;
+    padding-right: 0; }
+
+  .form-actions {
+    padding-left: 15px; }
+
+  .editableform .form-group {
+    margin-bottom: 0; }
+
+  .popover-content {
+    padding: 9px 12px; }
+
+  .edit-task-wrap h3 {
+    font-size: 14px;
+    margin-bottom: 10px !important; }
+
+  .edit-task-wrap .popover h3 {
+    font-size: 11px; }
+
+  .popover {
+    left: 35.2969px !important; } }
+@media screen and (min-width: 768px) {
+  .tabbable-custom > .nav-tabs > li {
+    width: 20%; } }
+.employee-zone {
+  /* === Left Part === */
+  /* === Personal Item === */
+  /* === Tabs Part === */ }
+  .employee-zone .left-part .m-personal-info {
+    display: none; }
+  .employee-zone .left-part .m-tabs {
+    display: none; }
+  .employee-zone .personal-item label {
+    color: #74777B;
+    margin-right: 5px; }
+  .employee-zone .personal-item span {
+    color: #7d7d7d; }
+  .employee-zone .personal-item span.label-danger {
+    color: #FFFFFF; }
+  .employee-zone .personal-item i {
+    font-size: 18px;
+    margin-right: 3px; }
+  .employee-zone .tabbable-custom > .nav-tabs > li:last-child {
+    border-right: none; }
+  .employee-zone .add-btn-tab {
+    font-size: 27px; }
+  .employee-zone .edit-btn-tab {
+    font-size: 20px; }
+  .employee-zone .work-exp-item h4,
+  .employee-zone .edu-item h4,
+  .employee-zone .skill-item h4,
+  .employee-zone .salary-item h4 {
+    color: #74777B; }
+    .employee-zone .work-exp-item h4 span,
+    .employee-zone .edu-item h4 span,
+    .employee-zone .skill-item h4 span,
+    .employee-zone .salary-item h4 span {
+      margin: 7px 0;
+      display: inline-block;
+      color: #828282; }
+  .employee-zone .work-exp-item h6,
+  .employee-zone .edu-item h6,
+  .employee-zone .skill-item h6,
+  .employee-zone .salary-item h6 {
+    color: #828282; }
+  .employee-zone .skill-item .progress-bar {
+    color: #FFF !important; }
+  .employee-zone .skill-item .progress-bar.grey {
+    background-color: #566366 !important; }
+  .employee-zone .skill-item .progress-bar.yellow-saffron {
+    background-color: #F4D03F !important; }
+  .employee-zone .skill-item .progress-bar.blue-steel {
+    background-color: #4B77BE !important; }
+  .employee-zone .skill-item .progress-bar.purple-studio {
+    background-color: #8E44AD !important; }
+  .employee-zone .skill-item .prgress-bar.green-meadow {
+    background-color: #1BBC9B !important; }
+  .employee-zone #personal {
+    display: none; }
+
+/*# sourceMappingURL=employee_edit.css.map */

@@ -1,0 +1,24 @@
+#comments-container .navigation {
+  display: none; }
+#comments-container ul.main li.comment .comment-wrapper {
+  overflow: visible;
+  padding: 1.5em 0.5em; }
+#comments-container .textarea-wrapper::after {
+  display: none; }
+#comments-container .textarea-wrapper::before {
+  display: none; }
+#comments-container .textarea-wrapper .close .left, #comments-container .textarea-wrapper .close .right {
+  display: none; }
+#comments-container .commenting-field.main {
+  margin-bottom: 20px; }
+  #comments-container .commenting-field.main .profile-picture {
+    display: none; }
+#comments-container .highlight-background {
+  background-color: #1BBC9B !important; }
+
+.file-information {
+  border-bottom: 1px solid #C9C9C9;
+  margin-bottom: 30px;
+  padding-bottom: 15px; }
+
+/*# sourceMappingURL=files.css.map */

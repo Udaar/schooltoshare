@@ -1,0 +1,66 @@
+@import "../../../partials/_Variables";
+@import "../../../partials/_remodal";
+
+.service-section{
+    a{
+        color: #333333;
+    }
+    >h3{
+        margin-bottom: 20px!important;
+    }
+    .col-md-3{
+        margin-bottom: 10px;
+    }
+    .service-item{
+        .service-title{
+            background-color: #BFBFBF;
+            padding: 10px 0;
+            span{
+                display: inline-block;
+                vertical-align: -webkit-baseline-middle;
+                vertical-align: -moz-baseline-middle;
+                vertical-align: -ms-baseline-middle;
+                vertical-align: -o-baseline-middle;
+                vertical-align: baseline-middle;
+                word-break: break-all;
+            }
+        }
+        .service-body{
+            background-color: #E9EDEF;
+            color: #6D6766;
+            font-size: 12px;
+            padding: 10px 5px;
+            position: relative;
+        }
+        .add{
+            background-color: #E9EDEF;
+            color: #6D6766;
+            font-size: 12px;
+            padding: 10px 5px;
+            position: relative;
+            height: 150px;
+        }
+    }
+}
+
+.row.is-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.row.is-flex>[class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}

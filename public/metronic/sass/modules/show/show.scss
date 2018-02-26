@@ -1,0 +1,20 @@
+@import "../../partials/_Variables";
+
+@media screen and (min-width: 991px){
+    .ifm-show{
+        .left-col{
+            border-right: 1px solid $ifm-light-grey;
+        }
+        .form-group{
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+    .ifm-show{
+        .portlet.light{
+            padding: 15px;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@media only screen and (min-width : 320px) and (max-width : 768px){
+    /* Start Navigation Bar */
+    #primary-menu-trigger i{
+        padding: 13px 0;
+    }
+    #header,
+    #header-wrap,
+    #primary-menu:not(.style-2),
+    #primary-menu:not(.style-2)>ul{
+        width: auto;
+        height: auto!important;
+    }
+    #logo{
+        padding: 25px 0!important;
+    }
+    #logo img{
+        width: auto;
+        padding-left: 20px;
+        height: 50px!important;
+    }
+    body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu>div>ul>li.current a,
+    body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu>div>ul>li:hover a,
+    body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu>ul>li.current a,
+    body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu>ul>li:hover a{
+        color: #68c0d8!important;
+    }
+    /* End Navigation Bar */
+
+    /* Start Sections */
+    section{
+        font-size: 12px;
+        border-bottom: 1px solid #999999;
+    }
+    .padding-50-all{
+        padding: 20px;
+    }
+    p{
+        margin-bottom: 20px;
+    }
+    /* End Sections */
+}

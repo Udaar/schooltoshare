@@ -1,0 +1,123 @@
+@import "../../../partials/_Variables";
+
+.dropdown-menu{
+    box-shadow: none;
+    border-color: $ifm-light-grey;
+    &:before{
+        border-bottom-color: $ifm-light-grey!important;
+    }
+}
+
+.slimScrollBar{
+    background-color: $ifm-grey!important;
+}
+
+.dashboard-section{
+    .related-system{
+        .mt-element-ribbon{
+            padding: 10px 0 10px 8px;
+            font-size: 11px;
+            .ribbon{
+                top:7px;
+            }
+        }
+    }
+    .charts{
+        .left{
+            .portlet.light{
+                padding: 10px;
+                border-color: $ifm-light-grey;
+                .portlet-title{
+                    .caption{
+                        .caption-subject{
+                            font-size: 12px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+                .portlet-body{
+                    .feeds{
+                        li{
+                            background-color: #e9edf0;
+                            font-size: 12px;
+                            padding-bottom: 5px;
+                            padding-left: 5px;
+                            padding-top: 5px;
+                            .col1{
+                                .desc{
+                                    .label.label-sm{
+                                        display: inline-block;
+                                        font-size: 12px;
+                                        margin-top: 5px;
+                                        padding-bottom: 5px;
+                                        padding-top: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .task-list{
+                        li{
+                            background-color: #e9edf0;
+                            font-size: 12px;
+                            margin-bottom: 7px;
+                            padding-bottom: 5px;
+                            padding-left: 5px;
+                            padding-top: 5px;
+                            .task-title{
+                                .label.label-sm{
+                                    display: inline-block;
+                                    font-size: 12px;
+                                    margin-top: 5px;
+                                    padding-bottom: 5px;
+                                    padding-top: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .right{
+            .budget-expenses{
+                .portlet-body{
+                    padding: 10px 10px 0;
+                }
+            }
+        }
+    }
+    .requstes{
+        .legend{
+            table{
+                bottom: 5px;
+                left: 50%;
+                right: auto!important;
+                top: auto!important;
+                transform: translateX(-50%);
+            }
+            tr{
+                display: inline;
+                margin-right: 10px;
+                td.legendColorBox{
+                    >div{
+                        border: 0!important;
+                        >div{
+                            border-radius: 50%!important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .inventory-list{
+        div.dataTables_wrapper .dt-buttons{
+            display: block;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .no-padding-left-lg{
+        padding-left: 0;
+    }
+}

@@ -1,0 +1,42 @@
+.no-more-tables > .extandable > tbody > tr:not(.child) {
+  cursor: pointer; }
+.no-more-tables > .extandable > tbody tr.child {
+  display: none; }
+  .no-more-tables > .extandable > tbody tr.child td {
+    padding: 0;
+    text-align: left; }
+    .no-more-tables > .extandable > tbody tr.child td > div.child-item > i {
+      vertical-align: middle;
+      margin-right: 5px;
+      font-size: 16px; }
+    .no-more-tables > .extandable > tbody tr.child td > div.child-item > p {
+      margin-top: 10px; }
+.no-more-tables > .extandable > tbody td > p {
+  margin: 0 auto;
+  width: 150px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+@media screen and (min-width: 320px) and (max-width: 1200px) {
+  .no-more-tables table.table-bordered {
+    border: none !important; }
+  .no-more-tables > .extandable > tbody tr:not(.child) td {
+    padding: 5px !important;
+    text-align: left;
+    font-weight: bold;
+    border: 0; }
+    .no-more-tables > .extandable > tbody tr:not(.child) td i {
+      float: right;
+      margin-top: 3px;
+      font-size: 16px; }
+  .no-more-tables > .extandable > tbody tr.child {
+    border: 0; }
+    .no-more-tables > .extandable > tbody tr.child td {
+      padding: 0 !important;
+      border-top: 0; }
+      .no-more-tables > .extandable > tbody tr.child td .child-item.ifm-padding-md-all {
+        padding: 10px !important;
+        font-size: 12px; } }
+
+/*# sourceMappingURL=extandableTable.css.map */

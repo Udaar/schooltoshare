@@ -1,0 +1,327 @@
+<?php
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class CurrenciesTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        DB::table('currencies')->delete();
+        DB::table('currencies')->insert([
+            [
+                'id' => 1,
+                'code' => 'GBP',
+                'num' => '826',
+                'name' => 'Pound sterling',
+                'hex' => '&#xa3;',
+            ],
+            [
+                'id' => 2,
+                'code' => 'USD',
+                'num' => '840',
+                'name' => 'United States dollar',
+                'hex' => '&#x24;',
+            ],
+            [
+                'id' => 3,
+                'code' => 'AED',
+                'num' => '784',
+                'name' => 'United Arab Emirates dirham',
+                'hex' => '&#x62f;&#x2e;&#x625;',
+            ],
+            [
+                'id' => 4,
+                'code' => 'ARS',
+                'num' => '032',
+                'name' => 'Argentine peso',
+                'hex' => '&#x24;',
+            ],
+            [
+                'id' => 5,
+                'code' => 'AUD',
+                'num' => '036',
+                'name' => 'Australian dollar',
+                'hex' => '&#x24;',
+            ],
+            [
+                'id' => 6,
+                'code' => 'BRL',
+                'num' => '986',
+                'name' => 'Brazilian real',
+                'hex' => '&#x52;&#x24;',
+            ],
+            [
+                'id' => 7,
+                'code' => 'CAD',
+                'num' => '124',
+                'name' => 'Canadian dollar',
+                'hex' => '&#x24;',
+            ],
+            [
+                'id' => 8,
+                'code' => 'CHF',
+                'num' => '756',
+                'name' => 'Swiss franc',
+                'hex' => '&#x43;&#x48;&#x46;',
+            ],
+            [
+                'id' => 9,
+                'code' => 'CLP',
+                'num' => '152',
+                'name' => 'Chilean peso',
+                'hex' => '&#x24;',
+            ],
+            [
+                'id' => 10,
+                'code' => 'CNY',
+                'num' => '156',
+                'name' => 'Chinese yuan',
+                'hex' => '&#xa5;',
+            ],
+            [
+                'id' => 11,
+                'code' => 'COP',
+                'num' => '170',
+                'name' => 'Colombian peso',
+                'hex' => '&#x24;',
+            ],
+            [
+                'id' => 12,
+                'code' => 'CZK',
+                'num' => '203',
+                'name' => 'Czech koruna',
+                'hex' => '&#x4b;&#x10d;',
+            ],
+            [
+                'id' => 13,
+                'code' => 'DKK',
+                'num' => '208',
+                'name' => 'Danish krone',
+                'hex' => '&#x6b;&#x72;',
+            ],
+            [
+                'id' => 14,
+                'code' => 'EGP',
+                'num' => '818',
+                'name' => 'Egyptian pound',
+                'hex' => '&#xa3;',
+            ],
+            [
+                'id' => 15,
+                'code' => 'EUR',
+                'num' => '978',
+                'name' => 'Euro',
+                'hex' => '&#x20ac;',
+            ],
+            [
+                'id' => 16,
+                'code' => 'HKD',
+                'num' => '344',
+                'name' => 'Hong Kong dollar',
+                'hex' => 'HK&#x24;',
+            ],
+            [
+                'id' => 17,
+                'code' => 'HUF',
+                'num' => '348',
+                'name' => 'Hungarian forint',
+                'hex' => '&#x46;&#x74;',
+            ],
+            [
+                'id' => 18,
+                'code' => 'IDR',
+                'num' => '360',
+                'name' => 'Indonesian rupiah',
+                'hex' => '&#x52;&#x70;',
+            ],
+            [
+                'id' => 19,
+                'code' => 'ILS',
+                'num' => '376',
+                'name' => 'Israeli shekel',
+                'hex' => '&#x20aa;',
+            ],
+            [
+                'id' => 20,
+                'code' => 'INR',
+                'num' => '356',
+                'name' => 'Indian rupee',
+                'hex' => '&#x20b9;',
+            ],
+            [
+                'id' => 21,
+                'code' => 'JPY',
+                'num' => '392',
+                'name' => 'Japanese yen',
+                'hex' => '&#xa5;',
+            ],
+            [
+                'id' => 22,
+                'code' => 'KRW',
+                'num' => '410',
+                'name' => 'South Korean won',
+                'hex' => '&#x20a9;',
+            ],
+            [
+                'id' => 23,
+                'code' => 'MAD',
+                'num' => '504',
+                'name' => 'Moroccan dirham',
+                'hex' => '&#x2e;&#x62f;&#x2e;&#x645;',
+            ],
+            [
+                'id' => 24,
+                'code' => 'MXN',
+                'num' => '484',
+                'name' => 'Mexican peso',
+                'hex' => '&#x24;',
+            ],
+            [
+                'id' => 25,
+                'code' => 'MYR',
+                'num' => '458',
+                'name' => 'Malaysian ringgit',
+                'hex' => '&#x52;&#x4d;',
+            ],
+            [
+                'id' => 26,
+                'code' => 'NOK',
+                'num' => '578',
+                'name' => 'Norwegian krone',
+                'hex' => '&#x6b;&#x72;',
+            ],
+            [
+                'id' => 27,
+                'code' => 'NZD',
+                'num' => '554',
+                'name' => 'New Zealand dollar',
+                'hex' => '&#x24;',
+            ],
+            [
+                'id' => 28,
+                'code' => 'PEN',
+                'num' => '604',
+                'name' => 'Peruvian Sol',
+                'hex' => '&#x53;&#x2f;&#x2e;',
+            ],
+            [
+                'id' => 29,
+                'code' => 'PHP',
+                'num' => '608',
+                'name' => 'Philippine peso',
+                'hex' => '&#x20b1;',
+            ],
+            [
+                'id' => 30,
+                'code' => 'PKR',
+                'num' => '586',
+                'name' => 'Pakistani rupee',
+                'hex' => '&#x20a8;',
+            ],
+            [
+                'id' => 31,
+                'code' => 'PLN',
+                'num' => '985',
+                'name' => 'Polish złoty',
+                'hex' => '&#x7a;&#x142;',
+            ],
+            [
+                'id' => 32,
+                'code' => 'RON',
+                'num' => '946',
+                'name' => 'Romanian leu',
+                'hex' => '&#x6c;&#x65;&#x69;',
+            ],
+            [
+                'id' => 33,
+                'code' => 'RUB',
+                'num' => '643',
+                'name' => 'Russian ruble',
+                'hex' => '&#x440;&#x443;&#x431;',
+            ],
+            [
+                'id' => 34,
+                'code' => 'SAR',
+                'num' => '682',
+                'name' => 'Saudi riyal',
+                'hex' => '&#xfdfc;',
+            ],
+            [
+                'id' => 35,
+                'code' => 'SEK',
+                'num' => '752',
+                'name' => 'Swedish krona',
+                'hex' => '&#x6b;&#x72;',
+            ],
+            [
+                'id' => 36,
+                'code' => 'SGD',
+                'num' => '702',
+                'name' => 'Singapore dollar',
+                'hex' => '&#x24;',
+            ],
+            [
+                'id' => 37,
+                'code' => 'THB',
+                'num' => '764',
+                'name' => 'Thai baht',
+                'hex' => '&#xe3f;',
+            ],
+            [
+                'id' => 38,
+                'code' => 'TRY',
+                'num' => '949',
+                'name' => 'Turkish lira',
+                'hex' => 'TL',
+            ],
+            [
+                'id' => 39,
+                'code' => 'TWD',
+                'num' => '901',
+                'name' => 'New Taiwan dollar',
+                'hex' => '&#x4e;&#x54;&#x24;',
+            ],
+            [
+                'id' => 40,
+                'code' => 'UAH',
+                'num' => '980',
+                'name' => 'Ukrainian hryvnia',
+                'hex' => '&#x20b4;',
+            ],
+            [
+                'id' => 41,
+                'code' => 'UYU',
+                'num' => '858',
+                'name' => 'Uruguayan peso',
+                'hex' => '&#x24;&#x55;',
+            ],
+            [
+                'id' => 42,
+                'code' => 'VEF',
+                'num' => '937',
+                'name' => 'Venezuelan bolívar',
+                'hex' => '&#x42;&#x73;',
+            ],
+            [
+                'id' => 43,
+                'code' => 'VND',
+                'num' => '704',
+                'name' => 'Vietnamese dong',
+                'hex' => '&#x20ab;',
+            ],
+            [
+                'id' => 44,
+                'code' => 'ZAR',
+                'num' => '710',
+                'name' => 'South African rand',
+                'hex' => '&#x52;',
+            ]
+        ]);
+    }
+}

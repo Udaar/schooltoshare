@@ -1,0 +1,143 @@
+/* Start Global Reset */
+a:hover{
+    text-decoration: none;
+}
+/* End Global Reset */
+
+
+/* Start Color Reset */
+body,
+.page-sidebar-closed .page-sidebar .page-sidebar-menu.page-sidebar-menu-closed > li > .sub-menu,
+.page-sidebar .page-sidebar-menu > li.open > a,
+.page-sidebar,
+.page-quick-sidebar-wrapper .page-quick-sidebar,
+.page-sidebar .sidebar-search .input-group .form-control{
+    background-color: #333333;
+}
+
+.page-sidebar .page-sidebar-menu > li:hover > a,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.open > a,
+.page-header.navbar{
+    background-color: #222222;
+}
+
+/*.page-header.navbar .menu-toggler{
+    background-image: url('../../images/sidebar_toggler_icon_green.png');
+}*/
+
+.property .nav-tabs > li > a > .badge,
+.page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-toggle .badge.badge-default,
+.page-sidebar .page-sidebar-menu > li.active.open > a,
+.page-sidebar .page-sidebar-menu > li.active > a,
+.page-sidebar .page-sidebar-menu li > a > .badge,
+.portlet .media .tag,
+.tag,
+.sidebar-menu > li.active.open > a:hover,
+.page-sidebar .page-sidebar-menu > li.active > a:hover{
+    background-color: #93d327;
+}
+
+.theme-panel > .toggler, .theme-panel > .toggler:hover{
+    background: url(../../images/icon-color.png) center no-repeat #93d327 !important;
+}
+
+.page-sidebar .sidebar-search .input-group .form-control::-moz-placeholder
+{
+    color: #cccccc;
+}
+
+.page-sidebar .sidebar-search .input-group .form-control::-webkit-input-placeholder{
+   color: #cccccc;
+}
+
+.page-sidebar .sidebar-search .input-group .form-control:-ms-input-placeholder{
+   color: #cccccc;
+}
+
+.page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle > .username,
+.page-sidebar .page-sidebar-menu > li > a > i,
+.page-sidebar .page-sidebar-menu > li:hover > a > i,
+.page-sidebar .page-sidebar-menu .sub-menu > li > a > i,
+.page-sidebar .sidebar-search .input-group .input-group-btn .btn > i,
+.page-sidebar .page-sidebar-menu .sub-menu > li > a,
+.page-sidebar .page-sidebar-menu > li > a > i[class*="icon-"],
+.page-sidebar .page-sidebar-menu > li > a > i[class^="icon-"],
+.page-sidebar .page-sidebar-menu > li.heading > h3,
+.page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-toggle > i,
+.page-sidebar .page-sidebar-menu > li > a,
+.page-sidebar .page-sidebar-menu > li:hover > a,
+.page-quick-sidebar-open .page-quick-sidebar-toggler > i::before,
+.page-sidebar .page-sidebar-menu li > a > .arrow::before{
+    color: #cccccc;
+}
+
+.page-sidebar .sidebar-search .input-group{
+    border-bottom: 1px solid #cccccc;
+}
+
+.page-sidebar .page-sidebar-menu > li > a{
+    border-top: 1px solid #3d4957;
+}
+
+.page-quick-sidebar-wrapper,
+.theme-panel > .theme-options{
+    background-color: #333333;
+}
+
+.page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-toggle{
+    background-color: transparent;
+}
+.page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-toggle:hover
+{
+    background-color: #444444;
+}
+
+.property .media{
+    border-bottom-color: #f5c55f;
+}
+
+.property.portlet.light.bordered > .portlet-title,
+.feeds li{
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.tabbable-line > .nav-tabs > li.active, .tabbable-line > .nav-tabs > li:hover{
+    border-bottom: 4px solid #93d327;
+}
+
+.property .slimScrollBar{
+    background: #d9d9d9 !important;
+}
+
+.activities .bg-green{
+    background-color: #93d327 !important;
+}
+
+.page-quick-sidebar-open .page-quick-sidebar-toggler > i::before,
+.property .media .fa-arrow-circle-o-up,
+.property .media .media-heading > span,
+.portlet.light > .portlet-title > .caption,
+.portlet.light > .portlet-title > .caption > i,
+.activities .font-green,
+.page-header .top-menu .dropdown-quick-sidebar-toggler > .dropdown-toggle i::before{
+    color: #93d327 !important;
+}
+
+.property .media .fa-arrow-circle-o-down{
+    color: #cc5656;
+}
+
+.portlet > .portlet-body p,
+.portlet .media .media-heading{
+    color: #292929;
+}
+/* End Color Reset */
+
+
+.property .media{
+    padding: 20px;
+}
+
+.portlet .media{
+    background-color: #fff;
+}

@@ -1,0 +1,35 @@
+.ifm-form .portlet .form-group label {
+  display: block; }
+.ifm-form .portlet .form-group input, .ifm-form .portlet .form-group textarea, .ifm-form .portlet .form-group .ifm-btn-default {
+  transition: all ease-in-out 0.2s; }
+  .ifm-form .portlet .form-group input:focus, .ifm-form .portlet .form-group textarea:focus, .ifm-form .portlet .form-group .ifm-btn-default:focus {
+    border-color: #1BBC9B !important;
+    border-width: 2px !important; }
+.ifm-form .portlet .form-group .select2-selection[aria-expanded="true"] {
+  border-color: #1BBC9B !important;
+  border-width: 2px !important; }
+.ifm-form .portlet .form-group.ifm-form-actions {
+  float: right;
+  margin-bottom: 0; }
+.ifm-form .portlet .form-group.money-input {
+  position: relative; }
+  .ifm-form .portlet .form-group.money-input span.dollar-icon {
+    left: 10px;
+    position: absolute;
+    top: 58%; }
+.ifm-form .portlet .form-group .textarea-sm {
+  height: 100px !important; }
+
+.select2-container--bootstrap .select2-dropdown {
+  border-color: #1BBC9B !important;
+  border-width: 2px !important; }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .ifm-form .portlet {
+    padding: 12px; }
+    .ifm-form .portlet .form-group label {
+      font-size: 12px; }
+    .ifm-form .portlet .form-group.ifm-form-actions input, .ifm-form .portlet .form-group.ifm-form-actions a {
+      font-size: 12px; } }
+
+/*# sourceMappingURL=form.css.map */

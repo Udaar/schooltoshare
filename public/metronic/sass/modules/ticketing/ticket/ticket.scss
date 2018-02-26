@@ -1,0 +1,353 @@
+@import "../../../partials/_step-progress-bar";
+@import "../../../partials/_Variables";
+@import "../../../partials/_remodal";
+
+body { background-color: #333 }
+
+img{ vertical-align: middle }
+
+.ticket-section{
+
+    /* Report Btn */
+
+    .report-btn{
+        font-size: 13px;
+        padding: 3px 4px;
+    }
+
+    /* Container */
+    .container{
+        margin: 40px auto;
+        width: 80%;
+    }
+
+    /* Step Bar Carosal #1 */
+
+    #firstCarousel{
+        .carousel-control{
+            background-image: none;
+            top: 6px;
+            width: 5%;
+            .fa-chevron-left,
+            .fa-chevron-right{
+                &::before{
+                    position: absolute;
+                    left: 48%;
+                    top: 52%;
+                    transform: translate(-50%,-50%);
+                }
+            }
+            .fa-chevron-right{
+                &::before{
+                    left: 55%;
+                }
+            }
+        }
+    }
+
+    /* Step Bar */
+
+    .line{
+        border-bottom: 1px solid $ifm-light-grey;
+        padding-bottom: 20px;
+        width: 100%;
+        left: 15px;
+        position: relative;
+        .line-inner{
+            position: absolute;
+            height: 1px;
+            background-color: $ifm-main;
+            top: 0;
+            left: 0;
+            margin-top: 20px;
+            padding: 0 20px;
+        }
+    }
+    .stepText{
+        color: $ifm-light-grey;
+        font-size: 16px;
+        margin-top: 10px;
+        text-align: center; 
+    }
+    .stepText.active{ color: $ifm-main }
+    .step{
+        background: white;
+        border: 1px solid $ifm-light-grey;
+        border-radius: 100px!important;
+        color: #fff;
+        cursor: pointer;
+        height: 30px;
+        margin: -16px auto 10px;
+        text-align: center;
+        text-transform: capitalize;
+        transition: 0.4s;
+        width: 30px;
+        i{
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+    .step.active{
+      background: $ifm-main;
+      border-color: $ifm-main;
+    }    
+    
+    /* If one step in item */
+    .one .one{
+        width: 100%;
+    }
+    .one .zero{
+        padding: 0;
+    }
+
+    /* If two step in item */
+    .two .one{
+        width: 25%;
+    }
+    .two .two{
+        width: 100%;
+    }
+    .two .zero{
+        padding: 0;
+    }
+
+    /* If three step in item */
+    .three .one{
+        width: 18%;
+    }
+    .three .two{
+        width: 50%;
+    }
+    .three .three{
+        width: 100%;
+    }
+    .three .zero{
+        padding: 0;
+    }
+
+    /* If four step in item */
+    .four .one{
+        width: 12.5%;
+    }
+    .four .two{
+        width: 37.5%;
+    }
+    .four .three{
+        width: 62.5%;
+    }
+    .four .four{
+        width: 100%;
+    }
+    .four .zero{
+        padding: 0;
+    }
+
+}
+
+.step-section{
+    display: none;
+}
+
+.step-section.active{
+    display: block;
+}
+
+/* Action Slider */
+.cd-horizontal-timeline{
+    margin-bottom: 45px;
+    margin-top: 45px;
+    .events-content{
+        margin: 0;
+        .action-wrap{
+            border-bottom: 1px solid #ece8e8;
+            margin-top: 20px;
+            padding-bottom: 20px;
+            &:first-child{
+                margin-top: 0;
+            }
+            &:last-child{
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+        .action-row{
+            margin-bottom: 15px;
+            label{
+                color: #555;
+                font-size: 15px;
+                font-weight: 100;
+            }
+            span{
+                color: #777;
+                font-size: 14px;
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .timeline{
+        max-width: none;
+
+    }
+    .cd-timeline-navigation{
+        a{
+            height: 30px;
+            width: 30px;
+        }
+        a, a:hover, a.inactive:hover{
+            border-color: $ifm-main;
+            border-radius: 50%!important;
+            border-width: 2px;
+            &::after{
+                background-image: url('/horezontal_timeline/img/cd-arrow.svg');
+            }
+        }
+        a.inactive{
+            &::after{
+                background-position: 0 0;
+            }
+        }
+    }
+    .filling-line{
+        background-color: $ifm-main;
+    }
+    .events{
+        height: 1px;
+        background-color: $ifm-light-grey;
+        a{
+            &:hover{
+                &::after{
+                    background-color: $ifm-main!important;
+                    border-color: $ifm-main!important;
+                }
+            }
+        }
+        a.selected{
+            &::after{
+                background-color: $ifm-main;
+                border-color: $ifm-main;
+            }
+        }
+        a.older-event{
+            &::after{
+                border-color: $ifm-main;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 480px){
+
+    /* Step Bar Carosal #1 */
+
+    #firstCarousel{
+        .carousel-inner{
+            margin-top: 20px;
+        }
+        .container{
+            padding: 0;
+        }
+        .carousel-control{
+            box-shadow: none;
+            opacity: 1;
+            left: 28px;
+            .fa-chevron-left,
+            .fa-chevron-right{
+                border: 2px solid $ifm-main;
+                border-radius: 50%!important;
+                color: $ifm-main;
+                display: inline-block;
+                font-size: 12px;
+                height: 30px;
+                line-height: 30px;
+                position: absolute;
+                text-align: center;
+                text-shadow: none;
+                top: 30.5%;
+                width: 30px;
+            }
+            &.right{
+                left: auto;
+                right: 55px;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+
+}
+@media screen and (min-width: 320px) and (max-width: 768px){
+    
+}
+@media screen and (min-width: 480px) and (max-width: 768){
+    
+}
+@media screen and (max-width: 480px){
+    .ticket-section{
+
+        /* Container */
+        .container{
+            padding: 0;
+            width: 100%;
+        }
+
+        /* Step */
+        .step{
+            height: 20px;
+            margin-top: -11px;
+            width: 20px;
+            i{
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+        .stepText{
+            font-size: 12px;
+        }
+
+    }
+
+    #firstCarousel{
+        .carousel-control{
+            box-shadow: none;
+            opacity: 1;
+            .fa-chevron-left,
+            .fa-chevron-right{
+                color: $ifm-main;
+                font-size: 12px;
+                position: absolute;
+                text-shadow: none;
+                top: 10%;
+            }
+            &.right{
+                right: 0px;
+            }
+        }
+    }
+
+    .cd-timeline-navigation{
+        li{
+            position: absolute;
+            top: 0;
+            a{
+                border: 0;
+                width: 10px!important;
+            }
+            &:first-child{
+                left: 0;
+            }
+            &:last-child{
+                right: 0;
+            }
+        }
+    }
+    .cd-horizontal-timeline{
+        .timeline{
+            margin:0;
+            width: 100%;
+        }
+    }
+}

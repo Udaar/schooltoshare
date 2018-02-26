@@ -1,0 +1,24 @@
+@import "partials/_Variables";
+.input-medium{
+	width: 100%!important;
+}
+.select2-container{
+	width: 100%!important;
+	text-align: left!important;
+	z-index: 100005!important;
+}
+
+.select2-container--bootstrap .select2-results__option--highlighted[aria-selected]{
+    background-color: $ifm-main;
+	text-align: left!important;
+}
+
+.select2-container--bootstrap .select2-selection--single .select2-selection__rendered{
+	color: #999999;
+}
+.select2-container--bootstrap .select2-dropdown{
+	border-color: $ifm-light-grey;
+}
+.select2-container--bootstrap .select2-selection{
+	border: 1px solid $ifm-light-grey !important;
+}

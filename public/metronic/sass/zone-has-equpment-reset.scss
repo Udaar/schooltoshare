@@ -1,0 +1,13 @@
+@import "partials/_Variables";
+.issue-body{
+	width: 200px;
+	overflow-x: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+@media screen and (min-width: $screen-xxs) and (max-width: $screen-sm){
+	.issue-body{
+		width: 150px;
+	}
+}

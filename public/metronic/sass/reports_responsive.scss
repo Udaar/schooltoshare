@@ -1,0 +1,10 @@
+@media screen and (max-width: 992px){
+    .report-left,
+    .report-right{
+        padding: 0!important;
+    }
+    .report-left .portlet.light,
+    .report-right .portlet.light{
+        padding: 8px!important;
+    }
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,MAAO;EACH,QAAQ,EAAE,OAAO;;AAErB,UAAU;EACN,UAAU,EAAE,eAAc",
+"sources": ["../sass/tasks-show-reset.scss"],
+"names": [],
+"file": "tasks-show-reset.css"
+}

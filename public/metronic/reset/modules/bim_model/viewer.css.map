@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAU;EACN,MAAM,EAAE,CAAC;;AAGb,QAAQ;EACJ,MAAM,EAAE,iBAAiB;EACzB,OAAO,EAAE,eAAe;EACxB,KAAK,EAAE,IAAI;EAEP,mBAAM;IACF,KAAK,EAAE,IAAI",
+"sources": ["../../../sass/modules/bim_model/viewer.scss"],
+"names": [],
+"file": "viewer.css"
+}

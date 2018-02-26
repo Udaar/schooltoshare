@@ -1,0 +1,114 @@
+/* iPhone, Mobile */
+
+@media screen and (max-width: 991px){
+    :root:root:root .page-content{
+        padding: 0!important;
+        .employee-zone{
+            padding: 0!important;
+            .personal{
+                margin-bottom: 0!important;
+                padding-bottom: 0!important;
+                border-bottom: 0!important;
+            }
+            .title-bar{
+                display: none;
+            }
+            .left-part{
+                >.col-md-4{
+                    margin: 0;
+                    padding: 30px 0;
+                    background-color: $ifm-main;
+                    .profile-img{
+                        width: 150px;
+                        height: 150px;
+                        border: 3px solid #FFF;
+                        margin-bottom: 10px;
+                        left: 50%;
+                        transform: translate(-50%);
+                    }
+                    .m-personal-info{
+                        display: block;
+                        p.name{
+                            font-weight: bold;
+                            font-size: 17px;
+                        }
+                        p{
+                            margin: 0;
+                            margin-bottom: 5px;
+                            font-size: 14px;
+                            i{
+                                font-size: 16px
+                            }
+                        }
+                    }
+                    .m-edit-btn{
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        a{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            .right-part{
+                display: none;
+            }
+            .m-name, .m-job{
+                display: none;
+            }
+            /* === Tabs === */
+            .tabbable-custom{
+                border: none!important;
+                .nav-tabs{
+                    list-style: none;
+                    width: 100%;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    position: relative;
+                    border:none;
+                    border-bottom: 1px solid $ifm-light-grey;
+                    li{
+                        width: 28%;
+                        border:none!important;
+                        display: inline-block;
+                        float: none;
+                        border-right: 1px solid $ifm-light-grey!important;
+                        &.active{
+                            a{
+                                color: $ifm-main!important;
+                            }
+                        }
+                        a{
+                            padding: 7px;
+                            font-size: 12px;
+                            border: none!important;
+                            background-color: $ifm-white!important;
+                            .icon{
+                                font-size: 14px;
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+                }
+                #personal.active{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px){
+    :root:root:root .page-content{
+        .employee-zone{
+            /* === Personal Item === */
+            .personal-item{
+                margin-bottom: 0!important;
+                .col-lg-6{
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}

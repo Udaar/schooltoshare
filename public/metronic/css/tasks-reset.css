@@ -1,0 +1,31 @@
+.task-card {
+  height: 200px;
+  background-color: #FFFFFF;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #DDD;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  -ms-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777; }
+  .task-card .chart-wrap {
+    height: 100%;
+    border-right: 1px solid #DDD;
+    padding-right: 10px; }
+  .task-card .task-details .task-title {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #DDDDDD; }
+    .task-card .task-details .task-title a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.6s ease-in-out; }
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .task-card {
+    height: auto; }
+
+  .task-actions {
+    position: static !important; } }
+
+/*# sourceMappingURL=tasks-reset.css.map */

@@ -1,0 +1,10 @@
+@media screen and (min-width: 991px) {
+  .ifm-show .left-col {
+    border-right: 1px solid #C9C9C9; }
+  .ifm-show .form-group {
+    margin-bottom: 0; } }
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .ifm-show .portlet.light {
+    padding: 15px; } }
+
+/*# sourceMappingURL=show.css.map */
