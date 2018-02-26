@@ -76,7 +76,7 @@ a{
     -ms-text-stroke-color: orange;
 }
 .company-info .rate-value{
-    color: #777;
+    color: #353535;
     font-size: 20px;
 }
 
@@ -86,7 +86,7 @@ a{
 .image-gallery h4,
 .facilities h4,
 .events h4{
-    color: #777!important;
+    color: #353535!important;
     padding: 15px 0;
     margin-bottom: 0;
 }
@@ -130,7 +130,7 @@ a{
     font-size: 15px;
 }
 .company-reviews .rate-value{
-    color: #777;
+    color: #353535;
 }
 
 /* === Company Follow === */
@@ -149,7 +149,7 @@ a{
 
 /* === Property Info === */
 .right .property-info{
-    margin-bottom: 25px;
+    margin-bottom: 0px;
 }
 .right .property-info img{
     width: 100%;
@@ -165,7 +165,7 @@ a{
 .property-reviews .rate-group .rate-grey,
 .property-info .rate-group .rate-yellow,
 .property-reviews .rate-group .rate-yellow{
-    font-size: 30px;
+    font-size: 15px;
 }
 
 .property-info .rate-group .rate-yellow,
@@ -190,8 +190,8 @@ a{
     -ms-text-stroke-color: orange;
 }
 .property-info .rate-value{
-    color: #777;
-    font-size: 20px;
+    color: #353535;
+    font-size: 15px;
 }
 
 /* === Property Reviews === */
@@ -209,16 +209,18 @@ a{
     font-size: 15px;
 }
 .property-reviews .rate-value{
-    color: #777;
+    color: #353535;
 }
 
 /* === Property Follow === */
 .property-follow{
-    margin-top: 30px;
+    margin-top: 5px;
     text-align: center;
 }
 .property-follow .button{
-    background-color: #5B9BD5;
+    background-color: #353535;
+    width: 100%;
+    margin-left: 0;
 }
 .property-follow .button:focus{
     color: #FFFFFF;
@@ -240,6 +242,23 @@ a{
 /* === Facilities === */
 .facilities .pricing-content-1 .price-table-head h2{
     color: #FFFFFF!important;
+}
+.facility-col{
+    float: left;
+    width: 12.5%;
+}
+.facility-item p{
+    line-height: 14px!important;
+    margin-top: 5px;
+}
+.facility-item .not-exisit p{
+    color: #A7A8AA;
+}
+.facility-item .exisit p{
+    color: #353535;
+}
+.facility-item.two-word p{
+    margin-bottom: 16px;
 }
 
 /* === Events === */
