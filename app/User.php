@@ -224,17 +224,7 @@ class User extends Authenticatable
             $merged=$merged->merge($request);
         }
       return $merged;
-    //    $requests = User::where('perent_id',$this->id)->get()->pluck('serviceZones');
-    //      $merged=collect();
-    //     foreach ($requests as $request){
-    //         $merged=$merged->merge($request);
-    //     }
-    //   $teamrequests = $merged->pluck('requests');
-    //   $mergedrequests=collect();
-    //     foreach ($teamrequests as $teamrequest){
-    //         $mergedrequests=$mergedrequests->merge($teamrequest);
-    //     }
-    //     return $mergedrequests;
+    
 
     }
 
@@ -242,34 +232,21 @@ class User extends Authenticatable
     {
         return $this->hasMany(\Bimmunity\Invoice\Models\Customer::class);
     }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     **/
     public function expenses()
     {
         return $this->hasMany(\Bimmunity\Invoice\Models\Expenses::class);
     }
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     **/
     public function invoices()
     {
         return $this->hasMany(\Bimmunity\Invoice\Models\Invoice::class);
     }
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     **/
     public function payments()
     {
         return $this->hasMany(\Bimmunity\Invoice\Models\Payment::class);
     }
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     **/
     public function vendors()
     {
         return $this->hasMany(\Bimmunity\Invoice\Models\Vendor::class);
