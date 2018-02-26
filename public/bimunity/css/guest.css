@@ -161,7 +161,20 @@ a:focus,
 .item .rate-group .rate-yellow {
     color: #FFFF00;
 }
-
+.table.dataTable.no-footer{
+    border-bottom: 0;
+}
+#sample_1_wrapper,
+div.dataTables_wrapper div.dataTables_filter input{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+#sample_1_wrapper{
+    padding: 15px;
+}
+.table-scrollable>.table-bordered>tbody>tr>td,
+.table-scrollable>.table-bordered>thead>tr>th{
+    color: #393939;
+}
 /* Event Box */
 .event-box{
     

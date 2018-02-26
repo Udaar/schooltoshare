@@ -15,6 +15,8 @@
 	<link rel="stylesheet" href="/bimunity/vendor/bootstrap-3.3.7-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/metronic/assets/global/plugins/select2/css/select2.min.css">
 	<link rel="stylesheet" href="/metronic/assets/global/plugins/select2/css/select2-bootstrap.min.css">
+	<link href="/metronic/assets/global/plugins/datatables/datatables.min.css" rel="stylesheet">
+    <link href="/metronic/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" href="/metronic/assets/global/css/components.min.css">
 	<link rel="stylesheet" href="/metronic/assets/layouts/layout/css/themes/darkblue.min.css">
 	<link rel="stylesheet" href="/bimunity/css/main.css" />
@@ -252,6 +254,41 @@
 				</div>
 			</div>
 
+			<div class="container">
+				<div class="wrap">
+					<div class="container-fluid company-wrap">
+						<h3 class="top-p inline-block">Facility Requests</h3>
+						<a href="" class="btn grey-bg white-color pull-right"> <i class="fa fa-plus"></i> Add New </a>
+						<div class="clearfix"></div>
+						<div class="row is-flex">     
+							<div class="col-xs-12">
+								<table class="table table-striped table-bordered table-hover " width="100%" id="sample_1">
+									<thead>
+										<th class="ifm-main-bg ifm-white all">School Name</th>
+										<th class="ifm-main-bg ifm-white all">Activity</th>
+										<th class="ifm-main-bg ifm-white all">Date</th>
+										<th class="ifm-main-bg ifm-white all">Actions</th>
+									</thead>
+									<tbody>
+										<tr>
+											<td>This Is School Name</td>
+											<td>Playing Football</td>
+											<td>20 Jan, 2015</td>
+											<td>
+												<div class='btn-group ifm-static'>
+													{!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn ifm-btn-default ifm-white-bg ifm-grey ifm-border-light-grey-all', 'onclick' => "return confirm('Are you sure?')"]) !!}
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
 		</section><!-- #content end -->
 
 	</div><!-- #wrapper end -->
@@ -298,6 +335,13 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6yohSe89WiHJXhZCUA6wSNQnCEzySQVc"></script>
 	<script type="text/javascript" src="/bimunity/vendor/smooth-scroll-master/dist/js/smooth-scroll.min.js"></script>
 	<script src="/metronic/assets/global/plugins/select2/js/select2.full.min.js"></script>
+	<script src="/metronic/assets/global/plugins/jquery.dataTables1.10.11.min.js"></script>
+	<script src="/metronic/assets/global/plugins/dataTables.bootstrap1.10.11.min.js"></script>
+	<script src="/metronic/assets/global/scripts/datatable.js"></script>
+	<script src="/metronic/assets/global/plugins/datatables/datatables.min.js"></script>
+	<scrtip src="/metronic/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js"></scrtip>
+	<script src="/metronic/assets/pages/scripts/table-datatables-responsive.min.js"></script>
+	<script src="/metronic/js/datatable.js"></script>
 	<script type="text/javascript" src="/bimunity/js/functions.js"></script>
 	<script type="text/javascript" src="/bimunity/js/script.js"></script>
 	<script>

@@ -20,6 +20,18 @@ body{
 .text-left{
     text-align: left!important;
 }
+.inline-block{
+    display: inline-block!important;
+}
+.grey-bg{
+    background-color: #353535;
+}
+.grey-color{
+    color: #353535;
+}
+.white-color{
+    color: #fff!important;
+}
 .relative{
     position: relative!important;
 }
