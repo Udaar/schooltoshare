@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/metronic/reset/themes/green.css">
+<link rel="stylesheet" href="/metronic/reset/themes/red.css">
 
 {{-- Home --}}
     <li class="nav-item start {!! Request::is('home') ? ' active' : '' !!}">

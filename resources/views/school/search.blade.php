@@ -1,6 +1,6 @@
 <div class="map-wrap">
     
-    <div class="row filters">
+    <div class="row filters ifm-margin-sm-bottom">
         <div class="col-lg-10">
             <div class="row">
                 <div class="col-lg-3 no-padding-right">
@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="col-lg-2">
-            <button id="searchbtn" name="quick-contact-form-submit" class="button button-small button-3d nomargin" style="width:100%">filter</button>
+            <button id="searchbtn" name="quick-contact-form-submit" class="btn filter-btn ifm-white button button-small button-3d nomargin" style="width:100%">FILTER</button>
         </div>
     </div>
     <div id="map"></div>

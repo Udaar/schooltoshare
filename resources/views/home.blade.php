@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @push('head')
-    <link rel="stylesheet" href="/metronic/reset/dashboards/pm-dashboards.css">
+    <link rel="stylesheet" href="/metronic/reset/dashboards/sp-dashboards.css">
     <link rel="stylesheet" href="/metronic/reset/modules/bim_model/viewer.css">
     <style>
         .status{
@@ -14,7 +14,7 @@
 @endpush
 
 @section('content')
-    <section class="pm-dashboard">
+    <section class="sp-dashboard">
         {{-- Begin Page Title --}}
         <h3 class="page-title"> Property Manager Dashboard </h3>
         {{-- End Page Title --}}
