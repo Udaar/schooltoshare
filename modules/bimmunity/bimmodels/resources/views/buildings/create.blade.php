@@ -13,6 +13,11 @@
     }
 </style>
 
+
+
+
+
+
 @section('content')
 <section class="building-create-section info-section">
     <div class="portlet light ifm-border-light-grey-all">
