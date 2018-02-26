@@ -21,6 +21,9 @@ class CreateEventsTable extends Migration
             $table->integer('duration');
             $table->string('d_type');
             $table->date('date');
+            $table->time('time');
+            $table->string('type');
+            $table->string('location');
             $table->timestamps();
             $table->softDeletes();						
             $table->integer('ticket_id')->nullable();

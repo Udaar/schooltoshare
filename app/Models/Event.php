@@ -81,6 +81,11 @@ class Event extends Model
     public static $rules = [
         
     ];
-
+    public function user(){
+        return $this->belongsTo('\App\User');
+    }
+    public function school(){
+        return $this->belongsTo('\Bimmunity\Bimmodels\Models\Building');
+    }
     
 }
