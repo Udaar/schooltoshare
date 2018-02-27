@@ -11,9 +11,9 @@
     <tbody>
         @foreach($requests as $request)
             <tr>
-                <td class="text-capitalize">{!! $request->user_id !!}</td>
-                <td class="text-capitalize">{!! $request->school_id !!}</td>
-                <td class="text-capitalize">{!! $request->activity_id !!}</td>
+                <td class="text-capitalize">{!! $request->user->name !!}</td>
+                <td class="text-capitalize">{!! $request->school->name !!}</td>
+                <td class="text-capitalize">{!! $request->Facility->name !!}</td>
                 <td class="text-capitalize">{!! $request->date !!}</td>        
                 <td>
                     {!! Form::open(['route' => ['requests.destroy', $request->id], 'method' => 'delete']) !!}

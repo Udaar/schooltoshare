@@ -80,7 +80,7 @@ class Request extends Model
         return $this->belongsTo('\Bimmunity\Bimmodels\Models\Building','school_id');
     }
     public function Facility(){
-        return $this->belongsTo('\Bimmunity\Bimmodels\Models\Building','activity_id');
+        return $this->belongsTo('\Bimmunity\Bimmodels\Models\Facility','activity_id');
     }
     
 }

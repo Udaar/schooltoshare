@@ -31,7 +31,8 @@ class RequestController extends AppBaseController
     {
         $this->requestRepository->pushCriteria(new RequestCriteria($request));
         $requests = $this->requestRepository->all();
-
+        if(\Auth::user()->type=="children")
+            return redirect('home');
         return view('requests.index')
             ->with('requests', $requests);
     }
@@ -57,11 +58,14 @@ class RequestController extends AppBaseController
     public function store(CreateRequestRequest $request)
     {
         $input = $request->all();
+        $format = config('ifm.settings.date-format-carbon');
         $input['user_id']=\Auth::user()->id;
+        $input['date']=\Carbon\Carbon::createFromFormat($format, $input['date']);
         $request = $this->requestRepository->create($input);
 
         Flash::success('Request saved successfully.');
-
+        if(\Auth::user()->type=="children")
+            return redirect('home');
         return redirect(route('requests.index'));
     }
 
@@ -81,7 +85,8 @@ class RequestController extends AppBaseController
 
             return redirect(route('requests.index'));
         }
-
+        if(\Auth::user()->type=="children")
+            return redirect('home');
         return view('requests.show')->with('request', $request);
     }
 
@@ -101,7 +106,8 @@ class RequestController extends AppBaseController
 
             return redirect(route('requests.index'));
         }
-
+        if(\Auth::user()->type=="children")
+            return redirect('home');
         return view('requests.edit')->with('request', $request);
     }
 
@@ -150,7 +156,8 @@ class RequestController extends AppBaseController
         $this->requestRepository->delete($id);
 
         Flash::success('Request deleted successfully.');
-
+        if(\Auth::user()->type=="children")
+            return redirect('home');
         return redirect(route('requests.index'));
     }
 }

@@ -234,7 +234,7 @@
 				<div class="wrap">
 					<div class="container-fluid company-wrap">
 						<h3 class="top-p inline-block">Facility Requests</h3>
-						<a href="" class="btn grey-bg white-color pull-right"> <i class="fa fa-plus"></i> Add New </a>
+						<a href="/requests/create" class="btn grey-bg white-color pull-right"> <i class="fa fa-plus"></i> Add New </a>
 						<div class="clearfix"></div>
 						<div class="row is-flex">     
 							<div class="col-xs-12">
@@ -246,16 +246,18 @@
 										<th class="ifm-main-bg ifm-white all">Actions</th>
 									</thead>
 									<tbody>
-										<tr>
-											<td>This Is School Name</td>
-											<td>Playing Football</td>
-											<td>20 Jan, 2015</td>
-											<td>
-												<div class='btn-group ifm-static'>
-													{!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn ifm-btn-default ifm-white-bg ifm-grey ifm-border-light-grey-all', 'onclick' => "return confirm('Are you sure?')"]) !!}
-												</div>
-											</td>
-										</tr>
+										@foreach(\Auth::user()->requests as $request)
+											<tr>
+												<td>{{$request->school->name}}</td>
+												<td>{{$request->Facility->name}}</td>
+												<td>{{ $request->date}}</td>
+												<td>
+													<div class='btn-group ifm-static'>
+														{!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn ifm-btn-default ifm-white-bg ifm-grey ifm-border-light-grey-all', 'onclick' => "return confirm('Are you sure?')"]) !!}
+													</div>
+												</td>
+											</tr>
+										@endforeach
 									</tbody>
 								</table>
 							</div>

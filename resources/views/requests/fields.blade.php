@@ -10,12 +10,20 @@
     {!! Form::select('activity_id', array(), null, ['class' => 'form-control ifm-border-light-grey-all select2' ,'id'=>'activity_id']) !!}
 </div>
 
-<!-- Date Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('date', 'Date:') !!}
-    {!! Form::date('date', null, ['class' => 'form-control']) !!}
-</div>
 
+<div class="col-md-6">
+    <div class="form-group">
+        {!! Form::label('date', 'date:', ['class' => 'ifm-grey']) !!}
+        <div class="input-group ifm-width-100 input-medium date date-picker" data-date-format="{{config('ifm.settings.date-format-bootstrap')}}" >
+            {!! Form::text('date', null, ['class' => 'form-control ifm-border-light-grey-all', 'required'=>'required']) !!}
+            <span class="input-group-btn">
+                <button class="btn default ifm-main-bg ifm-white ifm-border-main-all" style="padding:9px 12px" type="button">
+                    <i class="fa fa-calendar"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+</div>
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
     {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
@@ -26,14 +34,16 @@
 
 @push('scripts')
     <script>
-        $(document).on('click change','#school_id',function(){
+        $(document).on('change','#school_id',function(){
             console.log('dadaakjdkashdjs');
-            $.get('/school/facility/'+$('#school_id').val,function(data){
+            $.get('/school/facility/'+$('#school_id').val(),function(data){
                 console.log('data: ',data);
                 $('#activity_id').find('option').remove();
                 for(var i in data){
-                    $('#activity_id').append('<option>'+data[i].name+'</option>')
+                        $('#activity_id').append('<option value="'+data[i].id+'">'+data[i].name+'</option>')
                 }
+                $('#select2-activity_id-container').text(data[0].name);
+                $('#select2-activity_id-container').attr('title',data[0].name);
             });
         });
     </script>

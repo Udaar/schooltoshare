@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 
-class BuildingsTableSeeder extends Seeder
+class SchoolsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,11 +16,11 @@ class BuildingsTableSeeder extends Seeder
     	DB::table('buildings')->delete();
     	DB::update("ALTER TABLE buildings AUTO_INCREMENT = 1;");
          //insert some dummy records
-    	DB::table('buildings')->insert(
+    	DB::table('Schools')->insert(
     		array(
     			array(
     				
-    				'name'=>'Building 1',  
+    				'name'=>'School 1',  
     				'year'=>2005,
     				'address'=>'Cairo',
     				'phone'=>'+20 - 55177 669',
@@ -34,7 +34,7 @@ class BuildingsTableSeeder extends Seeder
 				),
 				array(
     				
-    				'name'=>'Building 2',  
+    				'name'=>'School 2',  
     				'year'=>2010,
     				'address'=>'antalia',
     				'phone'=>'+99 - 5942 669',
@@ -48,7 +48,7 @@ class BuildingsTableSeeder extends Seeder
 				),
 				array(
     				
-    				'name'=>'Building 3',  
+    				'name'=>'School 3',  
     				'year'=>2010,
     				'address'=>'antalia',
     				'phone'=>'+99 - 5942 669',
@@ -62,7 +62,7 @@ class BuildingsTableSeeder extends Seeder
 				),
 				array(
     				
-    				'name'=>'Building 4',  
+    				'name'=>'School 4',  
     				'year'=>2010,
     				'address'=>'antalia',
     				'phone'=>'+99 - 5942 669',
@@ -76,7 +76,7 @@ class BuildingsTableSeeder extends Seeder
 				),
 				array(
     				
-    				'name'=>'Building 5',  
+    				'name'=>'School 5',  
     				'year'=>2010,
     				'address'=>'antalia',
     				'phone'=>'+99 - 5942 669',
@@ -90,7 +90,7 @@ class BuildingsTableSeeder extends Seeder
 				),
 				array(
     				
-    				'name'=>'Building 6',  
+    				'name'=>'School 6',  
     				'year'=>2010,
     				'address'=>'antalia',
     				'phone'=>'+99 - 5942 669',
@@ -104,7 +104,7 @@ class BuildingsTableSeeder extends Seeder
 				),
 				array(
     				
-    				'name'=>'Building 7',  
+    				'name'=>'School 7',  
     				'year'=>2010,
     				'address'=>'antalia',
     				'phone'=>'+99 - 5942 669',
@@ -118,7 +118,7 @@ class BuildingsTableSeeder extends Seeder
 				),
 				array(
     				
-    				'name'=>'Building 8',  
+    				'name'=>'School 8',  
     				'year'=>2010,
     				'address'=>'antalia',
     				'phone'=>'+99 - 5942 669',
