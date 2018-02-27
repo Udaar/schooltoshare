@@ -30,7 +30,8 @@ class FacilityController extends AppBaseController
     public function index(Request $request)
     {
         app('App\Http\Controllers\OptionController')->generateToken();
-        $BimModel=\App\Models\BimModel::where('name','tower')->first();
+        $building=\Bimmunity\Bimmodels\Models\Building::find(1);
+        $BimModel=$building->bim_models()->first();
         if($BimModel){
             $urn=$BimModel->urn;
         }
@@ -40,8 +41,8 @@ class FacilityController extends AppBaseController
         }
         $this->facilityRepository->pushCriteria(new RequestCriteria($request));
         $facilities = $this->facilityRepository->all();
-
-        return view('bimmodels::facilities.index',compact('token','urn'))
+        
+        return view('bimmodels::facilities.index',compact('token','urn','building'))
             ->with('facilities', $facilities);
     }
 

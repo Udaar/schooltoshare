@@ -16,7 +16,7 @@
 @section('content')
     <section class="sp-dashboard">
         {{-- Begin Page Title --}}
-        <h3 class="page-title"> Property Manager Dashboard </h3>
+        <h3 class="page-title"> School Dashboard </h3>
         {{-- End Page Title --}}
         {{-- Top Boxes --}}
         <div class="container-fluid">
