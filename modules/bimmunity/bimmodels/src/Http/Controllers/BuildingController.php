@@ -302,6 +302,10 @@ class BuildingController extends AppBaseController
 
     public function profile($id){
         $building = $this->buildingRepository->findWithoutFail($id);
-        return view('child.school_profile',compact('building'));
+        $facliltes=\Bimmunity\Bimmodels\Models\Facility::all();
+        return view('child.school_profile',compact('building','facliltes'));
+    }
+    public function facility($id){
+        return $building = $this->buildingRepository->findWithoutFail($id)->facilities;
     }
 }

@@ -43,7 +43,8 @@ class RequestController extends AppBaseController
      */
     public function create()
     {
-        return view('requests.create');
+        $schools= \Bimmunity\Bimmodels\Models\Building::all();
+        return view('requests.create',compact('schools'));
     }
 
     /**
@@ -56,7 +57,7 @@ class RequestController extends AppBaseController
     public function store(CreateRequestRequest $request)
     {
         $input = $request->all();
-
+        $input['user_id']=\Auth::user()->id;
         $request = $this->requestRepository->create($input);
 
         Flash::success('Request saved successfully.');

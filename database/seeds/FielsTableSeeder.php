@@ -93,6 +93,7 @@ class FielsTableSeeder extends Seeder
             'folder_id'=>null,
             'created_by'=>null
         ]);
+        
        
     }
 }

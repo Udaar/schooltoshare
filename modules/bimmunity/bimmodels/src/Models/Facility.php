@@ -58,7 +58,8 @@ class Facility extends Model
 
     public $fillable = [
         'name',
-        'building_id'
+        'logoavaliable',
+        'lognotavaliable'
     ];
 
     /**
@@ -69,7 +70,6 @@ class Facility extends Model
     protected $casts = [
         'id' => 'integer',
         'name' => 'string',
-        'building_id' => 'integer'
     ];
 
     /**
@@ -80,10 +80,6 @@ class Facility extends Model
     public static $rules = [
         
     ];
-
-    public function building(){
-        return $this->belongsTo('\Bimmunity\Bimmodels\Models\Building');
-    }
 
     
 }

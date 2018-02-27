@@ -153,6 +153,19 @@ class Building extends Model
     }
 
     public function facilities(){
-        return $this->hasMany('Bimmunity\Bimmodels\Models\Facility');
+        return $this->belongsToMany('Bimmunity\Bimmodels\Models\Facility','school_facility','school_id');
+    }
+    public function facilityexist($id){
+        $facilty=$this->facilities()->where('facility_id',$id)->first();
+        if($facilty){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public function events(){
+
+        return $this->hasMany('\App\Models\Event','school_id');
     }
 }

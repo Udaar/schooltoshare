@@ -24,8 +24,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call(SitesTableSeeder::class);
         $this->command->info("Sites table seeded :)");
-        $this->call(SiteZonesTableSeeder::class);
-        $this->command->info("SiteZones table seeded :)");
+        // $this->call(SiteZonesTableSeeder::class);
+        // $this->command->info("SiteZones table seeded :)");
         $this->call(BuildingsTableSeeder::class);
         $this->command->info("Buildings table seeded :)");
         $this->call(ZonesTableSeeder::class);
@@ -66,6 +66,8 @@ class DatabaseSeeder extends Seeder
         $this->command->info("FielsTableSeeder table seeded :)");
         $this->call(FileablesTableSeeder::class);
         $this->command->info("FileablesTableSeeder table seeded :)");
+        $this->call(SchoolFacilityTableSeeder::class);
+        $this->command->info("SchoolFacilityTableSeeder table seeded :)");
         
 
         

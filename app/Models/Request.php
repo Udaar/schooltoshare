@@ -79,5 +79,8 @@ class Request extends Model
     public function school(){
         return $this->belongsTo('\Bimmunity\Bimmodels\Models\Building','school_id');
     }
+    public function Facility(){
+        return $this->belongsTo('\Bimmunity\Bimmodels\Models\Building','activity_id');
+    }
     
 }

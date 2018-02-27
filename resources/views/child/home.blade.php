@@ -235,7 +235,7 @@
 				<div class="wrap">
 					<div class="container-fluid company-wrap">
 						<h3 class="top-p inline-block">Facility Requests</h3>
-						<a href="" class="btn grey-bg white-color pull-right"> <i class="fa fa-plus"></i> Add New </a>
+						<a href="/requests/create" class="btn grey-bg white-color pull-right"> <i class="fa fa-plus"></i> Add New </a>
 						<div class="clearfix"></div>
 						<div class="row is-flex">     
 							<div class="col-xs-12">

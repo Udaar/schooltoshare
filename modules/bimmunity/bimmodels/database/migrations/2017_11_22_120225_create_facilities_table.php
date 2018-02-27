@@ -17,7 +17,8 @@ class CreateFacilitiesTable extends Migration
 		{
 			$table->increments('id');
 			$table->string('name', 250)->nullable();
-			$table->integer('building_id');
+            $table->text('logoavaliable');
+            $table->text('lognotavaliable');
 			$table->timestamps();
 			$table->softDeletes();
 		});

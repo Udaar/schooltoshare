@@ -31,8 +31,11 @@ Route::group([
             return view('school.inf_new_event');
         });
         Route::resource('requests', 'RequestController');
+        Route::get('/school/facility/{id}','\Bimmunity\Bimmodels\Http\Controllers\BuildingController@facility');
         
             
 });
+
+
 
 
