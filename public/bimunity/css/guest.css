@@ -67,6 +67,7 @@ a:focus,
     top: 450px;
     transform: translateX(-50%);
     width: 900px;
+    z-index: 30;
 }
 #map{
     height: 500px;
