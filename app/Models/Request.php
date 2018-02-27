@@ -6,9 +6,9 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class Event
+ * Class Request
  * @package App\Models
- * @version February 22, 2018, 11:41 am UTC
+ * @version February 26, 2018, 2:30 pm UTC
  *
  * @property \Illuminate\Database\Eloquent\Collection adminTables
  * @property \Illuminate\Database\Eloquent\Collection buildings
@@ -26,19 +26,16 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property \Illuminate\Database\Eloquent\Collection usersHasPrivileges
  * @property \Illuminate\Database\Eloquent\Collection usersHasRoles
  * @property \Illuminate\Database\Eloquent\Collection zonesHasEquipments
- * @property string name
  * @property integer user_id
  * @property integer school_id
- * @property integer duration
- * @property string d_type
+ * @property integer activity_id
  * @property date date
- * @property integer ticket_id
  */
-class Event extends Model
+class Request extends Model
 {
     use SoftDeletes;
 
-    public $table = 'events';
+    public $table = 'requests';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
@@ -48,13 +45,10 @@ class Event extends Model
 
 
     public $fillable = [
-        'name',
         'user_id',
         'school_id',
-        'duration',
-        'd_type',
-        'date',
-        'ticket_id'
+        'activity_id',
+        'date'
     ];
 
     /**
@@ -64,13 +58,10 @@ class Event extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'name' => 'string',
         'user_id' => 'integer',
         'school_id' => 'integer',
-        'duration' => 'integer',
-        'd_type' => 'string',
-        'date' => 'date',
-        'ticket_id' => 'integer'
+        'activity_id' => 'integer',
+        'date' => 'date'
     ];
 
     /**
@@ -81,6 +72,7 @@ class Event extends Model
     public static $rules = [
         
     ];
+
     public function user(){
         return $this->belongsTo('\App\User');
     }

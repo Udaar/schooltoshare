@@ -30,6 +30,7 @@ Route::group([
         Route::get('/inf_news_event',function(){
             return view('school.inf_new_event');
         });
+        Route::resource('requests', 'RequestController');
         
             
 });

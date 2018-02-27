@@ -12,7 +12,7 @@
         var positions;
 
         function initialize() {
-            center={lat: 24.461478, lng: 54.381655};
+            center={lat: parseFloat("{{$buildings[0]->gps_lat}}"), lng: parseFloat("{{$buildings[0]->gps_long}}") };
             positions=[];
             @foreach($buildings as $building)
             positions.push({

@@ -85,7 +85,7 @@ class User extends Authenticatable
     }
     public function requests()
     {
-        return $this->hasMany(\Bimmunity\Ticketing\Models\Request::class);
+        return $this->hasMany(\App\Models\Request::class);
     }
 
     /**

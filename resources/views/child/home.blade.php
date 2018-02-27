@@ -247,16 +247,18 @@
 										<th class="ifm-main-bg ifm-white all">Actions</th>
 									</thead>
 									<tbody>
-										<tr>
-											<td>This Is School Name</td>
-											<td>Playing Football</td>
-											<td>20 Jan, 2015</td>
-											<td>
-												<div class='btn-group ifm-static'>
-													{!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn ifm-btn-default ifm-white-bg ifm-grey ifm-border-light-grey-all', 'onclick' => "return confirm('Are you sure?')"]) !!}
-												</div>
-											</td>
-										</tr>
+										@foreach($requests as $request)
+											<tr>
+												<td>{{$request->school->name}}</td>
+												<td>{{$request->activity->name}}</td>
+												<td>{{$request->date}}</td>
+												<td>
+													<div class='btn-group ifm-static'>
+														{!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn ifm-btn-default ifm-white-bg ifm-grey ifm-border-light-grey-all', 'onclick' => "return confirm('Are you sure?')"]) !!}
+													</div>
+												</td>
+											</tr>
+										@endforeach	
 									</tbody>
 								</table>
 							</div>

@@ -321,3 +321,7 @@
     <a href="{!! route('events.index') !!}"><i class="fa fa-edit"></i><span>Events</span></a>
 </li>
 
+<li class="{{ Request::is('requests*') ? 'active' : '' }}">
+    <a href="{!! route('requests.index') !!}"><i class="fa fa-edit"></i><span>Requests</span></a>
+</li>
+

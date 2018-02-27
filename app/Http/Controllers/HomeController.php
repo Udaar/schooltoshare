@@ -33,7 +33,7 @@ class HomeController extends Controller
     {
         
         $buildings = \Bimmunity\Bimmodels\Models\Building::all();
-        $events=\App\Models\Event::all();
+        $events=\App\Models\Event::all()->take(8);
         app('App\Http\Controllers\OptionController')->generateToken();
         $BimModel=\App\Models\BimModel::where('name','tower')->first();
         if($BimModel){
@@ -52,8 +52,11 @@ class HomeController extends Controller
             return "Admin";
         elseif(\Auth::user()->type == 'government')
             return "government";
-        elseif(\Auth::user()->type == 'children')
-            return view('child.home',compact('buildings','events'));
+        elseif(\Auth::user()->type == 'children'){
+            $requests=\Auth::user()->requests;
+            return view('child.home',compact('buildings','events','requests'));
+            
+        }
         elseif(\Auth::user()->type == 'fundorg')  
             return "fundorg";  
        else
