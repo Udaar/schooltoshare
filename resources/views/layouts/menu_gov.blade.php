@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/metronic/reset/themes/red.css">
+<link rel="stylesheet" href="/metronic/reset/themes/green.css">
 
 {{-- Home --}}
     <li class="nav-item start {!! Request::is('home') ? ' active' : '' !!}">
@@ -10,18 +10,18 @@
     <li class="nav-item start {!! Request::is('facilities') ? ' active' : '' !!}">
         <a href="{!! url('/facilities') !!}" class="nav-link ifm-text-left nav-toggle">
             <i class="fa fa-building"></i>
-            <span class="title">School Facility</span>
+            <span class="title">Schools</span>
         </a>
     </li>
-    <li class="nav-item start {!! Request::is('requests') ? ' active' : '' !!}">
-        <a href="{!! url('/requests') !!}" class="nav-link ifm-text-left nav-toggle">
-            <i class="fa fa-ticket"></i>
+    <li class="nav-item start {!! Request::is('sharing') ? ' active' : '' !!}">
+        <a href="{!! url('/sharing') !!}" class="nav-link ifm-text-left nav-toggle">
+            <i class="fa fa-home"></i>
             <span class="title">Sharing Manager</span>
         </a>
     </li>
     <li class="nav-item start {!! Request::is('inf_news_event') ? ' active' : '' !!}">
         <a href="{!! url('/inf_news_event') !!}" class="nav-link ifm-text-left nav-toggle">
-            <i class="fa fa-info-circle"></i>
+            <i class="fa fa-home"></i>
             <span class="title">Info, News ,Events</span>
         </a>
     </li>

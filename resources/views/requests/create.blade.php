@@ -1,24 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="content-header">
-        <h1>
-            Request
-        </h1>
-    </section>
-    <div class="content">
-        @include('adminlte-templates::common.errors')
-        <div class="box box-primary">
-
-            <div class="box-body">
+    <section class="request-create-section ifm-form">
+        <div class="portlet light ifm-border-light-grey-all">
+            <div class="portlet-title ifm-border-light-grey-bottom">
+                <div class="caption">
+                    <h3 class="ifm-grey ifm-no-margin-all inline-block capitalize normal title">
+                        <i class="fa fa-ticket ifm-grey"></i>
+                        Add Request
+                    </h3>
+                </div>
+            </div>
+            <div>
+                @include('metronic-templates::common.errors')
+            </div>
+            <div class="portlet-body form">
                 <div class="row">
                     {!! Form::open(['route' => 'requests.store']) !!}
-
                         @include('requests.fields')
-
                     {!! Form::close() !!}
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 @endsection

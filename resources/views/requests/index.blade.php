@@ -1,26 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="content-header">
-        <h1 class="pull-left">Requests</h1>
-        <h1 class="pull-right">
-           <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{!! route('requests.create') !!}">Add New</a>
-        </h1>
-    </section>
-    <div class="content">
-        <div class="clearfix"></div>
+    <section class="requests-section ifm-padding-md-all ifm-white-bg ifm-border-light-grey-all">
 
-        @include('flash::message')
+        <!-- Requests Title Bar -->
+        <div class="ifm-padding-md-bottom ifm-margin-sm-bottom ifm-border-light-grey-bottom clearfix">
+            <h3 class="ifm-grey ifm-no-margin-all inline-block capitalize normal title">
+                <i class="fa fa-ticket ifm-grey"></i>
+                Requests
+            </h3>
+            <a href="{!! route('requests.create') !!}" class="btn ifm-btn-green ifm-grey-bg ifm-white ifm-absolute-right" style="top:19px;right:36px"><i class="fa fa-plus"></i> Add</a>
+        </div>
+        <!-- /Requests Title Bar -->
 
-        <div class="clearfix"></div>
-        <div class="box box-primary">
-            <div class="box-body">
-                    @include('requests.table')
+        <div class="row">
+            @include('flash::message')
+
+            <!-- Requests Table -->
+            <div class="ifm-padding-sm-all">
+                @include('requests.table')
             </div>
+            <!-- /Requests Table -->
+
         </div>
-        <div class="text-center">
-        
-        </div>
-    </div>
+    </section>
+
+    
 @endsection
 

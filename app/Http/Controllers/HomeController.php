@@ -51,7 +51,7 @@ class HomeController extends Controller
         elseif(\Auth::user()->type == 'admin')
             return "Admin";
         elseif(\Auth::user()->type == 'government')
-            return view('home' ,compact('buildings', 'urn', 'token','funds','invoice','notifications'));
+            return view('gov.home' ,compact('buildings', 'urn', 'token','funds','invoice','notifications'));
         elseif(\Auth::user()->type == 'children'){
             $requests=\Auth::user()->requests;
             return view('child.home',compact('buildings','events','requests'));
