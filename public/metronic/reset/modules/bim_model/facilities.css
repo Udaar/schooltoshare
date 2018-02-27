@@ -1,0 +1,22 @@
+/* === Facilities === */
+.facilities .pricing-content-1 .price-table-head h2 {
+  color: #FFFFFF !important; }
+
+.facility-col {
+  float: left;
+  width: 33.3333333%; }
+
+.facility-item p {
+  line-height: 14px !important;
+  margin-top: 5px; }
+
+.facility-item .not-exisit p {
+  color: #A7A8AA; }
+
+.facility-item .exisit p {
+  color: #353535; }
+
+.facility-item.two-word p {
+  margin-bottom: 16px; }
+
+/*# sourceMappingURL=facilities.css.map */

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,wBAAwB;AACxB,mDAAmD;EAC/C,KAAK,EAAE,kBAAiB;;AAE5B,aAAa;EACT,KAAK,EAAE,IAAI;EACX,KAAK,EAAE,WAAW;;AAEtB,gBAAgB;EACZ,WAAW,EAAE,eAAc;EAC3B,UAAU,EAAE,GAAG;;AAEnB,4BAA4B;EACxB,KAAK,EAAE,OAAO;;AAElB,wBAAwB;EACpB,KAAK,EAAE,OAAO;;AAElB,yBAAyB;EACrB,aAAa,EAAE,IAAI",
+"sources": ["../../../sass/modules/bim_model/facilities.scss"],
+"names": [],
+"file": "facilities.css"
+}
