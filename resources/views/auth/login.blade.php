@@ -10,7 +10,7 @@
 
 <head>
     <meta charset="utf-8"/>
-    <title>bimmunity</title>
+    <title>Schools</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <meta content="" name="description"/>
@@ -51,7 +51,7 @@
 <!-- BEGIN LOGO -->
 <div class="logo">
     <a href="{{ url('/') }}">
-        <img src="/metronic/images/BIMMUNITY_LOGO.png" alt="" width="300px"/> </a>
+        <img src="/bimunity/images/school_logo.png" alt="" width="150px"/> </a>
 </div>
 <!-- END LOGO -->
 <!-- BEGIN LOGIN -->
@@ -133,6 +133,16 @@
 
         <div class="form-group ">
             <input type="email" class="form-control" name="email" value="{!! old('email') !!}" placeholder="Email">
+        </div>
+
+        <div class="form-group ">
+           <select class="form-control" name="" id="">
+               <option value="0" disabled selected>Select Account Type</option>
+               <option value="1">School</option>
+               <option value="2">Government</option>
+               <option value="3">Funding Organization</option>
+               <option value="4">Children</option>               
+           </select>
         </div>
 
         <div style="margin-bottom:15px" class="form-inline clearfix">
