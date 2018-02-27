@@ -1,10 +1,8 @@
 
-@section('heads')
 <link rel="stylesheet" href="https://js.arcgis.com/3.23/esri/css/esri.css">
     <style>
-      html, body, #mapDiv { height: 100%; margin: 0; padding: 0; } 
+      html, body, #mapDiv { height: 500px; margin: 0; padding: 0; } 
     </style>
-@endsection
 @push('scripts')  
 
     <script src="https://js.arcgis.com/3.23/"></script>
