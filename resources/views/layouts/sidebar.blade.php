@@ -28,10 +28,13 @@
                         <div class="sidebar-toggler"></div>
                         <!-- END SIDEBAR TOGGLER BUTTON -->
                     </li>
-                    
-                        {{--@include('layouts.menu_property')--}}
-                        {{--@include('layouts.menu_gov')--}}
+                    @if(\Auth::user()->type == 'school')
+                        @include('layouts.menu_property')
+                    @elseif(\Auth::user()->type == 'government')
+                        @include('layouts.menu_gov')
+                    @elseif(\Auth::user()->type == 'fundorg')  
                         @include('layouts.menu_fund')
+                    @endif
                     
                 </ul>
                 <!-- END SIDEBAR MENU -->

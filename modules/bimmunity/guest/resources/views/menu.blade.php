@@ -1,8 +1,8 @@
 <ul>
     <li class="mega-menu">
         <a href="/users/{{\Auth::user()->id}}" class="nav-link avatar">
-            <img src="/bimunity/images/team3.jpg" alt="">
-            <span>Mohammed Galal</span>
+            <img src="{{\Auth::user()->picture_url}}" alt="">
+            <span>{{\Auth::user()->name}}</span>
         </a>
     </li>
     <li class="mega-menu">
