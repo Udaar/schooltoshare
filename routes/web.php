@@ -28,9 +28,7 @@ Route::group([
         Route::resource('events', 'EventController');
         Route::resource('users', 'UserController');
         Route::get('/show/school/{id}','\Bimmunity\Bimmodels\Http\Controllers\BuildingController@profile');
-        Route::get('/inf_news_event',function(){
-            return view('school.inf_new_event');
-        });
+        Route::get('/inf_news_event','\Bimmunity\Bimmodels\Http\Controllers\BuildingController@newevents');
         Route::resource('requests', 'RequestController');
         Route::get('/school/facility/{id}','\Bimmunity\Bimmodels\Http\Controllers\BuildingController@facility');
         

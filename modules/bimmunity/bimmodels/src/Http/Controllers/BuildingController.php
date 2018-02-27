@@ -308,4 +308,9 @@ class BuildingController extends AppBaseController
     public function facility($id){
         return $building = $this->buildingRepository->findWithoutFail($id)->facilities;
     }
+    public function newevents(){
+        $building=\Bimmunity\Bimmodels\Models\Building::find(2);
+        $events=$building->events;
+        return view('school.inf_new_event',compact('events','building'));
+    }
 }
