@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/metronic/reset/themes/green.css">
+<link rel="stylesheet" href="/metronic/reset/themes/yellow.css">
 
 {{-- Home --}}
     <li class="nav-item start {!! Request::is('home') ? ' active' : '' !!}">
@@ -7,22 +7,22 @@
             <span class="title">Home</span>
         </a>
     </li>
-    <li class="nav-item start {!! Request::is('buildings') ? ' active' : '' !!}">
+    <li class="nav-item {!! Request::is('buildings') ? ' active' : '' !!}">
         <a href="{!! url('/buildings') !!}" class="nav-link ifm-text-left nav-toggle">
             <i class="fa fa-building"></i>
             <span class="title">Schools</span>
         </a>
     </li>
-    <li class="nav-item start {!! Request::is('bimassets') ? ' active' : '' !!}">
+    {{--<li class="nav-item start {!! Request::is('bimassets') ? ' active' : '' !!}">
         <a href="{!! url('/bimassets') !!}" class="nav-link ifm-text-left nav-toggle">
             <i class="fa fa-cubes"></i>
             <span class="title">Assets</span>
         </a>
-    </li>
-    <li class="nav-item start {!! Request::is('requests') ? ' active' : '' !!}">
+    </li>--}}
+    <li class="nav-item {!! Request::is('requests') ? ' active' : '' !!}">
         <a href="{!! url('/requests') !!}" class="nav-link ifm-text-left nav-toggle">
-            <i class="fa fa-user"></i>
-            <span class="title">Sharing Manager</span>
+            <i class="fa fa-ticket"></i>
+            <span class="title">Funding Manager</span>
         </a>
     </li>
 
@@ -131,4 +131,3 @@
         <span  class="title">Report Generator</span>
     </a>
 </li>
-

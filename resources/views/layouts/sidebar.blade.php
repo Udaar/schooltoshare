@@ -29,8 +29,9 @@
                         <!-- END SIDEBAR TOGGLER BUTTON -->
                     </li>
                     
-                        @include('layouts.menu_property')
+                        {{--@include('layouts.menu_property')--}}
                         {{--@include('layouts.menu_gov')--}}
+                        @include('layouts.menu_fund')
                     
                 </ul>
                 <!-- END SIDEBAR MENU -->

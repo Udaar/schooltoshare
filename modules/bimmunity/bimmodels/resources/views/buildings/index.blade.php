@@ -10,7 +10,7 @@
         <div class="ifm-padding-sm-bottom ifm-margin-sm-bottom ifm-relative clearfix">
             <h3 class="ifm-grey ifm-no-margin-all inline-block uppercase">
                 <i class="fa fa-building-o ifm-grey"></i>
-                Building
+                Schools
             </h3>
             <a href="{!! route('buildings.create') !!}" class="pull-right ifm-absolute-right btn ifm-btn-green ifm-grey-bg ifm-white">Add New</a>
         </div>

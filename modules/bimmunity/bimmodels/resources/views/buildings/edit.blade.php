@@ -39,17 +39,17 @@
 
     <div class="show-zone-tabbable-custome tabbable-custom ifm-border-light-grey-all">
         <!-- Tabs Links -->
-        <ul class="show-zone-nav-tabs nav nav-tabs swipe not-m-tabs" id="tabs">
+        <!-- <ul class="show-zone-nav-tabs nav nav-tabs swipe not-m-tabs" id="tabs">
             <li class="show-zone-taxonomy-tab taxonomy-tab active ifm-border-light-grey-bottom m-personal">
                 <a class="bold" href="#building" data-toggle="tab" tax>
                     <span style="display: block;" class="fa fa-building icon"></span>
                     Building
                 </a>
             </li>
-        </ul>
+        </ul> -->
 
         <div class="show-zone-tab-content tab-content ifm-no-border-all">
-            <div class="show-zone-tab-pane tab-pane active" id="building">
+            <!-- <div class="show-zone-tab-pane tab-pane active" id="building"> -->
                 <div class="portlet light ifm-no-margin-bottom ifm-no-padding-all">
                     <div class="clearfix"></div>
                     <div class="show-zone-portlet-body portlet-body">
@@ -58,7 +58,7 @@
                         {!! Form::close() !!}
                     </div>
                 </div>
-            </div>
+            <!-- </div> -->
 
         </div>
     </div>

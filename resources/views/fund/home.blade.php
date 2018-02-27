@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @push('head')
-    <link rel="stylesheet" href="/metronic/reset/dashboards/pm-dashboards.css">
+    <link rel="stylesheet" href="/metronic/reset/dashboards/fm-dashboards.css">
     <link rel="stylesheet" href="/metronic/reset/modules/bim_model/viewer.css">
     <style>
         .status{
@@ -14,7 +14,7 @@
 @endpush
 
 @section('content')
-    <section class="pm-dashboard">
+    <section class="fm-dashboard">
         {{-- Begin Page Title --}}
         <h3 class="page-title"> Property Manager Dashboard </h3>
         {{-- End Page Title --}}
@@ -135,8 +135,8 @@
                                 <table class="table table-striped table-bordered table-hover " width="100%" id="sample_1">
                                     <thead>
                                         <tr>
-                                            <th class="ifm-main-bg ifm-white all">School Name</th>
-                                            <th class="ifm-main-bg ifm-white all">Schools Location</th>
+                                            <th class="ifm-main-bg ifm-white all">Property Name</th>
+                                            <th class="ifm-main-bg ifm-white all">Zone/Apartment</th>
                                             <th class="ifm-main-bg ifm-white all">Space</th>  
                                             <th class="ifm-main-bg ifm-white all">Periority</th>  
                                         </tr>

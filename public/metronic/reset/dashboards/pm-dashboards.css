@@ -7,7 +7,8 @@
 .pm-dashboard {
   /* Top Boxes */
   /* General */
-  /* Notifications */ }
+  /* Notifications */
+  /* Filters */ }
   .pm-dashboard .dashboard-stat.first-color {
     background-color: #1bbc9b; }
     .pm-dashboard .dashboard-stat.first-color .visual > i {
@@ -70,5 +71,11 @@
       padding: 0 15px 8px; }
     .pm-dashboard .portlet.ticket .tabbable-line > .nav-tabs > li.active > a > i {
       color: #333333; }
+  .pm-dashboard .filters {
+    background-color: #A7A8AA;
+    margin: 0;
+    padding: 15px; }
+    .pm-dashboard .filters .filter-btn {
+      background-color: #353535; }
 
 /*# sourceMappingURL=pm-dashboards.css.map */

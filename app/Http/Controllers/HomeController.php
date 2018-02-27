@@ -58,7 +58,7 @@ class HomeController extends Controller
             
         }
         elseif(\Auth::user()->type == 'fundorg')  
-            return view('home' ,compact('buildings', 'urn', 'token','funds','invoice','notifications'));
+            return view('fund.home' ,compact('buildings', 'urn', 'token','funds','invoice','notifications'));
        else
             return "guest";
     }
