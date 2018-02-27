@@ -42,7 +42,7 @@
                         <div class="details">
                             <div class="number">
                                 <span data-counter="counterup" data-value="{{count($funds)}}">0</span>$</div>
-                            <div class="desc"> Reqested Fund </div>
+                            <div class="desc"> Requested Fund </div>
                         </div>
                     </a>
                 </div>

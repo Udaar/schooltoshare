@@ -7,7 +7,7 @@
         <!-- BEGIN LOGO -->
         <div class="page-logo">
             <a href="/">
-                <img src="/metronic/images/BIMMUNITY_LOGO.png" width="150px" alt="logo" class="logo-default"/>
+                <img src="/bimunity/images/school_logo.png" width="85px" alt="logo" class="logo-default"/>
             </a>
             <div class="menu-toggler sidebar-toggler"></div>
         </div>
