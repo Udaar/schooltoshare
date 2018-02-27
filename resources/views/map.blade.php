@@ -1,77 +1,69 @@
-<div id="map"></div>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6yohSe89WiHJXhZCUA6wSNQnCEzySQVc"></script>
+@section('heads')
+<link rel="stylesheet" href="https://js.arcgis.com/3.23/esri/css/esri.css">
+    <style>
+      html, body, #mapDiv { height: 100%; margin: 0; padding: 0; } 
+    </style>
+@endsection
+@push('scripts')  
 
-<script>
-    $(function(){
-        $('.select2').select2();
-        var map;
-        var marker;
-        var infowindow;
-        var center;
-        var positions;
+    <script src="https://js.arcgis.com/3.23/"></script>
+    <script>
 
-        function initialize() {
-            center={lat: parseFloat("{{$buildings[0]->gps_lat}}"), lng: parseFloat("{{$buildings[0]->gps_long}}") };
-            positions=[];
-            @foreach($buildings as $building)
-            positions.push({
-                position:{lat: parseFloat("{{$building->gps_lat}}"), lng: parseFloat("{{$building->gps_long}}") },
-                url:"/show/school/{{$building->id}}"
-            });
-                
-            @endforeach	
-            
-            var mapOptions = {
-            zoom: 13,
-            center: center
-        };
+      require([
+        "esri/map", 
+        "esri/dijit/InfoWindowLite",
+        "esri/InfoTemplate",
+        "esri/layers/FeatureLayer",
+        "dojo/dom-construct",
+        "dojo/domReady!"
+      ], function(
+          Map,
+          InfoWindowLite,
+          InfoTemplate,
+          FeatureLayer,
+          domConstruct
+         ) {
 
-        //position={lat: 30.040106, lng: 31.242922};
-        console.log('position',positions);
-        map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-        for(var i=0; i<positions.length; i++){
-            marker = new google.maps.Marker({
-                draggable: false,
-                map: map,
-                position: positions[i].position,
-                url:positions[i].url
-            });
-            google.maps.event.addListener(marker, 'click', function () {
-                window.location.href = marker.url
-                });
-        }
-
-        infowindow = new google.maps.InfoWindow({});
+        var map = new Map("mapDiv", {
+          basemap: "streets-relief-vector",
+          center: [30.780575, 25.991984],
+          zoom: 6
+        });
+       
     
+        var infoWindow = new InfoWindowLite(null, domConstruct.create("div", null, null, map.root));
+        infoWindow.startup();
+        map.setInfoWindow(infoWindow);
+
+        var template = new InfoTemplate();
+       
+
+        //add a layer to the map
+        var featureLayer = new FeatureLayer("https://services8.arcgis.com/5rNeOa8mc76DIXgn/arcgis/rest/services/schoolegypt/FeatureServer/0", {
+           mode: FeatureLayer.MODE_SNAPSHOT,
+        outFields: ["*"],
+          infoTemplate:template
       
+         
+        });
+         
+     
+    
+       map.addLayer( featureLayer);
+       
+   
+    
+          
+    map.on('click',function(response){
+      
+    console.log(response.graphic.attributes);
+      
+      
+  });
 
-        function reloadMarkers() {
-
-            // Loop through markers and set map to null for each
-            for (var i=0; i<markers.length; i++) {
-
-                markers[i].setMap(null);
-            }
-
-            // Reset the markers array
-            markers = [];
-
-            // Call set markers to re-add markers
-            setMarkers(beaches);
-        }
-
-        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-            infowindow.setPosition(position);
-            marker.setPosition(position);
-            map.setCenter(position);
-            infoWindow.setContent(browserHasGeolocation ?
-                'Error: The Geolocation service failed.' :
-                'Error: Your browser doesn\'t support geolocation.');
-            }
-        }
-
-        google.maps.event.addDomListener(window, 'load', initialize);
-    });
-</script>
+      });
+    </script>
+    @endpush
+  
+    <div id="mapDiv"></div>
