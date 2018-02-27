@@ -27,7 +27,10 @@ class HomeController extends Controller
    
     public function index()
     {
-        return view('bimunity.index');
+        if(\Auth::check())
+            return redirect('home');
+        else
+            return redirect('login');
     }
     public function dashboard()
     {
