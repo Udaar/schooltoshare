@@ -18,7 +18,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             @foreach($facilities as $facility)
-                                <div class="facility-col text-center">
+                                <div class="facility-col item text-center">
                                     <div class="facility-item {{(strpos($facility->name,' ')?'two-word':'')}}">
                                         <div class="{{($building->facilityexist($facility->id))?'exisit':'not-exisit'}}">
                                             <img src="data:image/png;base64,{!!($building->facilityexist($facility->id))?$facility->logoavaliable:$facility->lognotavaliable!!}">
