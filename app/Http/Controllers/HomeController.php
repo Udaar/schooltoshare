@@ -60,6 +60,7 @@ class HomeController extends Controller
 
             }
             elseif(\Auth::user()->type == 'fundorg'){
+                $notifications =\Auth::user()->notifications()->orderBy('created_at', 'desc')->paginate(20);
                 return view('fund.home' ,compact('buildings', 'urn', 'token','funds','invoice','notifications'));
                 
             }
