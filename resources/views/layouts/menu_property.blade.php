@@ -128,7 +128,6 @@
 
            
 {{-- admindbchange --}}
-@include('admindbchange::side_menu')
 {{-- Report --}}
 <li class="{!! Request::is('*reportGenerators*') ? 'active' : '' !!}">
     <a class="nav-link ifm-text-left" href="{!! url('reportGenerators') !!}">

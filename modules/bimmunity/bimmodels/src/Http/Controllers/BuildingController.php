@@ -323,6 +323,7 @@ class BuildingController extends AppBaseController
             }
             else{
                 $events=\Auth::user()->school->events;
+                $building=\Auth::user()->school;
                 return view('school.inf_new_event',compact('events','building'));
             }
         }    
