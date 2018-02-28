@@ -55,7 +55,7 @@
 </li>
 {{-- Bimmodels --}}
 
-    @include('bimmunity/invoice::side_menu')
+   
 
 {{-- Inventory --}}
     @include('inventory::side_menu')
