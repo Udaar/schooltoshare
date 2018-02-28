@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 
-class BuildingsTableSeeder extends Seeder
+class SchoolsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,7 +16,7 @@ class BuildingsTableSeeder extends Seeder
     	DB::table('buildings')->delete();
     	DB::update("ALTER TABLE buildings AUTO_INCREMENT = 1;");
          //insert some dummy records
-    	DB::table('buildings')->insert(
+    	DB::table('Schools')->insert(
     		array(
     			array(
     				

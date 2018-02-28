@@ -2,15 +2,7 @@
 <div class="row">
     <div class="col-lg-6 col-xs-12">
         <!-- Category Id Field -->
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="form-group col-sm-6 ifm-width-100">
-                    {!! Form::label('category_id', 'Category Id:', ['class' => 'ifm-grey']) !!}
-                    @include('bimmodels::categories.partials.tree', ["taxonomy_name"=> 'BuildingTax'])
-                    {{-- {!! Form::number('category_id', null, ['class' => 'form-control']) !!} --}}
-                </div>
-            </div>
-        </div>
+        
         <!-- Name Field -->
         <div class="row">
             <div class="col-xs-12">
@@ -35,7 +27,7 @@
             <div class="col-xs-12">
                 <div class="form-group col-sm-6 ifm-width-100">
                     {!! Form::label('country', 'Country:', ['class' => 'ifm-grey']) !!}
-                    {!! Form::text('country', null, ['class' => 'form-control ifm-border-light-grey-all']) !!}
+                    {!! Form::select('country_id', \App\Country::all()->pluck('name','id'), null, ['class' => 'form-control select2','placeholder'=>'Country','id'=>'country']) !!}
                 </div>
             </div>
         </div>
@@ -44,7 +36,9 @@
             <div class="col-xs-12">
                 <div class="form-group col-sm-6 ifm-width-100">
                     {!! Form::label('city', 'City:', ['class' => 'ifm-grey']) !!}
-                    {!! Form::text('city', null, ['class' => 'form-control ifm-border-light-grey-all']) !!}
+                    <select id="city" class="form-control select2" placeholder="City">
+                        <option value="0" disabled selected>City</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -220,5 +214,14 @@
         }
     }
     google.maps.event.addDomListener(window, 'load', initialize);
+
+     $(document).on('change','#country',function(){
+			 $.ajax({
+					url:'/getcities/'+$('#country').val(),
+					success:function(result){
+						$('#city').html(result);
+					}
+				});
+		 });	
 </script>
 @stop

@@ -13,7 +13,7 @@ Route::group([
             Route::get('/propertymanagementcompanies','GuestController@propertymanagementcompanies');
             Route::get('/facilitymanagementcompanies','GuestController@facilitymanagementcompanies');
             Route::get('/serviceProvidercompanies','GuestController@serviceProvidercompanies');
-            Route::get('/search/{type}/{country}/{city}/{name}','GuestController@search');
+            Route::get('/search/{country}/{city}/{name}','GuestController@search');
             Route::get('/see_more/{type}','GuestController@seemore');
             Route::get('/company','GuestController@company');
             Route::get('testguest','GuestController@testguest');

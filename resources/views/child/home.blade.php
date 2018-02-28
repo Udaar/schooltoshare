@@ -39,7 +39,7 @@
 	<script src="/metronic/assets/pages/scripts/login.min.js" type="text/javascript"></script>
 	<!-- Document Title
 	============================================= -->
-	<title>BIMMUNITY</title>
+	<title>Schools</title>
 
 </head>
 
@@ -60,7 +60,7 @@
 				<div class="row filters">
 					<div class="col-lg-10">
 						<div class="row">
-							<div class="col-lg-3 no-padding-right">
+							{{--  <div class="col-lg-3 no-padding-right">
 								<select id="Property" class="form-control select2">
                                     <option selected disabled>Search for a property</option>
                                     @foreach($buildings as $building)
@@ -68,16 +68,16 @@
                                     @endforeach    
 									
 								</select>
-							</div>
-							<div class="col-lg-3 no-padding-right">
+							</div>  --}}
+							<div class="col-lg-4 no-padding-right">
 								{!! Form::select('country_id', \App\Country::all()->pluck('name','id'), null, ['class' => 'form-control select2','placeholder'=>'Country','id'=>'country']) !!}
 							</div>
-							<div class="col-lg-3 no-padding-right">
+							<div class="col-lg-4 no-padding-right">
 								<select id="city" class="form-control select2" placeholder="City">
-									<option value="0">City</option>
+									<option value="0" disabled selected>City</option>
 								</select>
 							</div>
-							<div class="col-lg-3 no-padding-right">
+							<div class="col-lg-4 no-padding-right">
 								<input type="text" id="bname" class="form-control" placeholder="Name">
 							</div>	
 						</div>
@@ -344,8 +344,23 @@
 				});
 		 });		
 		$('#searchbtn').on('click',function(){
+			var country_id = $('#country').val();
+			var city_id = $('#city').val();
+			var name = $('#bname').val();
+			if(country_id== null)
+			{
+				country_id =0;
+			}
+			if(city_id== null)
+			{
+				city_id =0;
+			}
+			if(name == "")
+			{
+				name="null";
+			}
 			$.ajax({
-					url:'/search/'+$('#Property').val()+'/'+$('#country').val()+'/'+$('#city').val()+'/'+$('#bname').val(),
+					url:'/search/'+country_id+'/'+city_id+'/'+name,
 					success:function(result){
 						$('#guestbody').html(result);
 					}

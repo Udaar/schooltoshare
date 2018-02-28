@@ -3,7 +3,7 @@
 namespace Bimmunity\Guest\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Building;
+use Bimmunity\Bimmodels\Models\Building;
 use Bimmunity\Ticketing\Models\Profile;
 use App\User;
 use App\Models\Role;
@@ -59,25 +59,33 @@ class GuestController extends Controller
         $cities = City::where('country_id','=',$id)->get();
         return view('guest::city',compact('cities'));
     }
-    public function search($type,$country,$city,$name){
-        if($type=='Property'){
-            $properties= Building::where('country','=',Country::find($country)->name)
-                                  ->where('city', $city)
+    public function search($country_id,$city_id,$name){
+       /*
+        // if($type=='Property'){
+        //     $properties= Building::where('country','=',Country::find($country)->name)
+        //                           ->where('city', $city)
+        //                           ->where('name', 'like', '%' . $name . '%')
+        //                           ->get();
+        //     return view('guest::guest_partial_injected',compact('properties'));
+        // }else{
+        //     $users= Profile::where('country', Country::find($country)->name)
+        //                      ->where('city', $city)
+        //                      ->get();
+        //     $properties=collect();
+        //     foreach($users as $user){
+        //         if($user->user->name == $name)
+        //             $properties->push($user->user);
+        //     }      
+        //     return view('guest::guest_partial_injected_user',compact('properties','type'));
+        // }
+       */
+      if($country_id != 0)
+        $schools= Building::where('country','=',$country_id)
+                                  ->where('city', $city_id)
                                   ->where('name', 'like', '%' . $name . '%')
                                   ->get();
+            return $schools;
             return view('guest::guest_partial_injected',compact('properties'));
-        }else{
-            $users= Profile::where('country', Country::find($country)->name)
-                             ->where('city', $city)
-                             ->get();
-            $properties=collect();
-            foreach($users as $user){
-                if($user->user->name == $name)
-                    $properties->push($user->user);
-            }      
-            return view('guest::guest_partial_injected_user',compact('properties','type'));
-        }
-
     }
     public function testguest(){
         
