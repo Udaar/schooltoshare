@@ -17,7 +17,9 @@ class CreateCitiesTable extends Migration
 		{
 			$table->increments('id');
 			$table->string('name');
-            $table->integer('country_id');
+            $table->string('district');
+            $table->string('country_code');
+            $table->integer('population');
 			$table->timestamps();
 			$table->softDeletes();
 		});

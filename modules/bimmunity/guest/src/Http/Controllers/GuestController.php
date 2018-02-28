@@ -56,7 +56,8 @@ class GuestController extends Controller
         
     }
     public function getcities($id){
-        $cities = City::where('country_id','=',$id)->get();
+         $country = Country::find($id);
+         $cities=$country->cities;
         return view('guest::city',compact('cities'));
     }
     public function search($country_id,$city_id,$name){

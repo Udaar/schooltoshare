@@ -230,4 +230,34 @@ class UserController extends AppBaseController
             ->with('users', $users)
             ->with('type', $type);;
     }
+
+
+    public function registeruser(Request $request){
+        $this->validate($request, [
+            'email' => 'unique:users',
+            'name'=>'required',
+            'password'=>'required|confirmed|min:6',
+            'type'=>'required',
+            'address' =>'required',
+            'phone'=>'required'
+              ]);
+        $input =$request->all();
+         $user=User::create([
+            'name' => $input['name'],
+            'email' => $input['email'],
+            'password' => bcrypt($input['password']),
+            'phone' => $input['phone'],
+            'cell_phone' => $input['cell_phone'],
+            'address' => $input['address'],
+            'type'=>$input['type'],
+            'picture' => '/metronic/images/no-image.jpg',
+        ]);
+        \Auth::attempt(['email'=>$user->email,'password'=>$input['password']]);
+        if($input['type']=='school'){
+            return redirect('buildings/create');
+        }
+        else{
+            return redirect('/home');
+        }
+    }
 }

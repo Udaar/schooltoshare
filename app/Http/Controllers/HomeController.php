@@ -27,15 +27,13 @@ class HomeController extends Controller
    
     public function index()
     {
-        if(\Auth::check())
+      
             return redirect('home');
-        else
-            return redirect('login');
     }
     public function dashboard()
     {
         
-        $buildings = \Bimmunity\Bimmodels\Models\Building::all();
+        $buildings = \Bimmunity\Bimmodels\Models\Building::all()->take(8);
         $events=\App\Models\Event::all()->take(8);
         app('App\Http\Controllers\OptionController')->generateToken();
         $BimModel=\App\Models\BimModel::where('name','tower')->first();
@@ -48,22 +46,30 @@ class HomeController extends Controller
         }
         $invoice=\Bimmunity\Invoice\Models\Invoice::all();
         $funds=\App\User::where('type','fundorg')->get(); 
-        $notifications =\Auth::user()->notifications()->orderBy('created_at', 'desc')->paginate(20);
-        if(\Auth::user()->type == 'school')
-            return view('home' ,compact('buildings', 'urn', 'token','funds','invoice','notifications'));
-        elseif(\Auth::user()->type == 'admin')
-            return "Admin";
-        elseif(\Auth::user()->type == 'government')
-            return view('gov.home' ,compact('buildings', 'urn', 'token','funds','invoice','notifications'));
-        elseif(\Auth::user()->type == 'children'){
-            $requests=\Auth::user()->requests;
-            return view('child.home',compact('buildings','events','requests'));
-            
-        }
-        elseif(\Auth::user()->type == 'fundorg')  
-            return view('fund.home' ,compact('buildings', 'urn', 'token','funds','invoice','notifications'));
+        if(\Auth::check()){
+            if(\Auth::user()->type == 'school'){
+                $notifications =\Auth::user()->notifications()->orderBy('created_at', 'desc')->paginate(20);
+                return view('home' ,compact('buildings', 'urn', 'token','funds','invoice','notifications'));
+            }
+                
+            elseif(\Auth::user()->type == 'admin')
+                return "Admin";
+            elseif(\Auth::user()->type == 'government'){
+                $notifications =\Auth::user()->notifications()->orderBy('created_at', 'desc')->paginate(20);
+                return view('gov.home' ,compact('buildings', 'urn', 'token','funds','invoice','notifications'));
+
+            }
+            elseif(\Auth::user()->type == 'fundorg'){
+                return view('fund.home' ,compact('buildings', 'urn', 'token','funds','invoice','notifications'));
+                
+            }
+            else{
+                $requests=\Auth::user()->requests;
+                return view('child.home',compact('buildings','events','requests'));
+            } 
+        }    
        else
-            return "guest";
+            return view('child.home',compact('buildings','events'));
     }
    
 }

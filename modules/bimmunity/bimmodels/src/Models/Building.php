@@ -24,15 +24,14 @@ class Building extends Model
 
     public $fillable = [
         'name',
-        'year',
         'address',
         'phone',
-        'category_id',
         'emergency_info',
         'gps_lat',
         'gps_long',
-        'country',
-        'city'
+        'country_id',
+        'city_id',
+        'owner_id'
     ];
 
     /**
@@ -64,25 +63,12 @@ class Building extends Model
         'phone' => 'min:3',
         'gps_lat' => 'gps',
         'gps_long' => 'gps',
-        'category_id' => 'required',
     ];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      **/
-    public function category()
-    {
-        return $this->belongsTo(\App\Models\Category::class);
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     **/
-    public function site()
-    {
-        return $this->belongsTo(\App\Models\Site::class);
-    }
-
+   
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/
@@ -109,14 +95,7 @@ class Building extends Model
     {
         return $this->profile->first();
     }
-    public function userbuilding()
-    {
-        return $this->belongsToMany('App\Models\User','facililtybuildings');
-    }
-    public function facililtyBuilding()
-    {
-        return $this->hasMany(\App\Models\FacililtyBuilding::class);
-    }
+   
     public static function boot()
     {
         parent::boot();    
@@ -167,5 +146,14 @@ class Building extends Model
     public function events(){
 
         return $this->hasMany('\App\Models\Event','school_id');
+    }
+    public function owner(){
+        return $this->belongsTo('\App\User','owner_id');
+    }
+    public function country(){
+        return $this->belongsTo('\App\Country');
+    }
+    public function city(){
+        return $this->belongsTo('\App\City');
     }
 }

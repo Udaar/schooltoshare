@@ -18,13 +18,15 @@
 
 Auth::routes();
 Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@dashboard');
 Route::resource('sendemail', 'ContactUSController');
+Route::post('/registeruser','UserController@registeruser');
 
 Route::group([
     'middleware' => ['web','auth']
 ],
     function() {
-        Route::get('/home', 'HomeController@dashboard');
+        
         Route::resource('events', 'EventController');
         Route::resource('users', 'UserController');
         Route::get('/show/school/{id}','\Bimmunity\Bimmodels\Http\Controllers\BuildingController@profile');

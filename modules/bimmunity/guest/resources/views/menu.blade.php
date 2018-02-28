@@ -1,15 +1,23 @@
 <ul>
-    <li class="mega-menu">
-        <a href="/users/{{\Auth::user()->id}}" class="nav-link avatar">
-            <img src="{{\Auth::user()->picture_url}}" alt="">
-            <span>{{\Auth::user()->name}}</span>
-        </a>
-    </li>
-    <li class="mega-menu">
-        <a href="/logout" class="nav-link avatar">
-            <i class="icon-logout"></i>
-        </a>
-    </li>
+    @if(\Auth::check())
+        <li class="mega-menu">
+            <a href="/users/{{\Auth::user()->id}}" class="nav-link avatar">
+                <img src="{{\Auth::user()->picture_url}}" alt="">
+                <span>{{\Auth::user()->name}}</span>
+            </a>
+        </li>
+        <li class="mega-menu">
+            <a href="/logout" class="nav-link avatar">
+                <i class="icon-logout"></i>
+            </a>
+        </li>
+    @else   
+         <li class="mega-menu">
+            <a href="/login" class="nav-link ">
+                <span>Login</span>
+            </a>
+        </li>
+    @endif    
     <!-- <li class="current">
         <a class="nav-link" data-scroll href="#header"><div>Home</div></a>
     </li>

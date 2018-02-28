@@ -57,6 +57,7 @@
 <!-- BEGIN LOGIN -->
 <div class="content">
     <!-- BEGIN LOGIN FORM -->
+    @include('metronic-templates::common.errors')
     <form class="login-form" action="{!! url('/login') !!}" method="post">
         {!! csrf_field() !!}
         <h3 class="form-title font-green">Sign In</h3>
@@ -109,7 +110,7 @@
 
 
     <!-- BEGIN REGISTERATION FORM -->
-    <form class="register-form" method="post" action="{!! url('/register') !!}">
+    <form class="register-form" method="post" action="{!! url('/registeruser') !!}">
 
         {!! csrf_field() !!}
         <h3 class="form-title font-green">Sign up</h3>
@@ -136,12 +137,12 @@
         </div>
 
         <div class="form-group ">
-           <select class="form-control" name="" id="">
+           <select class="form-control" name="type" id="">
                <option value="0" disabled selected>Select Account Type</option>
-               <option value="1">School</option>
-               <option value="2">Government</option>
-               <option value="3">Funding Organization</option>
-               <option value="4">Children</option>               
+               <option value="school">School</option>
+               <option value="government">Government</option>
+               <option value="fundorg">Funding Organization</option>
+               <option value="children">Children</option>               
            </select>
         </div>
 

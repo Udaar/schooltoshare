@@ -229,7 +229,7 @@
 
 				</div>
 			</div>
-
+		@if(isset($requests))
 			<div class="container">
 				<div class="wrap">
 					<div class="container-fluid company-wrap">
@@ -246,7 +246,7 @@
 										<th class="ifm-main-bg ifm-white all">Actions</th>
 									</thead>
 									<tbody>
-										@foreach(\Auth::user()->requests as $request)
+										@foreach($requests as $request)
 											<tr>
 												<td>{{$request->school->name}}</td>
 												<td>{{$request->Facility->name}}</td>
@@ -266,7 +266,7 @@
 
 				</div>
 			</div>
-
+		@endif
 		</section><!-- #content end -->
 
 	</div><!-- #wrapper end -->
