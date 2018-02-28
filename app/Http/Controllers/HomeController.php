@@ -36,7 +36,7 @@ class HomeController extends Controller
         $buildings = \Bimmunity\Bimmodels\Models\Building::all()->take(8);
         $events=\App\Models\Event::all()->take(8);
         app('App\Http\Controllers\OptionController')->generateToken();
-        $BimModel=\App\Models\BimModel::where('name','tower')->first();
+        $BimModel=\App\Models\BimModel::find(1);
         if($BimModel){
             $urn=$BimModel->urn;
         }
