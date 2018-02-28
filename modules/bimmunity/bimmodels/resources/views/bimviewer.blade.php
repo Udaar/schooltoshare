@@ -97,10 +97,8 @@
         oViews2D =Autodesk.Viewing.Document.getSubItemsWithProperties (doc.getRootItem (), { 'type': 'geometry', 'role': '2d' }, true) ;
         // Load up first a 3D view by default
         var viewable =null ;
-        var level=[];
-        var units=[];
-        var assets=[];
-        var check_asset;
+        var school=[];
+        var fund=[];
         if ( oViews3D.length > 0 )
             viewable =oViews3D [0] ;
         else if ( oViews2D.length > 0 )
@@ -109,84 +107,54 @@
             return (alert ('ERROR: No 3D or 2D views found in this document!')) ;
 
         for ( var i =0 ; i < oViews3D.length ; i++ ) {
-            var level_name=oViews3D [i].name.substring(0, oViews3D [i].name.indexOf("-"));
-            if(level.indexOf(level_name)== -1){
-                level.push(level_name);
-            }
-            check_asset=oViews3D [i].name.substring(oViews3D [i].name.indexOf("-")+1, oViews3D [i].name.length);
-            if(check_asset.substring(0,check_asset.indexOf("-")) == "AM"){
-                assets.push([level_name,[i,oViews3D [i].guid,oViews3D [i].name.substring(oViews3D [i].name.indexOf("-")+1, oViews3D [i].name.length),'3d']]);
+            var level_name=oViews3D [i].name;
+            if(level_name.indexOf('SM')!= -1){
+                school.push([i,oViews3D [i].guid,oViews3D [i].name, oViews3D [i].name.length,'3d']);                                
+                
             }
             else{
-                units.push([level_name,[i,oViews3D [i].guid,oViews3D [i].name.substring(oViews3D [i].name.indexOf("-")+1, oViews3D [i].name.length),'3d']]);  
+                fund.push([i,oViews3D [i].guid,oViews3D [i].name, oViews3D [i].name.length,'3d']);                                
             }
-            //var r =$('<div><button id="view_' + i + '" data="' + oViews3D [i].guid + '">' + oViews3D [i].name + '</button></div>') ;
-            //$('#list').append (r) ;
-            //$('#view_' + i).click (function (e) { switchView (e, '3d') ; }) ;
+            
             
         }
         for ( var i =0, j =1000 ; i < oViews2D.length ; j++, i++ ) {
-            var level_name=oViews2D [i].name.substring(0, oViews2D [i].name.indexOf("-"));
-            if(level.indexOf(level_name)== -1){
-                level.push(level_name);
-            }
-            check_asset=oViews2D [i].name.substring(oViews2D [i].name.indexOf("-")+1, oViews2D [i].name.length);
-            if(check_asset.substring(0,check_asset.indexOf("-")) == "AM"){
-                assets.push([level_name,[j,oViews2D [i].guid,oViews2D [i].name.substring(oViews2D [i].name.indexOf("-")+1, oViews2D [i].name.length),'2d']]);                                
+            var level_name=oViews2D [i].name;
+            if(level_name.indexOf('SM')!= -1){
+                school.push([j,oViews2D [i].guid,oViews2D [i].name, oViews2D [i].name.length,'2d']);
             }
             else{
-                units.push([level_name,[j,oViews2D [i].guid,oViews2D [i].name.substring(oViews2D [i].name.indexOf("-")+1, oViews2D [i].name.length),'2d']]);                
+                fund.push([j,oViews2D [i].guid,oViews2D [i].name, oViews2D [i].name.length,'2d']);
             }
-            //var r =$('<div><button id="view_' + j + '" data="' + oViews2D [i].guid + '">' + oViews2D [i].name + '</button></div>') ;
-            //$('#list').append (r) ;
-            //$('#view_' + j).click (function (e) { switchView (e, '2d') ; }) ;
         }
-        console.log('levels : ',level);
-        console.log('units : ',units);
-        console.log('assets : ',assets);
-        
-        //for ( var j =0; j < plans.length ; j++ ) {
-             //   $(document).on('click','#view_' + plans[j][1][0],function (e) { switchView (e, plans[j][1][3]) ; }) ;
-        //}
-            
-        var r='<ul class="list">';
-            
-                for ( var i =0; i < level.length ; i++ ) {
-                    r+= '<li>'+
-                            '<a><div><button>Level '+level[i]+'</button></div></a>'+
-                            '<ul class="sub-list">'+
-                                '<li><a><div><button style="background-color:transparent!important" class="ifm-grey ifm-no-border-all text-left">Units</button></div></a></li>'+
-                                    '<ul class="chiled_list">';
-                                for ( var j =0; j < units.length ; j++ ) {
-                                    if(units[j][0] == level[i]){
-                                        r+='<li><div><button id="view_' + units[j][1][0] + '" data="' + units[j][1][1] + '">Unit ' + units[j][1][2] + '</button></div></li>';
-                                        if(units[j][1][3] == "3d")
-                                            $(document).on('click','#view_' + units[j][1][0],function (e) { switchView (e, "3d") ; }) ;
-                                        else
-                                            $(document).on('click','#view_' + units[j][1][0],function (e) { switchView (e, "2d") ; }) ;
-                                    } 
-                                }
-                    r+=             '</ul>'+
-                                '</li>'+            
-                                '<li><a><div><button style="background-color:transparent!important" class="ifm-grey ifm-no-border-all text-left">Assets</button></div></a></li>'+
-                                    '<ul class="chiled_list">';
-                                        for ( var j =0; j < assets.length ; j++ ) {
-                                            if(assets[j][0] == level[i]){
-                                                r+='<li><div><button id="view_' + assets[j][1][0] + '" data="' + assets[j][1][1] + '">Asset ' + assets[j][1][2] + '</button></div></li>';
-                                                
-                                                if(assets[j][1][3] == "3d")
-                                                    $(document).on('click','#view_' + assets[j][1][0],function (e) { switchView (e, "3d") ; }) ;
-                                                else
-                                                    $(document).on('click','#view_' + assets[j][1][0],function (e) { switchView (e, "2d") ; }) ;
-                                            } 
-                                        }
-                    r+=             '</ul>'+
-                                '</li>'+
-                            '</ul'+
-                        '</li>';
-                }
-                r+=   '</ul>';
-                $('#list').append (r) ;
+        console.log('school : ',school);
+        console.log('fund : ',fund);
+        var sm=  '<ul class="school_list">';
+                    for ( var j =0; j < school.length ; j++ ) {
+                            sm+='<li><div><button id="view_' + school[j][0] + '" data="' + school[j][1] + '">Asset ' + school[j][2] + '</button></div></li>';
+                            if(school[j][4] == "3d")
+                                $(document).on('click','#view_' + school[j][0],function (e) { switchView (e, "3d") ; }) ;
+                            else
+                                $(document).on('click','#view_' + school[j][0],function (e) { switchView (e, "2d") ; }) ;
+                       
+                    }
+            sm+= '</ul>';
+            var fm=  '<ul class="fund_list">';
+                    for ( var j =0; j < fund.length ; j++ ) {
+                       
+                            fm+='<li><div><button id="view_' + fund[j][0] + '" data="' + fund[j][1] + '">Asset ' + fund[j][2] + '</button></div></li>';
+                            if(fund[j][4] == "3d")
+                                $(document).on('click','#view_' + fund[j][0],function (e) { switchView (e, "3d") ; }) ;
+                            else
+                                $(document).on('click','#view_' + fund[j][0],function (e) { switchView (e, "2d") ; }) ;
+                       
+                    }
+            fm+= '</ul>'+
+            @if(\Auth::user()->type=='school')         
+                $('#list').append (sm) ;
+            @else    
+                $('#list').append (fm) ;
+            @endif
         startViewer (doc.getViewablePath (viewable), doc.getPropertyDbPath ()) ;
     }
 
