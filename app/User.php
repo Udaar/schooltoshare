@@ -320,5 +320,10 @@ class User extends Authenticatable
 
     }
 
+
+    public function school(){
+        return $this->hasOne('\Bimmunity\Bimmodels\Models\Building','owner_id');
+    }
+
 }
 

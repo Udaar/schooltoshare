@@ -54,7 +54,8 @@ class FacilityController extends AppBaseController
     public function create()
     {
         $buildings = \Bimmunity\Bimmodels\Models\Building::all();
-        return view('bimmodels::facilities.create',compact('buildings'));
+        $facilities=$this->facilityRepository->all();
+        return view('bimmodels::facilities.create',compact('buildings','facilities'));
     }
 
     /**
@@ -66,9 +67,9 @@ class FacilityController extends AppBaseController
      */
     public function store(CreateFacilityRequest $request)
     {
-        $input = $request->all();
-
-        $facility = $this->facilityRepository->create($input);
+         $input = $request->all();
+        \DB::table('school_facility')->insert(['school_id'=>$input['building_id'],'facility_id'=>$input['facility_id']]);
+        // $facility = $this->facilityRepository->create($input);
 
         Flash::success('Facilty saved successfully.');
 
