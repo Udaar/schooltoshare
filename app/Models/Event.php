@@ -54,7 +54,6 @@ class Event extends Model
         'duration',
         'd_type',
         'date',
-        'ticket_id'
     ];
 
     /**
@@ -70,7 +69,6 @@ class Event extends Model
         'duration' => 'integer',
         'd_type' => 'string',
         'date' => 'date',
-        'ticket_id' => 'integer'
     ];
 
     /**
