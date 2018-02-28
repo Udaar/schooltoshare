@@ -48,7 +48,6 @@
     
 </li>
 {{-- Bimmodels --}}
-    @include('bimmodels::side_menu')
 
     @include('bimmunity/invoice::side_menu')
 
