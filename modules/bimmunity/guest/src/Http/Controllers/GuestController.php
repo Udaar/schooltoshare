@@ -45,13 +45,9 @@ class GuestController extends Controller
         }
         else{
         
-        $propertyMs=Role::with('users')->where('name', $type)->first();
-        $properties= collect();
-        $properties->push($propertyMs->users);
-        $type= str_replace("Manager","Management Companies",$type);
-        $type= str_replace("Provider","Provider Companies",$type);
-        
-         return view('guest::see-more',compact('properties','type','searchtype'));
+        $events=\App\Models\Event::all();
+        $searchtype='Event';
+         return view('guest::see-more',compact('events','type','searchtype'));
         }
         
     }

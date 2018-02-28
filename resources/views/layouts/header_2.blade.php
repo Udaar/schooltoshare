@@ -17,13 +17,16 @@
 
             <!-- Left Navigation
                 ============================================= -->
-                <nav id="primary-menu" class="pull-left">
+                <nav id="primary-menu" class="pull-left" style="margin-left: 50px">
                     <ul class="left-nav">
                         <li class="mega-menu">
                             <a class="nav-link" href="/"><div>Home</div></a>
                         </li>
                         <li class="mega-menu">
-                            <a class="nav-link" href="/see_more/events"><div>Schools</div></a>
+                            <a class="nav-link" href="/see_more/Properties"><div>Schools</div></a>
+                        </li>
+                        <li class="mega-menu">
+                            <a class="nav-link" href="/see_more/events"><div>Events</div></a>
                         </li>
                     </ul>
                 </nav><!-- #left navigation end -->

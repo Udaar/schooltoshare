@@ -103,38 +103,7 @@
 
 	</div><!-- #wrapper end -->
 
-	<!-- Footer
-		============================================= -->
-	<footer id="footer" class="dark">
-
-		<!-- Copyrights
-		============================================= -->
-		<div id="copyrights">
-
-			<div class="container clearfix">
-
-				<div class="col_half">
-					<img src="/bimunity/images/logo.png" alt="" class="footer-logo">
-
-					Copyrights &copy; 2017 All Rights Reserved by BIMMUNITY.
-				</div>
-
-				<div class="col_half col_last tright">
-					<div class="copyrights-menu copyright-links fright clearfix">
-						<a class="nav-link" data-scroll href="#header">Home</a>/
-						<a class="nav-link" data-scroll href="#about">Our Logic</a>/
-						<a class="nav-link" data-scroll href="#core">Platforms</a>/
-						<a class="nav-link" data-scroll href="#concepts">Prototypes</a>/
-						<a class="nav-link" data-scroll href="#prototyps">Features</a>/
-						<a class="nav-link" data-scroll href="#team">Users</a>
-					</div>
-				</div>
-
-			</div>
-
-		</div><!-- #copyrights end -->
-
-	</footer><!-- #footer end -->
+	@include('layouts.footer_2')
 
 	<!-- Go To Top
 	============================================= -->
