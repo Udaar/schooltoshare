@@ -40,7 +40,15 @@ class BuildingController extends AppBaseController
     {
         $this->buildingRepository->pushCriteria(new RequestCriteria($request));
         $buildings = $this->buildingRepository->with(['profile'])->all();
-
+        if(\Auth::user()->type=='school'){
+            if(\Auth::user()->school){
+                $buildings=[\Auth::user()->school];
+                return view('bimmodels::buildings.index')
+                ->with('buildings', $buildings);
+            }
+            else
+                return redirect('/buildings/create');    
+        }
         return view('bimmodels::buildings.index')
             ->with('buildings', $buildings);
     }
@@ -309,8 +317,14 @@ class BuildingController extends AppBaseController
         return $building = $this->buildingRepository->findWithoutFail($id)->facilities;
     }
     public function newevents(){
-        $building=\Bimmunity\Bimmodels\Models\Building::find(2);
-        $events=$building->events;
-        return view('school.inf_new_event',compact('events','building'));
+        if(\Auth::user()->type == 'school'){
+            if(!\Auth::user()->school){
+                return redirect('/buildings/create');
+            }
+            else{
+                $events=\Auth::user()->school->events;
+                return view('school.inf_new_event',compact('events','building'));
+            }
+        }    
     }
 }

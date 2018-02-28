@@ -58,8 +58,8 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="form-group col-sm-6 ifm-width-100">
-                    {!! Form::label('year', 'Year:', ['class' => 'ifm-grey']) !!}
-                    {!! Form::selectRange('year', 2030, 1950, null, ['class' => 'form-control select2']) !!}
+                    {!! Form::label('layer_url', 'Layer Url:', ['class' => 'ifm-grey']) !!}
+                    {!! Form::text('layer_url', null, ['class' => 'form-control ']) !!}
                 </div>
             </div>
         </div>

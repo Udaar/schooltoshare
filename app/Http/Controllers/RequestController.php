@@ -33,8 +33,17 @@ class RequestController extends AppBaseController
         $requests = $this->requestRepository->all();
         if(\Auth::user()->type=="children")
             return redirect('home');
-        return view('requests.index')
-            ->with('requests', $requests);
+        if(\Auth::user()->type == 'school'){
+            if(!\Auth::user()->school){
+                return redirect('/buildings/create');
+            }
+            else{
+                $requests=\Auth::user()->school;
+            return view('requests.index')
+                ->with('requests', $requests);
+                }
+        }
+        
     }
 
     /**

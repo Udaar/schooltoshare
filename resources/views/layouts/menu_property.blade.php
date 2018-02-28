@@ -25,6 +25,12 @@
             <span class="title">Info, News ,Events</span>
         </a>
     </li>
+    <li class="nav-item start {!! Request::is('buildings') ? ' active' : '' !!}">
+        <a href="{!! url('/buildings') !!}" class="nav-link ifm-text-left nav-toggle">
+            <i class="fa fa-info-circle"></i>
+            <span class="title">School</span>
+        </a>
+    </li>
 
 {{-- File manager --}}
 <li class="nav-item {!! (Request::is('*laravel-filemanager?type=Images*')) || (Request::is('*laravel-filemanager?type=Files*')) ?'active' :'' !!}">

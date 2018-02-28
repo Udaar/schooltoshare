@@ -48,8 +48,15 @@ class HomeController extends Controller
         $funds=\App\User::where('type','fundorg')->get(); 
         if(\Auth::check()){
             if(\Auth::user()->type == 'school'){
-                $notifications =\Auth::user()->notifications()->orderBy('created_at', 'desc')->paginate(20);
-                return view('home' ,compact('buildings', 'urn', 'token','funds','invoice','notifications'));
+                    if(!\Auth::user()->school){
+                        return redirect('/buildings/create');
+                    }
+                    else{
+                        $notifications =\Auth::user()->notifications()->orderBy('created_at', 'desc')->paginate(20);
+                        return view('home' ,compact('buildings', 'urn', 'token','funds','invoice','notifications'));
+                    }
+                        
+                
             }
                 
             elseif(\Auth::user()->type == 'admin')

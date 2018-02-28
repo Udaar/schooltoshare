@@ -12,7 +12,9 @@
                 <i class="fa fa-building-o ifm-grey"></i>
                 Schools
             </h3>
+            @if(\Auth::user()->type!='school')
             <a href="{!! route('buildings.create') !!}" class="pull-right ifm-absolute-right btn ifm-btn-green ifm-grey-bg ifm-white">Add New</a>
+            @endif
         </div>
         @foreach($buildings as $building)
         <div class="building-wrapper info-wrapper ifm-margin-sm-bottom">

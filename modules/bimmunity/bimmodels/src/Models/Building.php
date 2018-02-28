@@ -31,7 +31,8 @@ class Building extends Model
         'gps_long',
         'country_id',
         'city_id',
-        'owner_id'
+        'owner_id',
+        'layer_url'
     ];
 
     /**

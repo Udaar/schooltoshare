@@ -29,21 +29,29 @@ class FacilityController extends AppBaseController
      */
     public function index(Request $request)
     {
-        app('App\Http\Controllers\OptionController')->generateToken();
-        $building=\Bimmunity\Bimmodels\Models\Building::find(1);
-        $BimModel=$building->bim_models()->first();
-        if($BimModel){
-            $urn=$BimModel->urn;
+        if(\Auth::user()->type == 'school')
+        {
+            if(!\Auth::user()->school){
+                return redirect('/buildings/create');
+            }
+            else{
+                    app('App\Http\Controllers\OptionController')->generateToken();
+                    $building=\Auth::user()->school;
+                    $BimModel=$building->bim_models()->first();
+                    if($BimModel){
+                        $urn=$BimModel->urn;
+                    }
+                    $token=\App\Models\Option::where('name','forge_data_read_token')->first();
+                    if($token){
+                        $token=$token->value;
+                    }
+                    $this->facilityRepository->pushCriteria(new RequestCriteria($request));
+                    $facilities = $this->facilityRepository->all();
+                    
+                    return view('bimmodels::facilities.index',compact('token','urn','building'))
+                        ->with('facilities', $facilities);
+                }
         }
-        $token=\App\Models\Option::where('name','forge_data_read_token')->first();
-        if($token){
-            $token=$token->value;
-        }
-        $this->facilityRepository->pushCriteria(new RequestCriteria($request));
-        $facilities = $this->facilityRepository->all();
-        
-        return view('bimmodels::facilities.index',compact('token','urn','building'))
-            ->with('facilities', $facilities);
     }
 
     /**
