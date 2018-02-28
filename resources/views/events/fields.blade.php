@@ -6,15 +6,13 @@
 
 <!-- User Id Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('user_id', 'User Id:') !!}
-    {!! Form::number('user_id', null, ['class' => 'form-control']) !!}
+    {!! Form::label('user_id', 'Speaker:') !!}
+    {!! Form::text('speaker', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- School Id Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('school_id', 'School Id:') !!}
-    {!! Form::number('school_id', null, ['class' => 'form-control']) !!}
-</div>
+<input type="hidden" name="school_id" value="{{\Auth::user()->school->id}}">
+
 
 <!-- Duration Field -->
 <div class="form-group col-sm-6">
@@ -35,10 +33,7 @@
 </div>
 
 <!-- Ticket Id Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('ticket_id', 'Ticket Id:') !!}
-    {!! Form::number('ticket_id', null, ['class' => 'form-control']) !!}
-</div>
+
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">

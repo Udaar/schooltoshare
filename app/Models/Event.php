@@ -49,7 +49,7 @@ class Event extends Model
 
     public $fillable = [
         'name',
-        'user_id',
+        'speaker',
         'school_id',
         'duration',
         'd_type',
@@ -64,7 +64,7 @@ class Event extends Model
     protected $casts = [
         'id' => 'integer',
         'name' => 'string',
-        'user_id' => 'integer',
+        'speaker' => 'string',
         'school_id' => 'integer',
         'duration' => 'integer',
         'd_type' => 'string',

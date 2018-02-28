@@ -146,14 +146,14 @@
 													<p class="text-center">{{$event->name}}</p>
 												</div>
 												<div class="event-avatar">
-													<img src="{{$event->user->picture_url}}" alt="">
+													<img src="{{$event->school->profilePicture}}" alt="">
 												</div>
 											</div>
 											<div class="event-details">
 												<div class="speaker text-center">
 													<p>
 														<span>Speaker</span>
-														{{$event->user->name}}
+														{{$event->speaker}}
 													</p>
 												</div>
 												<div class="attend-details text-center">
@@ -188,14 +188,14 @@
 													<p class="text-center">{{$event->name}}</p>
 												</div>
 												<div class="event-avatar">
-													<img src="{{$event->user->picture_url}}" alt="">
+													<img src="{{$event->school->profilePicture}}" alt="">
 												</div>
 											</div>
 											<div class="event-details">
 												<div class="speaker text-center">
 													<p>
 														<span>Speaker</span>
-														{{$event->user->name}}
+														{{$event->speaker}}
 													</p>
 												</div>
 												<div class="attend-details text-center">
