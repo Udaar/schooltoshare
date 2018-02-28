@@ -5,3 +5,23 @@
 .select2-container--bootstrap .select2-selection--multiple .select2-search--inline .select2-search__field{
     width: 100%!important;
 }
+
+.user-section{
+    .img-wrap{
+        width: 278px;
+        img{
+            width: 100%;
+        }
+    }
+    
+    .children-info{
+        .info-item{
+            margin-bottom: 10px;
+        }
+        label{
+            color: #757575;
+            margin-bottom: 0;
+            width: 100px;
+        }
+    }
+}
