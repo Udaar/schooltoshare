@@ -53,10 +53,11 @@
             <!-- BEGIN PAGE HEADER-->
             {{-- @include('layouts/page_header') --}}
             <!-- END PAGE HEADER-->
-
-            <div class="row">
-                <div class="col-lg-12">
-                    @yield('content')
+            <div class="contianer">
+                <div class="row">
+                    <div class="col-lg-12">
+                        @yield('content')
+                    </div>
                 </div>
             </div>
 

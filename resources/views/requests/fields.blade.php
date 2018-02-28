@@ -17,7 +17,7 @@
         <div class="input-group ifm-width-100 input-medium date date-picker" data-date-format="{{config('ifm.settings.date-format-bootstrap')}}" >
             {!! Form::text('date', null, ['class' => 'form-control ifm-border-light-grey-all', 'required'=>'required']) !!}
             <span class="input-group-btn">
-                <button class="btn default ifm-main-bg ifm-white ifm-border-main-all" style="padding:9px 12px" type="button">
+                <button class="btn default ifm-main-bg ifm-white ifm-border-main-all" type="button">
                     <i class="fa fa-calendar"></i>
                 </button>
             </span>
@@ -25,9 +25,11 @@
     </div>
 </div>
 <!-- Submit Field -->
-<div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{!! route('requests.index') !!}" class="btn btn-default">Cancel</a>
+<div class="col-sm-12">
+    <div class="form-group pull-right">
+        {!! Form::submit('Save', ['class' => 'btn ifm-main-bg ifm-white']) !!}
+        <a href="{!! route('requests.index') !!}" class="btn btn-default">Cancel</a>
+    </div>
 </div>
 
 

@@ -42,8 +42,8 @@
     
     <!-- BEGIN THEME LAYOUT STYLES -->
     <link href="/metronic/assets/layouts/layout/css/layout.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="/metronic/reset/modules/forms/form.css">
-    <link rel="stylesheet" href="/metronic/reset/modules/show/show.css">
+    <!-- <link rel="stylesheet" href="/metronic/reset/modules/forms/form.css">
+    <link rel="stylesheet" href="/metronic/reset/modules/show/show.css"> -->
     <link href="/metronic/assets/layouts/layout/css/themes/grey.min.css" rel="stylesheet" id="style_color"/>
     <link href="/metronic/reset/app-reset.css" rel="stylesheet">
     <!-- END THEME LAYOUT STYLES -->
@@ -51,6 +51,23 @@
     <!-- BEGIN THEME STYLES -->
     <link href="/metronic/reset/themes/main-theme.css" rel="stylesheet">
     <link rel="stylesheet" href="/metronic/reset/themes/sky-blue.css">
+    @if(\Auth::user()->type == 'children')
+        <link rel="stylesheet" href="/metronic/reset/themes/blue.css">
+        <style>
+            .dropdown-notification,
+            .dropdown-inbox,
+            .dropdown-quick-sidebar-toggler,
+            .page-header.navbar .menu-toggler.sidebar-toggler{
+                display: none!important;
+            }
+
+            @media (min-width: 992px){
+                .page-content-wrapper .page-content {
+                    margin-left: 0;
+                }
+            }
+        </style>
+    @endif
     <!-- END THEME STYLES -->
     
     <link rel="shortcut icon" href="favicon.ico"/>

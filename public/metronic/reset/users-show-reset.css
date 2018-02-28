@@ -4,4 +4,15 @@
 .select2-container--bootstrap .select2-selection--multiple .select2-search--inline .select2-search__field {
   width: 100% !important; }
 
+.user-section .img-wrap {
+  width: 278px; }
+  .user-section .img-wrap img {
+    width: 100%; }
+.user-section .children-info .info-item {
+  margin-bottom: 10px; }
+.user-section .children-info label {
+  color: #757575;
+  margin-bottom: 0;
+  width: 100px; }
+
 /*# sourceMappingURL=users-show-reset.css.map */
