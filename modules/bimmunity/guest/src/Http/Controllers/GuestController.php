@@ -10,6 +10,7 @@ use App\Models\Role;
 use App\Country;
 use App\Http\Controllers\Controller;
 use App\City;
+use Bimmunity\Bimmodels\Models\Facility;
 
 class GuestController extends Controller
 {
@@ -56,7 +57,7 @@ class GuestController extends Controller
          $cities=$country->cities;
         return view('guest::city',compact('cities'));
     }
-    public function search($country_id,$city_id,$name){
+    public function search($type,$country_id,$city_id,$name){
        /*
         // if($type=='Property'){
         //     $properties= Building::where('country','=',Country::find($country)->name)
@@ -76,26 +77,76 @@ class GuestController extends Controller
         //     return view('guest::guest_partial_injected_user',compact('properties','type'));
         // }
        */
-      if($country_id != 0 && $city_id != 0 && $name != "null")
-      {
-        $properties= Building::where('country','=',$country_id)
-                                  ->where('city', $city_id)
-                                  ->where('name', 'like', '%' . $name . '%')
-                                  ->get();
-            // return $schools;
-      }
-      elseif($country_id != 0 && $city_id != 0 && $name == "null")
-      {
-        $properties= Building::where('country','=',$country_id)
-                            ->where('city', $city_id)
-                            ->get();
-        // return $schools;
-      }
-      else
-      {
-        $properties= Building::where('name', 'like', '%' . $name . '%')->get();
-        // return $schools;
-      }
+        if($type == "school")
+        {
+            if($country_id != 0 && $city_id != 0 && $name != "null")
+            {
+                $properties= Building::where('country_id','=',$country_id)
+                                        ->where('city_id', $city_id)
+                                        ->where('name', 'like', '%' . $name . '%')
+                                        ->get();
+                    // return $schools;
+            }
+            elseif($country_id != 0 && $city_id != 0 && $name == "null")
+            {
+                $properties= Building::where('country_id','=',$country_id)
+                                    ->where('city_id', $city_id)
+                                    ->get();
+                // return $schools;
+            }
+            else
+            {
+                $properties= Building::where('name', 'like', '%' . $name . '%')->get();
+                // return $schools;
+            }
+        }
+        else
+        {
+            if($country_id != 0 && $city_id != 0 && $name == "null")
+            {
+                $properties= Building::where('country_id','=',$country_id)
+                                    ->where('city_id', $city_id)
+                                    ->get();
+                // return $schools;
+            }
+            elseif($country_id != 0 && $city_id != 0 && $name != "null")
+            {
+                $prop = [];
+                $properties= Building::where('country_id','=',$country_id)
+                                    ->where('city_id', $city_id)
+                                    ->get();
+                foreach($properties as $property)
+                {
+                    $facility = $property->facilities->where('name', 'like', '%' . $name . '%');
+                    if(count($facility)>0)
+                    {
+                        array_push($prop,$property);
+                    }
+
+                }
+                $properties = $prop;
+                // return $schools;
+            }
+            else
+            {
+                $prop = [];
+                $properties= Building::all();
+                foreach($properties as $property)
+                {
+                    $facilities = Facility::where('name','like','%' . $name . '%')->pluck('id')->toArray();
+                    $facility = $property->facilities;
+                    foreach($facility as $fac)
+                    {
+                        if(in_array($fac->id,$facilities))
+                        {
+                            array_push($prop,$property);
+                            break;
+                        }
+                    }
+                }
+                $properties = $prop;
+            }
+        }
             return view('guest::guest_partial_injected',compact('properties'));
     }
     public function testguest(){

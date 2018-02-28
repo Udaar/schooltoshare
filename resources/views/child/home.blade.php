@@ -60,24 +60,22 @@
 				<div class="row filters">
 					<div class="col-lg-10">
 						<div class="row">
-							{{--  <div class="col-lg-3 no-padding-right">
-								<select id="Property" class="form-control select2">
-                                    <option selected disabled>Search for a property</option>
-                                    @foreach($buildings as $building)
-                                        <option value="Property">{{$building->name}}</option>
-                                    @endforeach    
+							<div class="col-lg-3 no-padding-right">
+								<select id="search_type" class="form-control select2">
 									
+									<option selected value="school">School</option>
+									<option value="facility">Activity</option>
 								</select>
-							</div>  --}}
-							<div class="col-lg-4 no-padding-right">
+							</div>
+							<div class="col-lg-3 no-padding-right">
 								{!! Form::select('country_id', \App\Country::all()->pluck('name','id'), null, ['class' => 'form-control select2','placeholder'=>'Country','id'=>'country']) !!}
 							</div>
-							<div class="col-lg-4 no-padding-right">
+							<div class="col-lg-3 no-padding-right">
 								<select id="city" class="form-control select2" placeholder="City">
 									<option value="0" disabled selected>City</option>
 								</select>
 							</div>
-							<div class="col-lg-4 no-padding-right">
+							<div class="col-lg-3 no-padding-right">
 								<input type="text" id="bname" class="form-control" placeholder="Name">
 							</div>	
 						</div>
@@ -316,6 +314,7 @@
 			var country_id = $('#country').val();
 			var city_id = $('#city').val();
 			var name = $('#bname').val();
+			var type = $('#search_type').val();
 			if(country_id== null)
 			{
 				country_id =0;
@@ -329,7 +328,7 @@
 				name="null";
 			}
 			$.ajax({
-					url:'/search/'+country_id+'/'+city_id+'/'+name,
+					url:'/search/'+type+'/'+country_id+'/'+city_id+'/'+name,
 					success:function(result){
 						$('#guestbody').html(result);
 					}

@@ -141,6 +141,7 @@
 			var country_id = $('#country').val();
 			var city_id = $('#city').val();
 			var name = $('#bname').val();
+			var type = "school";
 			if(country_id== null)
 			{
 				country_id =0;
@@ -154,7 +155,7 @@
 				name="null";
 			}
 			$.ajax({
-					url:'/search/'+country_id+'/'+city_id+'/'+name,
+					url:'/search/'+type+'/'+country_id+'/'+city_id+'/'+name,
 					success:function(result){
 						$('#property').html(result);
 					}
