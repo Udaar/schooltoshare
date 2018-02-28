@@ -15,6 +15,19 @@
                     <a href="/" class="retina-logo" data-dark-logo="/bimunity/images/school_logo.png"><img src="/bimunity/images/school_logo.png" alt="Canvas Logo"></a>
                 </div><!-- #logo end -->
 
+            <!-- Left Navigation
+                ============================================= -->
+                <nav id="primary-menu" class="pull-left">
+                    <ul class="left-nav">
+                        <li class="mega-menu">
+                            <a class="nav-link" href="/"><div>Home</div></a>
+                        </li>
+                        <li class="mega-menu">
+                            <a class="nav-link" href="/see_more/events"><div>Schools</div></a>
+                        </li>
+                    </ul>
+                </nav><!-- #left navigation end -->
+
             <!-- Primary Navigation
             ============================================= -->
             <nav id="primary-menu">

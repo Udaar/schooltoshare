@@ -13,7 +13,8 @@
         </li>
     @else   
          <li class="mega-menu">
-            <a href="/login" class="nav-link ">
+            <a href="/login" class="nav-link" style="color:#fff">
+                <i class="icon-login"></i>
                 <span>Login</span>
             </a>
         </li>

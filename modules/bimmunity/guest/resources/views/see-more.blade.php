@@ -27,6 +27,17 @@
     </style>
 	<link rel="stylesheet" href="/bimunity/css/media.css">
 
+	<style>
+		.filters{
+			background-color: #A7A8AA;
+			margin: 15px 0;
+			padding: 30px;
+			position: static;
+			width: auto;
+			transform: none;
+		}
+	</style>
+
 	<!--[if lt IE 9]>
 		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
@@ -39,7 +50,7 @@
 	<script src="/metronic/assets/pages/scripts/login.min.js" type="text/javascript"></script>
 	<!-- Document Title
 	============================================= -->
-	<title>BIMMUNITY</title>
+	<title>Schools</title>
 
 
 </head>
@@ -50,192 +61,42 @@
 	============================================= -->
 	<div id="wrapper" class="clearfix">
 
-		<!-- Header
-		============================================= -->
-		<header id="header" class="full-header">
-
-			<div id="header-wrap">
-
-				<div class="container clearfix">
-
-					<div id="primary-menu-trigger"><i class="fa fa-bars fa-2x"></i></div>
-
-					<!-- Logo
-					============================================= -->
-					<div id="logo">
-						<a href="/" class="standard-logo" data-dark-logo="/bimunity/images/logo.png"><img src="/bimunity/images/logo.png" alt="Canvas Logo"></a>
-						<a href="/" class="retina-logo" data-dark-logo="/bimunity/images/logo.png"><img src="/bimunity/images/logo.png" alt="Canvas Logo"></a>
-					</div><!-- #logo end -->
-
-					<!-- Primary Navigation
-					============================================= -->
-					<nav id="primary-menu">
-						@include('guest::menu')
-					</nav><!-- #primary-menu end -->
-				</div>
-			</div>
-		</header><!-- #header end -->
+		@include('layouts.header_2')
 
     <!-- Slider
     ============================================= -->
-		{{-- <section id="slider" class="swiper_wrapper full-screen clearfix">
-			<div class="swiper-container swiper-parent">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide dark" style="background-image: url('/bimunity/images/header.jpg');">
-						<div class="overlay">
-							<div class="container clearfix">
-								<div class="slider-caption slider-caption-center">
-									<h2 data-caption-animate="fadeInUp">Welcome to BIMMUNITY</h2>
-									<p data-caption-animate="fadeInUp" data-caption-delay="200">BIMMUNITY builds upon the merger of several intertwined concepts and constituents that shape its unique integrated nature</p>
-									@if(\Auth::user())
-										<a href="/login" class="button button-3d button-blue nomargin"><i class="fa fa-user"></i> Dashboard</a>
-									@else
-										<a href="/login" class="button button-3d button-blue nomargin"><i class="fa fa-user"></i> Login</a>
-										<a href="/login#register" class="button button-3d dark-bg nomargin"><i class="fa fa-pencil"></i> Register</a>
-									@endif
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<script>
-				jQuery(document).ready(function($){
-					swiperSlider = new Swiper('.swiper-parent',{
-						paginationClickable: false,
-						slidesPerView: 1,
-						grabCursor: true,
-						onSwiperCreated: function(swiper){
-							$('[data-caption-animate]').each(function(){
-								var $toAnimateElement = $(this);
-								var toAnimateDelay = $(this).attr('data-caption-delay');
-								var toAnimateDelayTime = 0;
-								if( toAnimateDelay ) { toAnimateDelayTime = Number( toAnimateDelay ) + 750; } else { toAnimateDelayTime = 750; }
-								if( !$toAnimateElement.hasClass('animated') ) {
-									$toAnimateElement.addClass('not-animated');
-									var elementAnimation = $toAnimateElement.attr('data-caption-animate');
-									setTimeout(function() {
-										$toAnimateElement.removeClass('not-animated').addClass( elementAnimation + ' animated');
-									}, toAnimateDelayTime);
-								}
-							});
-						},
-						onSlideChangeStart: function(swiper){
-							$('#slide-number-current').html(swiper.activeIndex + 1);
-							$('[data-caption-animate]').each(function(){
-								var $toAnimateElement = $(this);
-								var elementAnimation = $toAnimateElement.attr('data-caption-animate');
-								$toAnimateElement.removeClass('animated').removeClass(elementAnimation).addClass('not-animated');
-							});
-						},
-						onSlideChangeEnd: function(swiper){
-							$('#slider .swiper-slide').each(function(){
-								if($(this).find('video').length > 0) { $(this).find('video').get(0).pause(); }
-							});
-							$('#slider .swiper-slide:not(".swiper-slide-active")').each(function(){
-								if($(this).find('video').length > 0) {
-									if($(this).find('video').get(0).currentTime != 0 ) $(this).find('video').get(0).currentTime = 0;
-								}
-							});
-							if( $('#slider .swiper-slide.swiper-slide-active').find('video').length > 0 ) { $('#slider .swiper-slide.swiper-slide-active').find('video').get(0).play(); }
-
-							$('#slider .swiper-slide.swiper-slide-active [data-caption-animate]').each(function(){
-								var $toAnimateElement = $(this);
-								var toAnimateDelay = $(this).attr('data-caption-delay');
-								var toAnimateDelayTime = 0;
-								if( toAnimateDelay ) { toAnimateDelayTime = Number( toAnimateDelay ) + 300; } else { toAnimateDelayTime = 300; }
-								if( !$toAnimateElement.hasClass('animated') ) {
-									$toAnimateElement.addClass('not-animated');
-									var elementAnimation = $toAnimateElement.attr('data-caption-animate');
-									setTimeout(function() {
-										$toAnimateElement.removeClass('not-animated').addClass( elementAnimation + ' animated');
-									}, toAnimateDelayTime);
-								}
-							});
-						}
-					});
-
-					$('#slider-arrow-left').on('click', function(e){
-						e.preventDefault();
-						swiperSlider.swipePrev();
-					});
-
-					$('#slider-arrow-right').on('click', function(e){
-						e.preventDefault();
-						swiperSlider.swipeNext();
-					});
-
-					$('#slide-number-current').html(swiperSlider.activeIndex + 1);
-					$('#slide-number-total').html(swiperSlider.slides.length);
-				});
-			</script>
-
-		</section><!-- #slider end --> --}}
+		
 
 		<!-- Content
 		============================================= -->
 		<section id="content">
 			<div class="content-wrap">
+				<div class="container-fluid">
 				<div class="row filters">
-					<div class="col-lg-11">
+					<div class="col-lg-10">
 						<div class="row">
-							<input type="hidden" id="Propertytype" value="{{$searchtype}}">
-									
-							<div class="col-lg-4">
+							<div class="col-lg-4 no-padding-right">
 								{!! Form::select('country_id', \App\Country::all()->pluck('name','id'), null, ['class' => 'form-control select2','placeholder'=>'Country','id'=>'country']) !!}
 							</div>
-							<div class="col-lg-4">
+							<div class="col-lg-4 no-padding-right">
 								<select id="city" class="form-control select2" placeholder="City">
-									<option value="0">City</option>
+									<option value="0" disabled selected>City</option>
 								</select>
 							</div>
-							<div class="col-lg-4">
+							<div class="col-lg-4 no-padding-right">
 								<input type="text" id="bname" class="form-control" placeholder="Name">
 							</div>	
 						</div>
 					</div>
-					<div class="col-lg-1">
-						<button id="searchbtn" name="quick-contact-form-submit" class="button button-small button-3d nomargin">filter</button>
+					<div class="col-lg-2">
+						<button id="searchbtn" name="quick-contact-form-submit" class="button button-small button-3d nomargin" style="width:100%">filter</button>
 					</div>
 				</div>
+				</div>
 				<div id="property" class="container-fluid company-wrap">
-					<!--<div class="row filters">
-						<div class="col-lg-3">
-							<select id="single" class="form-control select2">
-								<option selected>Search for a property</option>
-								<option>Alaska</option>
-								<option>Hawaii</option>
-							</select>
-						</div>
-						<div class="col-lg-3">
-							<select id="single" class="form-control select2">
-								<option selected disabled>Country</option>
-								<option>Alaska</option>
-								<option>Hawaii</option>
-							</select>
-						</div>
-						<div class="col-lg-3">
-							<select id="single" class="form-control select2">
-								<option selected disabled>City</option>
-								<option>Alaska</option>
-								<option>Hawaii</option>
-							</select>
-						</div>
-						<div class="col-lg-3">
-							<select id="single" class="form-control select2">
-								<option selected disabled>Name</option>
-								<option>Alaska</option>
-								<option>Hawaii</option>
-							</select>
-						</div>
-					</div>-->
-					<p class="top-p"><span class="bold">TOP</span> {{$type}}</p>
-					@if($type=='Properties')
-					    @include('guest::see_more_building')
-					@else
+					
 						@include('guest::see_more_partial')
-					@endif
+
 				</div>
 			</div>
 		</section><!-- #content end -->
@@ -307,9 +168,24 @@
 				});
 		 });
 
-		$('#searchbtn').on('click',function(){
+			$('#searchbtn').on('click',function(){
+			var country_id = $('#country').val();
+			var city_id = $('#city').val();
+			var name = $('#bname').val();
+			if(country_id== null)
+			{
+				country_id =0;
+			}
+			if(city_id== null)
+			{
+				city_id =0;
+			}
+			if(name == "")
+			{
+				name="null";
+			}
 			$.ajax({
-					url:'/search/'+$('#Propertytype').val()+'/'+$('#country').val()+'/'+$('#city').val()+'/'+$('#bname').val(),
+					url:'/search/'+country_id+'/'+city_id+'/'+name,
 					success:function(result){
 						$('#property').html(result);
 					}

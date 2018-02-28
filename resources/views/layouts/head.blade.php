@@ -66,6 +66,13 @@
                     margin-left: 0;
                 }
             }
+            @media screen and (min-width: 992px){
+                .page-header-inner,
+                .contianer{
+                    margin: auto;
+                    width: 1170px;
+                }
+            }
         </style>
     @endif
     <!-- END THEME STYLES -->

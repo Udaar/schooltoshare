@@ -160,7 +160,7 @@
 												</div>
 												<div class="attend-details text-center">
 													<label>date</label>
-													<span>{{$event->date}}</span>
+													<span>{{$event->date->format('Y-m-d')}}</span>
 												</div>
 												<div class="attend-details text-center">
 													<label>time</label>
@@ -202,7 +202,7 @@
 												</div>
 												<div class="attend-details text-center">
 													<label>date</label>
-													<span>{{$event->date}}</span>
+													<span>{{$event->date->format('Y-m-d')}}</span>
 												</div>
 												<div class="attend-details text-center">
 													<label>time</label>
@@ -222,9 +222,9 @@
 								@endif	
 							@endforeach	
 						</div>
-						<!-- <div class="see-more text-right">
+						<div class="see-more text-right" style="margin-top:15px">
 							<a href="/see_more/Properties" id="quick-contact-form-submit" name="quick-contact-form-submit" class="button button-small button-3d nomargin" value="submit">See More</a>
-						</div> -->
+						</div>
 					</div>
 
 				</div>

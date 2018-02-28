@@ -59,7 +59,7 @@ a:focus,
 .map-wrap{
     position: relative;
 }
-.map-wrap .filters{
+.filters{
     background-color: #A7A8AA;
     left: 50%;
     padding: 30px;

@@ -33,7 +33,7 @@
                 <a href="/show/school/{{$property->id}}" class="item-link">
                     <div class="item">
                         <img src="@if( isset($property->profilePicture) && file_exists(public_path( $property->profilePicture )) )
-                                        {{  $property->profilePicture }}
+                                        /{{  $property->profilePicture }}
                                     @else
                                         {{  asset(config('ifm.buildings.image_placeholder')) }}
                                     @endif" alt="">
