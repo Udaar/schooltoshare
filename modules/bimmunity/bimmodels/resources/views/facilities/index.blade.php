@@ -16,6 +16,12 @@
                         </div>
                     </div>
                     <div class="row">
+                            <div class="col-xs-12">
+                                    <a href="/facilities/create" class="btn grey-bg white-color pull-right" style="margin-bottom:10px"> <i class="fa fa-plus"></i> Add New </a>
+                                
+                            </div>
+                        </div>
+                    <div class="row">
                         <div class="col-xs-12">
                             @foreach($facilities as $facility)
                                 <div class="facility-col item text-center">
