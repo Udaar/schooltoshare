@@ -79,12 +79,26 @@ class GuestController extends Controller
         //     return view('guest::guest_partial_injected_user',compact('properties','type'));
         // }
        */
-      if($country_id != 0)
-        $schools= Building::where('country','=',$country_id)
+      if($country_id != 0 && $city_id != 0 && $name != "null")
+      {
+        $properties= Building::where('country','=',$country_id)
                                   ->where('city', $city_id)
                                   ->where('name', 'like', '%' . $name . '%')
                                   ->get();
-            return $schools;
+            // return $schools;
+      }
+      elseif($country_id != 0 && $city_id != 0 && $name == "null")
+      {
+        $properties= Building::where('country','=',$country_id)
+                            ->where('city', $city_id)
+                            ->get();
+        // return $schools;
+      }
+      else
+      {
+        $properties= Building::where('name', 'like', '%' . $name . '%')->get();
+        // return $schools;
+      }
             return view('guest::guest_partial_injected',compact('properties'));
     }
     public function testguest(){
