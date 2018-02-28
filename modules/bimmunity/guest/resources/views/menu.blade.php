@@ -9,6 +9,7 @@
         <li class="mega-menu">
             <a href="/logout" class="nav-link avatar">
                 <i class="icon-logout"></i>
+                <span>Logout</span>
             </a>
         </li>
     @else   

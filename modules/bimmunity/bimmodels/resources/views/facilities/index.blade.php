@@ -17,7 +17,7 @@
                     </div>
                     <div class="row">
                             <div class="col-xs-12">
-                                    <a href="/facilities/create" class="btn grey-bg white-color pull-right" style="margin-bottom:10px"> <i class="fa fa-plus"></i> Add New </a>
+                                    <a href="/facilities/create" class="btn ifm-grey-bg ifm-white pull-right" style="margin-bottom:10px;padding:2px 4px"> <i class="fa fa-plus"></i> Add New </a>
                                 
                             </div>
                         </div>
