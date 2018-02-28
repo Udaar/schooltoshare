@@ -157,4 +157,8 @@ class Building extends Model
     public function city(){
         return $this->belongsTo('\App\City');
     }
+    public function requests(){
+
+        return $this->hasMany('\App\Models\Request','school_id');
+    }
 }

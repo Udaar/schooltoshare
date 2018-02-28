@@ -38,7 +38,7 @@ class RequestController extends AppBaseController
                 return redirect('/buildings/create');
             }
             else{
-                $requests=\Auth::user()->school;
+                $requests=\Auth::user()->school->requests;
             return view('requests.index')
                 ->with('requests', $requests);
                 }
