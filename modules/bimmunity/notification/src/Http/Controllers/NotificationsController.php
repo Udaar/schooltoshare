@@ -7,7 +7,11 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\User;
 use Bimmunity\Notification\Models\Notification;
+use Bimmunity\Notification\Models\Notifiable;
 use Bimmunity\Notification\Models\Read;
+use Bimmunity\Notification\Models\NotificationType;
+use DB;
+
 
 class NotificationsController extends Controller
 {
@@ -108,5 +112,70 @@ class NotificationsController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function getPartial($id)
+    {
+        $notification_type =NotificationType::find($id);
+        //return $notification->realtions_notifications;
+        $roles = \Bimmunity\Authentication\Models\Role::all();
+        $relations = \Bimmunity\Notification\Models\RelationsNotification::all();
+        $users = \App\User::all();
+        return view('notification::notifications.remodal_partial',compact('notification_type','roles','relations','users'));
+    }
+    public function updateNotificationType($id, Request $request)
+    {
+        //  return $id;
+        $notification_type =NotificationType::find($id);
+        // $notification_related = Notifiable::Where('notification_type_id','=',$notification_type->id)->get();
+        // return DB::table('notifiables')->get();
+        // foreach($notification_related as $not_rel)
+        // {
+        //     $not_rel->delete();
+        // }
+        DB::table('notifiables')->where('notification_type_id', '=', $notification_type->id)->delete();
+        $roles = $request['roles'];
+        $relations = $request['relations'];
+        if($roles)
+        {
+           foreach($roles as $role)
+            {
+                DB::table('notifiables')->insert(
+                    ['notification_type_id'=>$id,'notifiable_type'=>'Bimmunity\Authentication\Models\Role','notifiable_id'=>$role]
+                );
+            }
+        }
+        if($relations)
+        {
+           foreach($relations as $relation)
+            {
+                DB::table('notifiables')->insert(
+                    ['notification_type_id'=>$notification_type->id,'notifiable_type'=>'Bimmunity\Notification\Models\RelationsNotification','notifiable_id'=>$relation]
+                );
+            }
+        }
+        return "true";
+
+    }
+    public function manageNotifications()
+    {
+        $notifications = NotificationType::all();
+        // $roles = \Bimmunity\Authentication\Models\Role::all();
+        // $relations = \Bimmunity\Notification\Models\RelationsNotification::all();
+        // $users = \App\User::all();
+        return view('notification::notifications.manage_notifications',compact('notifications'));
+    }
+    public function get_all_notifications()
+    {
+        $notifications = \Auth::user()->notifications()->orderBy('created_at','DESC')->paginate(15);
+        // $this->readAll();
+        return view('notification::notifications.all_notifications',compact('notifications'));
+    }
+    public function tryIt()
+    {
+        //return \Bimmunity\Tasks\Models\Task::find(1)->files()->first();
+        $vas= NotificationType::find(1)->relations;
+        //dd($vas->first());
+        //return $vas->get();
+        return Notification::sendNotifications(\Bimmunity\Tasks\Models\Task::find(1),'task');
     }
 }

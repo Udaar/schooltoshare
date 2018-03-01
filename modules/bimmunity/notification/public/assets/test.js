@@ -11,7 +11,7 @@ function updateRecent(event) {
         }
     });
 }
-$(document).on('mouseover', '.notifications-item', function() {
+$(document).on('click', '.notifications-item', function() {
     if ($(this).attr('status') == 'unread') {
         $.ajax({
             url: '/notification/markAsRead/' + $(this).attr('notification-id'),
@@ -21,6 +21,19 @@ $(document).on('mouseover', '.notifications-item', function() {
         });
     }
 });
+/*
+    $(document).on('click', '.notifications-item', function() {
+        // if ($(this).attr('status') == 'unread') {
+        //     $.ajax({
+        //         url: '/notification/markAsRead/' + $(this).attr('notification-id'),
+        //         success: function() {
+        //             updateRecent('notification');
+        //         }
+        //     });
+        // }
+        alert("sdsd");
+    });
+*/
 // Enable pusher logging - don't include this in production
 Pusher.logToConsole = true;
 

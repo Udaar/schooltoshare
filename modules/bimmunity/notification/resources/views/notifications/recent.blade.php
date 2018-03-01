@@ -19,9 +19,9 @@
     </li>
     <li>
         <ul class="dropdown-menu-list" data-handle-color="#637283">
-        @foreach (\Auth::user()->notifications as $notification)
+        @foreach (\Auth::user()->notifications->sortByDesc('created_at')->take(10) as $notification)
             <li class="notifications-item {!! count($notification->myReads)?'':'bg-default bg-font-default'!!}"  notification-id={{ $notification->id }} status={!! count($notification->myReads)?'read':'unread'!!}>
-                <a href="{{ $notification->url }}">
+                <a href="{{ $notification->url }}" style="font-size:13px">
                     <span class="details ifm-block">
                         <span class="label label-sm label-icon label-success">
                             <i class="fa fa-plus"></i>
@@ -37,8 +37,10 @@
         @endforeach
         </ul>
     </li>
+    <li class="text-center">
+        <a class="bold ifm-grey underline" style="font-size:13px" href="/all_notifications">view all</a>
+    </li>
 </ul>
-
 <script src="/metronic/assets/global/plugins/jquery1.12.0.min.js"></script>
 <script src="/metronic/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <script>
