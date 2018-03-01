@@ -49,8 +49,9 @@ class RequestController extends AppBaseController
             foreach($buildings as $building){
                 
                 if(count($building->requests))
-                    $requests->push($building->requests);
+                    $requests=$requests->merge($building->requests);
             }
+            $requests =$requests->all();
             return view('requests.index')
             ->with('requests', $requests);
         }
@@ -60,8 +61,9 @@ class RequestController extends AppBaseController
             foreach($buildings as $building){
                 
                 if(count($building->requests))
-                    $requests->push($building->requests);
+                    $requests=$requests->merge($building->requests);
             }
+            $requests =$requests->all();
             return view('requests.index')
             ->with('requests', $requests);
         }

@@ -221,14 +221,20 @@ class BuildingController extends AppBaseController
     public function destroy($id)
     {
         $building = $this->buildingRepository->findWithoutFail($id);
-
         if (empty($building)) {
             Flash::error('Building not found');
 
             return redirect(route('buildings.index'));
         }
-
-        $this->buildingRepository->delete($id);
+        if(\Auth::user()->type=='fundorg'){
+            \Auth::user()->fundschools()->detach($id);
+        }
+        else{
+            
+    
+            $this->buildingRepository->delete($id);
+        }
+        
 
         Flash::success('Building deleted successfully.');
 

@@ -2,7 +2,7 @@
 <!-- School Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('school_id', 'School:', ['class' => 'ifm-grey']) !!}
-    {!! Form::select('school_id', $schools->pluck('name','id'), null, ['class' => 'form-control ifm-border-light-grey-all select2','id'=>'school_id']) !!}
+    {!! Form::select('school_id', $schools->pluck('name','id'), null, ['class' => 'form-control ifm-border-light-grey-all select2','id'=>'school_id','placeholder'=>'Select Activity']) !!}
 </div>
 <!-- Activity Id Field -->
 <div class="form-group col-sm-6">

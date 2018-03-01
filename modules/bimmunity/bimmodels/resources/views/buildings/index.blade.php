@@ -12,7 +12,7 @@
                 <i class="fa fa-building-o ifm-grey"></i>
                 Schools
             </h3>
-            @if(\Auth::user()->type!='school')
+            @if(\Auth::user()->type!='school' || \Auth::user()->type!='government')
             <a href="{!! route('buildings.create') !!}" class="pull-right ifm-absolute-right btn ifm-btn-green ifm-grey-bg ifm-white">Add New</a>
             @endif
         </div>
@@ -147,9 +147,16 @@
                             <div class="col-sm-4" style="padding-left:30px">
                             {!! Form::open(['route' => ['buildings.destroy', $building->id], 'method' => 'delete']) !!}
                                 <div class="btn-group pull-left ifm-margin-sm-bottom">
-                                    <a class="btn ifm-btn ifm-main-bg ifm-white ifm-margin-sm-right" href="{!! route('buildings.edit', [$building->id]) !!}"><span class="hidden-xs">Edit</span><i class="fa fa-edit hidden-lg hidden-md hidden-sm"></i></a>
+                                    @if(\Auth::user()->type =='school' )
+                                        <a class="btn ifm-btn ifm-main-bg ifm-white ifm-margin-sm-right" href="{!! route('buildings.edit', [$building->id]) !!}"><span class="hidden-xs">Edit</span><i class="fa fa-edit hidden-lg hidden-md hidden-sm"></i></a>
+                                    @endif
+                                    {{--  @if(\Auth::user()->type=='fundorg' || \Auth::user()->type!='government' )
+                                        <a class="btn ifm-btn ifm-main-bg ifm-white ifm-margin-sm-right" href="{!! route('buildings.show', [$building->id]) !!}"><span class="hidden-xs">Show</span><i class="fa fa-aye hidden-lg hidden-md hidden-sm"></i></a>
+                                    @endif  --}}
                                     {{-- <a class="btn ifm-btn" href="#">Delete</a> --}}
-                                    {!! Form::button('<span class="hidden-xs">Delete</span><i class="fa fa-trash hidden-lg hidden-md hidden-sm"></i>', ['type' => 'submit', 'class' => 'btn ifm-btn-default ifm-light-grey-bg ifm-grey', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                                    @if(\Auth::user()->type =='school' || \Auth::user()->type=='fundorg')
+                                        {!! Form::button('<span class="hidden-xs">Delete</span><i class="fa fa-trash hidden-lg hidden-md hidden-sm"></i>', ['type' => 'submit', 'class' => 'btn ifm-btn-default ifm-light-grey-bg ifm-grey', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                                    @endif
                                 </div>
                             {!! Form::close() !!}
                             </div>
