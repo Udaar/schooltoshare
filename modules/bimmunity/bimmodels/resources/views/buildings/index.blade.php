@@ -12,7 +12,7 @@
                 <i class="fa fa-building-o ifm-grey"></i>
                 Schools
             </h3>
-            @if(\Auth::user()->type!='school' || \Auth::user()->type!='government')
+            @if(\Auth::user()->type!='school' && \Auth::user()->type!='government')
             <a href="{!! route('buildings.create') !!}" class="pull-right ifm-absolute-right btn ifm-btn-green ifm-grey-bg ifm-white">Add New</a>
             @endif
         </div>
