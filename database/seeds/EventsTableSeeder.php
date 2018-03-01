@@ -21,7 +21,7 @@ class EventsTableSeeder extends Seeder
     			array(
     				
     				'name'=>'Event 1',  
-    				'user_id'=>1,
+    				'speaker'=>1,
     				'school_id'=>1,
     				'duration'=>1,
     				'd_type'=>'day',
@@ -35,7 +35,7 @@ class EventsTableSeeder extends Seeder
 				array(
     				
     				'name'=>'Event 2',  
-    				'user_id'=>2,
+    				'speaker'=>2,
     				'school_id'=>2,
     				'duration'=>2,
     				'd_type'=>'day',
@@ -49,7 +49,7 @@ class EventsTableSeeder extends Seeder
 				array(
 
     				'name'=>'Event 3',  
-    				'user_id'=>3,
+    				'speaker'=>3,
     				'school_id'=>3,
     				'duration'=>3,
     				'd_type'=>'hours',
@@ -63,7 +63,7 @@ class EventsTableSeeder extends Seeder
 				array(
     				
     				'name'=>'Event 4',  
-    				'user_id'=>1,
+    				'speaker'=>1,
     				'school_id'=>4,
     				'duration'=>1,
     				'd_type'=>'day',

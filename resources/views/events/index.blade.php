@@ -1,26 +1,31 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="content-header">
-        <h1 class="pull-left">Events</h1>
-        <h1 class="pull-right">
-           <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{!! route('events.create') !!}">Add New</a>
-        </h1>
-    </section>
-    <div class="content">
-        <div class="clearfix"></div>
 
-        @include('flash::message')
+    <section class="events-section ifm-padding-md-all ifm-white-bg ifm-border-light-grey-all">
 
-        <div class="clearfix"></div>
-        <div class="box box-primary">
-            <div class="box-body">
-                    @include('events.table')
+        <!-- Events Title Bar -->
+        <div class="ifm-padding-md-bottom ifm-margin-sm-bottom ifm-border-light-grey-bottom clearfix">
+            <h3 class="ifm-grey ifm-no-margin-all inline-block capitalize normal title">
+                <i class="fa fa-bolt ifm-grey"></i>
+                Events
+            </h3>
+            <a href="{!! route('events.create') !!}" class="btn ifm-btn-green ifm-grey-bg ifm-white ifm-absolute-right" style="top:19px;right:36px"><i class="fa fa-plus"></i> Add</a>
+        </div>
+        <!-- /Events Title Bar -->
+
+        <div class="row">
+            @include('flash::message')
+
+            <!-- Events Table -->
+            <div class="ifm-padding-sm-all">
+                @include('events.table')
             </div>
+            <!-- /Events Table -->
+
         </div>
-        <div class="text-center">
-        
-        </div>
-    </div>
+
+    </section>
+    
 @endsection
 
