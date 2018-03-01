@@ -7,33 +7,33 @@
             <span class="title">Home</span>
         </a>
     </li>
-    <li class="nav-item start {!! Request::is('facilities') ? ' active' : '' !!}">
+    <li class="nav-item {!! Request::is('facilities') ? ' active' : '' !!}">
         <a href="{!! url('/facilities') !!}" class="nav-link ifm-text-left nav-toggle">
             <i class="fa fa-building"></i>
             <span class="title">School Facility</span>
         </a>
     </li>
-    <li class="nav-item start {!! Request::is('requests') ? ' active' : '' !!}">
+    <li class="nav-item {!! Request::is('requests') ? ' active' : '' !!}">
         <a href="{!! url('/requests') !!}" class="nav-link ifm-text-left nav-toggle">
             <i class="fa fa-ticket"></i>
             <span class="title">Sharing Manager</span>
         </a>
     </li>
-    <li class="nav-item start {!! Request::is('inf_news_event') ? ' active' : '' !!}">
+    <li class="nav-item {!! Request::is('inf_news_event') ? ' active' : '' !!}">
         <a href="{!! url('/inf_news_event') !!}" class="nav-link ifm-text-left nav-toggle">
             <i class="fa fa-info-circle"></i>
             <span class="title">Info, News ,Events</span>
         </a>
     </li>
-    <li class="nav-item start {!! Request::is('buildings') ? ' active' : '' !!}">
+    <li class="nav-item {!! Request::is('buildings') ? ' active' : '' !!}">
         <a href="{!! url('/buildings') !!}" class="nav-link ifm-text-left nav-toggle">
-            <i class="fa fa-info-circle"></i>
+            <i class="fa fa-bank"></i>
             <span class="title">School</span>
         </a>
     </li>
-    <li class="nav-item start {!! Request::is('events') ? ' active' : '' !!}">
+    <li class="nav-item {!! Request::is('events') ? ' active' : '' !!}">
         <a href="{!! url('/events') !!}" class="nav-link ifm-text-left nav-toggle">
-            <i class="fa fa-info-circle"></i>
+            <i class="fa fa-bolt"></i>
             <span class="title">Event</span>
         </a>
     </li>
