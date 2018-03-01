@@ -45,6 +45,7 @@ class RequestController extends AppBaseController
         }
         elseif(\Auth::user()->type=="government"){
             $requests=collect();
+            $requests=$requests->merge(\Auth::user()->requests);
             $buildings =\Auth::user()->govschool;
             foreach($buildings as $building){
                 
@@ -57,6 +58,7 @@ class RequestController extends AppBaseController
         }
         elseif(\Auth::user()->type=="fundorg"){
             $requests=collect();
+            $requests=$requests->merge(\Auth::user()->requests);
             $buildings =\Auth::user()->fundschools;
             foreach($buildings as $building){
                 
