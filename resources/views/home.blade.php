@@ -22,7 +22,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3 col-sm-6">
-                    <a class="dashboard-stat dashboard-stat-v2 first-color" href="#">
+                    <a class="dashboard-stat dashboard-stat-v2 first-color" href="/buildings">
                         <div class="visual">
                             <i class="fa fa-building"></i>
                         </div>
@@ -35,7 +35,7 @@
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <a class="dashboard-stat dashboard-stat-v2 second-color" href="#">
+                    <a class="dashboard-stat dashboard-stat-v2 second-color" href="/funds">
                         <div class="visual">
                             <i class="fa fa-users"></i>
                         </div>
@@ -47,7 +47,7 @@
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <a class="dashboard-stat dashboard-stat-v2 third-color" href="#">
+                    <a class="dashboard-stat dashboard-stat-v2 third-color" >
                         
                         <div class="visual">
                             <i class="fa fa-money"></i>
@@ -61,13 +61,13 @@
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <a class="dashboard-stat dashboard-stat-v2 fourth-color" href="#">
+                    <a class="dashboard-stat dashboard-stat-v2 fourth-color" href="/requests">
                         <div class="visual">
                             <i class="fa fa-mail-forward"></i>
                         </div>
                         <div class="details">
                             <div class="number"> +
-                                <span data-counter="counterup" data-value="0"></span> </div>
+                                <span data-counter="counterup" data-value="{{$requests->count()}}"></span> </div>
                             <div class="desc"> 2Shar Request </div>
                         </div>
                     </a>

@@ -26,7 +26,7 @@ class SchoolsTableSeeder extends Seeder
     				'phone'=>'+20 - 55177 669',
     				'emergency_info'=>'Emergency Info - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, dolores facilis id harum itaque magni minima, expedita saepe aliquam unde dolorem corporis iusto atque esse consequatur, magnam quidem voluptate beatae.',
     				'gps_lat'=>30.055606,
-					'gps_long'=>31.3601597
+					'gps_long'=>31.3601597,
 					'country'=>'egypt',
 					'city'=>'assuit',
     				'created_at'=>Carbon::now()->format('Y-m-d H:i:s'),
@@ -68,7 +68,7 @@ class SchoolsTableSeeder extends Seeder
     				'phone'=>'+99 - 5942 669',
     				'emergency_info'=>'Emergency Info - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, dolores facilis id harum itaque magni minima, expedita saepe aliquam unde dolorem corporis iusto atque esse consequatur, magnam quidem voluptate beatae.',
     				'gps_lat'=>30.0372298,
-					'gps_long'=>31.2523297
+					'gps_long'=>31.2523297,
 					'country'=>'egypt',
 					'city'=>'assuit',
     				'created_at'=>Carbon::now()->format('Y-m-d H:i:s'),

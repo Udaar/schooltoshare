@@ -31,6 +31,14 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="form-group col-sm-6 ifm-width-100">
+                    {!! Form::label('gov_id', 'Government:', ['class' => 'ifm-grey']) !!}
+                    {!! Form::select('gov_id', \App\user::where('type','government')->get()->pluck('name','id'), null, ['class' => 'form-control select2','placeholder'=>'Government']) !!}
+                </div>
+            </div>
+        </div>
         <!-- City Field -->
         <div class="row">
             <div class="col-xs-12">

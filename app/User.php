@@ -289,40 +289,18 @@ class User extends Authenticatable
         return !! $system->intersect($this->portals)->count();
     }
 
-    public function pathPermission()
-    {
-        return $this->hasMany('App\PathPermission');
-    }
-    
-    public function getPermession($path,$type)
-    {
-        
-        if($type == false)
-        {
-            
-            $item = \App\Models\Folder::where('path','=',$path)->first();
-            
-        }
-        else
-        {
-            $item = \App\Models\File::where('path','=',str_replace(url('/'),"",$path))->first();   
-        }
-        if($item)
-        {
-            $permission = \App\PathPermission::where('user_id','=',$this->id)->where('path_id',$item->id)->first();
-            if($permission)
-                return $permission->permission;
-            else
-                return 0;
-        }
-        else
-            return 0;
-
-    }
+  
 
 
     public function school(){
         return $this->hasOne('\Bimmunity\Bimmodels\Models\Building','owner_id');
+    }
+    public function govschool(){
+        return $this->hasMany('\Bimmunity\Bimmodels\Models\Building','gov_id');
+    }
+
+    public function fundschools(){
+        return $this->belongsToMany('\Bimmunity\Bimmodels\Models\Building','fund_gov_schools','id','school_id');
     }
 
 }

@@ -72,6 +72,8 @@ class DatabaseSeeder extends Seeder
         $this->command->info("FileablesTableSeeder table seeded :)");
         $this->call(SchoolFacilityTableSeeder::class);
         $this->command->info("SchoolFacilityTableSeeder table seeded :)");
+        $this->call(EventsTableSeeder::class);
+        $this->command->info("EventsTableSeeder table seeded :)");
         
 
         

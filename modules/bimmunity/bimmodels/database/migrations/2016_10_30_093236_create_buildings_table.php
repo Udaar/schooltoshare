@@ -24,6 +24,7 @@ class CreateBuildingsTable extends Migration {
 			$table->integer('country_id');
 			$table->integer('city_id');
 			$table->integer('owner_id');
+			$table->integer('gov_id');
 			$table->text('layer_url')->nullable();
 			$table->timestamps();
 			$table->softDeletes();

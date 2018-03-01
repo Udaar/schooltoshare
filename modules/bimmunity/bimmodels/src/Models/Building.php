@@ -32,6 +32,7 @@ class Building extends Model
         'country_id',
         'city_id',
         'owner_id',
+        'gov_id',
         'layer_url'
     ];
 
@@ -160,5 +161,11 @@ class Building extends Model
     public function requests(){
 
         return $this->hasMany('\App\Models\Request','school_id');
+    }
+    public function gov(){
+        return $this->belongsTo('\App\User','gov_id');
+    }
+    public function funds(){
+        return $this->belongsToMany('\App\User','fund_gov_schools','id','user_id');
     }
 }

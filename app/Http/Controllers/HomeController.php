@@ -37,6 +37,7 @@ class HomeController extends Controller
         $events=\App\Models\Event::all()->take(8);
         app('App\Http\Controllers\OptionController')->generateToken();
         $BimModel=\App\Models\BimModel::find(1);
+        $requests=\App\Models\Request::all();
         if($BimModel){
             $urn=$BimModel->urn;
         }
@@ -52,8 +53,9 @@ class HomeController extends Controller
                         return redirect('/buildings/create');
                     }
                     else{
+                        $requests=\Auth::user()->school->requests;
                         $notifications =\Auth::user()->notifications()->orderBy('created_at', 'desc')->paginate(20);
-                        return view('home' ,compact('buildings', 'urn', 'token','funds','invoice','notifications'));
+                        return view('home' ,compact('requests','buildings', 'urn', 'token','funds','invoice','notifications'));
                     }
                         
                 
@@ -63,12 +65,12 @@ class HomeController extends Controller
                 return "Admin";
             elseif(\Auth::user()->type == 'government'){
                 $notifications =\Auth::user()->notifications()->orderBy('created_at', 'desc')->paginate(20);
-                return view('gov.home' ,compact('buildings', 'urn', 'token','funds','invoice','notifications'));
+                return view('gov.home' ,compact('requests','buildings', 'urn', 'token','funds','invoice','notifications'));
 
             }
             elseif(\Auth::user()->type == 'fundorg'){
                 $notifications =\Auth::user()->notifications()->orderBy('created_at', 'desc')->paginate(20);
-                return view('fund.home' ,compact('buildings', 'urn', 'token','funds','invoice','notifications'));
+                return view('fund.home' ,compact('requests','buildings', 'urn', 'token','funds','invoice','notifications'));
                 
             }
             else{
