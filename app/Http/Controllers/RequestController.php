@@ -33,7 +33,7 @@ class RequestController extends AppBaseController
         $requests = $this->requestRepository->all();
         if(\Auth::user()->type=="children")
             return redirect('home');
-        if(\Auth::user()->type == 'school'){
+        elseif(\Auth::user()->type == 'school'){
             if(!\Auth::user()->school){
                 return redirect('/buildings/create');
             }
@@ -42,6 +42,31 @@ class RequestController extends AppBaseController
             return view('requests.index')
                 ->with('requests', $requests);
                 }
+        }
+        elseif(\Auth::user()->type=="government"){
+            $requests=collect();
+            $buildings =\Auth::user()->govschool;
+            foreach($buildings as $building){
+                
+                if(count($building->requests))
+                    $requests->push($building->requests);
+            }
+            return view('requests.index')
+            ->with('requests', $requests);
+        }
+        elseif(\Auth::user()->type=="fundorg"){
+            $requests=collect();
+            $buildings =\Auth::user()->fundschools;
+            foreach($buildings as $building){
+                
+                if(count($building->requests))
+                    $requests->push($building->requests);
+            }
+            return view('requests.index')
+            ->with('requests', $requests);
+        }
+        else{
+            return redirect('/home');
         }
         
     }

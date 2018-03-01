@@ -64,11 +64,19 @@ class HomeController extends Controller
             elseif(\Auth::user()->type == 'admin')
                 return "Admin";
             elseif(\Auth::user()->type == 'government'){
+                $buildings =\Auth::user()->govschool;
+                $requests=collect();
+                foreach($buildings as $building){
+                    
+                    if(count($building->requests))
+                        $requests->push($building->requests);
+                }
                 $notifications =\Auth::user()->notifications()->orderBy('created_at', 'desc')->paginate(20);
                 return view('gov.home' ,compact('requests','buildings', 'urn', 'token','funds','invoice','notifications'));
 
             }
             elseif(\Auth::user()->type == 'fundorg'){
+                $buildings =\Auth::user()->fundschools;
                 $notifications =\Auth::user()->notifications()->orderBy('created_at', 'desc')->paginate(20);
                 return view('fund.home' ,compact('requests','buildings', 'urn', 'token','funds','invoice','notifications'));
                 

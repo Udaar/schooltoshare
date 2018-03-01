@@ -49,6 +49,19 @@ class BuildingController extends AppBaseController
             else
                 return redirect('/buildings/create');    
         }
+        elseif(\Auth::user()->type=='government'){
+            $buildings=\Auth::user()->govschool;
+                return view('bimmodels::buildings.index')
+                ->with('buildings', $buildings);
+        }
+        elseif(\Auth::user()->type=='fundorg'){
+             $buildings=\Auth::user()->fundschools;
+                return view('bimmodels::buildings.index')
+                ->with('buildings', $buildings);
+        }
+        else{
+            return redirect('home');
+        }
         return view('bimmodels::buildings.index')
             ->with('buildings', $buildings);
     }
@@ -60,7 +73,21 @@ class BuildingController extends AppBaseController
      */
     public function create()
     {
-        return view('bimmodels::buildings.create');
+        if(\Auth::user()->type=='school')
+            return view('bimmodels::buildings.create');
+        elseif(\Auth::user()->type=='fundorg'){
+            $buildings=$this->buildingRepository->with(['profile'])->all();
+            $attachedschools=\Auth::user()->fundschools->pluck('id')->toArray();
+            return view('bimmodels::buildings.fcreate',compact('buildings','attachedschools'));
+        }  
+        elseif(\Auth::user()->type=='government'){
+            $buildings=$this->buildingRepository->with(['profile'])->all();
+            $attachedschools=\Auth::user()->govschool->pluck('id')->toArray();
+            return view('bimmodels::buildings.gcreate',compact('buildings','attachedschools'));
+        }  
+        else{
+            return redirect('home');
+        }  
     }
 
     /**
@@ -72,18 +99,36 @@ class BuildingController extends AppBaseController
      */
     public function store(CreateBuildingRequest $request)
     {
-         $input = $request->all();
-        $building = $this->buildingRepository->create($input);
-        if ($request->file('logo')) {
-            $file = $request->file('logo');
-           $fileid=File::upload($file,'uploads');
-           $building->files()->attach(File::where('id',$fileid[0])->get()->first(),['is_profile'=>1]);
-           
-        }
+        $input = $request->all();
+        if(\Auth::user()->type=='fundorg'){
+            $this->validate($request,[
+                'schools_id'=>'required'
+            ]);
+            \Auth::user()->fundschools()->detach(\Auth::user()->fundschools->pluck('id')->toArray());
+            \Auth::user()->fundschools()->attach($input['schools_id']);
+        }  
+       
         else{
-                // set a place holder
-                $building->files()->attach(File::getFileByPath(config('ifm.buildings.image_placeholder')));
+            $this->validate($request,[
+                'name' => 'required|min:3',
+                'phone' => 'min:3',
+                'gps_lat' => 'gps',
+                'gps_long' => 'gps',
+            ]);
+            $building = $this->buildingRepository->create($input);
+            if ($request->file('logo')) {
+                $file = $request->file('logo');
+            $fileid=File::upload($file,'uploads');
+            $building->files()->attach(File::where('id',$fileid[0])->get()->first(),['is_profile'=>1]);
+            
             }
+            else
+            {
+                    // set a place holder
+                    $building->files()->attach(File::getFileByPath(config('ifm.buildings.image_placeholder')));
+            }
+        }
+        
 
         Flash::success('Building saved successfully.');
 

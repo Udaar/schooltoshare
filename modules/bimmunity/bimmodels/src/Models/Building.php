@@ -61,10 +61,7 @@ class Building extends Model
      * @var array
      */
     public static $rules = [
-        'name' => 'required|min:3',
-        'phone' => 'min:3',
-        'gps_lat' => 'gps',
-        'gps_long' => 'gps',
+        
     ];
 
     /**

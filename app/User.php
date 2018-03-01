@@ -300,7 +300,7 @@ class User extends Authenticatable
     }
 
     public function fundschools(){
-        return $this->belongsToMany('\Bimmunity\Bimmodels\Models\Building','fund_gov_schools','id','school_id');
+        return $this->belongsToMany('\Bimmunity\Bimmodels\Models\Building','fund_gov_schools','user_id','school_id');
     }
 
 }
