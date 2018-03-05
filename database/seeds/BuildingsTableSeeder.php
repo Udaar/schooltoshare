@@ -20,12 +20,12 @@ class BuildingsTableSeeder extends Seeder
     		array(
     			array(
     				
-    				'name'=>'School 1', 
+    				'name'=>'Dar Alsalam', 
     				'address'=>'Cairo',
     				'phone'=>'+20 - 55177 669',
     				'emergency_info'=>'Emergency Info - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, dolores facilis id harum itaque magni minima, expedita saepe aliquam unde dolorem corporis iusto atque esse consequatur, magnam quidem voluptate beatae.',
-    				'gps_lat'=>24.470275,
-					'gps_long'=>54.351779,
+    				'gps_lat'=>27.173912,
+					'gps_long'=> 31.191470,
 					'country_id'=>1,
 					'city_id'=>2,
 					'owner_id'=>2,
@@ -35,12 +35,12 @@ class BuildingsTableSeeder extends Seeder
 				),
 				array(
     				
-    				'name'=>'School 2',  
+    				'name'=>'New ALsalam',  
     				'address'=>'antalia',
     				'phone'=>'+99 - 5942 669',
     				'emergency_info'=>'Emergency Info - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, dolores facilis id harum itaque magni minima, expedita saepe aliquam unde dolorem corporis iusto atque esse consequatur, magnam quidem voluptate beatae.',
-    				'gps_lat'=>24.434955,
-					'gps_long'=>54.412551,
+    				'gps_lat'=>27.193116, 
+					'gps_long'=>31.183815,
 					'country_id'=>2,
 					'city_id'=>5,
 					'owner_id'=>1,
@@ -50,12 +50,12 @@ class BuildingsTableSeeder extends Seeder
 				),
 				array(
     				
-    				'name'=>'School 3', 
+    				'name'=>'Dar Heraa', 
     				'address'=>'antalia',
     				'phone'=>'+99 - 5942 669',
     				'emergency_info'=>'Emergency Info - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, dolores facilis id harum itaque magni minima, expedita saepe aliquam unde dolorem corporis iusto atque esse consequatur, magnam quidem voluptate beatae.',
-    				'gps_lat'=>24.467361,
-					'gps_long'=>54.378971,
+    				'gps_lat'=>27.182472, 
+					'gps_long'=>31.188587,
 					'country_id'=>1,
 					'city_id'=>3,
 					'owner_id'=>5,
@@ -65,12 +65,12 @@ class BuildingsTableSeeder extends Seeder
 				),
 				array(
     				
-    				'name'=>'School 4',  
+    				'name'=>'Altahrir',  
     				'address'=>'antalia',
     				'phone'=>'+99 - 5942 669',
     				'emergency_info'=>'Emergency Info - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, dolores facilis id harum itaque magni minima, expedita saepe aliquam unde dolorem corporis iusto atque esse consequatur, magnam quidem voluptate beatae.',
-    				'gps_lat'=>24.476273,
-					'gps_long'=>54.321471,
+    				'gps_lat'=>27.207707, 
+					'gps_long'=>31.186160,
 					'country_id'=>1,
 					'city_id'=>4,
 					'owner_id'=>3,
@@ -80,12 +80,12 @@ class BuildingsTableSeeder extends Seeder
 				),
 				array(
     				
-    				'name'=>'School 5', 
+    				'name'=>'University School', 
     				'address'=>'antalia',
     				'phone'=>'+99 - 5942 669',
     				'emergency_info'=>'Emergency Info - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, dolores facilis id harum itaque magni minima, expedita saepe aliquam unde dolorem corporis iusto atque esse consequatur, magnam quidem voluptate beatae.',
-    				'gps_lat'=>24.470193,
-					'gps_long'=>54.367659,
+    				'gps_lat'=>27.191232, 
+					'gps_long'=>31.176169,
 					'country_id'=>2,
 					'city_id'=>6,
 					'owner_id'=>4,
@@ -95,12 +95,12 @@ class BuildingsTableSeeder extends Seeder
 				),
 				array(
     				
-    				'name'=>'School 6',  
+    				'name'=>'Naser Secondary',  
     				'address'=>'antalia',
     				'phone'=>'+99 - 5942 669',
     				'emergency_info'=>'Emergency Info - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, dolores facilis id harum itaque magni minima, expedita saepe aliquam unde dolorem corporis iusto atque esse consequatur, magnam quidem voluptate beatae.',
-    				'gps_lat'=>23.661003,
-					'gps_long'=>53.700645,
+    				'gps_lat'=>27.193712, 
+					'gps_long'=>31.181834,
 					'country_id'=>2,
 					'city_id'=>7,
 					'owner_id'=>6,
@@ -110,12 +110,12 @@ class BuildingsTableSeeder extends Seeder
 				),
 				array(
     				
-    				'name'=>'School 7', 
+    				'name'=>'Alnahda', 
     				'address'=>'antalia',
     				'phone'=>'+99 - 5942 669',
     				'emergency_info'=>'Emergency Info - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, dolores facilis id harum itaque magni minima, expedita saepe aliquam unde dolorem corporis iusto atque esse consequatur, magnam quidem voluptate beatae.',
-    				'gps_lat'=>22.661003,
-					'gps_long'=>55.273109,
+    				'gps_lat'=>27.205966, 
+					'gps_long'=>31.179558,
 					'country_id'=>2,
 					'city_id'=>5,
 					'owner_id'=>8,
@@ -125,12 +125,12 @@ class BuildingsTableSeeder extends Seeder
 				),
 				array(
     				
-    				'name'=>'School 8',
+    				'name'=>'Khadija Yusuf Secondary',
     				'address'=>'antalia',
     				'phone'=>'+99 - 5942 669',
     				'emergency_info'=>'Emergency Info - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, dolores facilis id harum itaque magni minima, expedita saepe aliquam unde dolorem corporis iusto atque esse consequatur, magnam quidem voluptate beatae.',
-    				'gps_lat'=>25.207070,
-					'gps_long'=>50.273107,
+    				'gps_lat'=>27.177570, 
+					'gps_long'=>31.179568,
 					'country_id'=>1,
 					'city_id'=>1,
 					'owner_id'=>7,
